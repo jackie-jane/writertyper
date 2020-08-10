@@ -1,6 +1,6 @@
 class ScoresController < ApplicationController
   before_action :set_text, only: [:show, :update, :destroy]
-  before_action :aet_score, only: [:show, :update, :destroy]
+  before_action :set_score, only: [:show, :update, :destroy]
 
   def index
     @author = Text.find(params[:text_id])
