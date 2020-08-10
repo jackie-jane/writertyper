@@ -179,11 +179,40 @@ __Index.js
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-<br>
+| Create File Structure|    H     |     3 hrs      |     :---------:     |   :---------:    |
+| Create database migration	|    H    |     1 hrs      |  :---------:        |    :---------:   |
+| Create database models	|    H    |     1 hrs      |     :---------:     |     :---------:  |
+| Create Seed file	|    H    |     2 hrs      |      :---------:    |     :---------:  |
+| Rails Controllers	|    H    |     3 hrs      |     :---------:     |    :---------:   |
+| Test Api and Debug	|    H    |     2 hrs      |   :---------:       |     :---------:  |
+| Header Component	|    H    |     1 hrs      |    :---------:      |   :---------:    |
+| Footer Component	|    H    |     1 hrs      |    :---------:      |    :---------:   |
+| Main Component	|    H    |     1 hrs      |    :---------:      |  :---------:     |
+| Layout Component	|    H    |     1 hrs      |   :---------:       |  :---------:     |
+| TitleAndAuthor Component	|    H    |     2 hrs      |     :---------:     |  :---------:     |
+| SubmitButton Component	|    H    |     2 hrs      |    :---------:      |   :---------:    |
+| StartButton Component	|    H    |     1 hrs      |   :---------:       |  :---------:     |
+| Introduction	|    H    |     1 hrs      |   :---------:       |  :---------:     |
+| WordPerMinute	|    H    |     3 hrs      |   :---------:       |  :---------:     |
+| WordComponent	|    H    |     3 hrs      |      :---------:    |   :---------:    |
+| Accuracy Component	|    H    |     3 hrs      |    :---------:      | :---------:      |
+| Estimate	|    H    |     3 hrs      |   :---------:       |   :---------:    |
+| Indicator	|    H    |     3 hrs      |     :---------:     |   :---------:    |
+| UpdateTextInput Component	|    H    |     2 hrs      |  :---------:        |  :---------:     |
+| DeleteButton Component	|    H    |     1 hrs      |   :---------:       |   :---------:    |
+| Modal	|    H    |     3 hrs      |    :---------:      |    :---------:   |
+| UploadForm	|    H    |     1 hrs      |    :---------:      |    :---------:   |
+| ApiConfig	|    H    |     1 hrs      |     :---------:     |    :---------:   |
+| text.js	|    H    |     2 hrs      |     :---------:     |     :---------:  |
+| Main Screen	|    H    |     4 hrs      |    :---------:      |   :---------:    |
+| Type Screen	|    H    |     3 hrs      |    :---------:      |   :---------:    |
+| Read Screen	|    H    |     2 hrs      |   :---------:       |   :---------:    |
+| Upload Screen	|    H    |     3 hrs      |   :---------:       | :---------:      |
+| App.js|    H    |     2 hrs      |      :---------:    |    :---------:   |
+| index.js|    H    |     1 hrs      |    :---------:      |     :---------:  |
+| Css|    H    |     10 hrs      |     :---------:     |   :---------:    |
+| MVP Contingency|    H    |  7 hrs  |   :---------:       |  :---------:     |
+| Total|:---------:       |  79 hrs  |  :---------:        |  :---------:     |
 
 ### Server (Back End)
 
