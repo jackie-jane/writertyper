@@ -218,7 +218,7 @@ __Index.js
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+https://whimsical.com/Q56Mz28NmJdP7ELfKHjXzE
 
 <br>
 
@@ -226,7 +226,15 @@ __Index.js
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+Post-MVP goals include:
+-adding a user functionality. 
+-auth
+-adding more texts to seed file
+-adding author bio page
+-about page
+-finding a way to integreate Project GutenBergs Api into databse
+
+
 
 ***
 
