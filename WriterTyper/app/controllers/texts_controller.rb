@@ -3,7 +3,7 @@ class TextsController < ApplicationController
   before_action :set_text, only: [:show, :update, :destroy]
 
   def index
-    @author = Author.find(params[:dojo_id])
+    @author = Author.find(params[:author_id])
     @texts = Text.where(author_id: @author.id)
     render json: @texts, include: :author, status: :ok
   end
@@ -33,6 +33,6 @@ class TextsController < ApplicationController
   end
 
   def set_text
-  @text = Sensei.where(author_id: @author.id)
+  @text = Text.where(author_id: @author.id)
   end
 end
