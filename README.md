@@ -71,17 +71,88 @@ https://xd.adobe.com/view/5e5f3b27-baf0-4a43-b6e2-d679036453f6-0b0c/screen/215de
 #### Component Hierarchy
 
 ``` structure
-
 src
 |__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
+    |__ fonts
 |__ components/
-      |__ Header.jsx
-|__ services/
-
+    |__ SHARED
+        |__Header
+            |__Header.js
+            |__Header.css
+        |__Footer
+            |__Footer.js
+            |__Footer.css
+        |__Main
+            |__Main.js
+            |__Main.css
+        |__Layout
+            |__Layout.js
+            |__Layout.css
+        |__TitleAndAuthor
+            |__TitleAndAuthor.js
+            |__TitleAndAuthor.css
+        |__SubmitButton
+            |__SubmitButton.js
+            |__SubmitButton.css  
+        |__Text
+            |__Text.js
+            |__Text.css 
+    |__ MAIN
+        |__StartButon
+            |__StartButton.js
+            |__StartButton.css
+        |__Introduction
+            |__Introduction.js
+            |__Introduction.css
+    |__ TYPE
+         |__WordPerMinute
+            |__WordPerMinute.js
+            |__WordPerMinute.css
+         |__Accuracy
+            |__Accuracy.js
+            |__Accuracy.css
+         |__Esitmate
+            |__Estimate.js
+            |__Estimate.css           
+         |__Indicator
+            |__Indicator.js
+            |__Indicator.css           
+     |__ READ
+         |__UpdateTextInput
+            |__UpdateTextInput.js
+            |__UpdateTextInput.css
+         |__EditButton
+            |__EditButton.js
+            |__EditButton.css        
+         |__DeleteButton
+            |__DeleteButton.js
+            |__DeleteButton.css        
+         |__Modal
+            |__Modal.js
+            |__Modal.css         
+     |__UPLOAD
+        |__UploadForm
+            |__UploadForm.js
+            |__UploadForm.css
+     |__ services/
+        |__ApiConfig.js
+        |__Text.js
+ |__screens
+     |__Main
+        |__Main.js
+        |__Main.css
+     |__Type
+        |__Type.js
+        |__Type.css 
+     |__Read
+        |__Read.js
+        |__Read.css
+     |__Upload
+        |__Upload.js
+        |__Upload.css
+__App.js
+__App.css
+__Index.js
 ```
 
 #### Component Breakdown
