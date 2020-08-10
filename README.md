@@ -61,37 +61,14 @@ _**WriterTyper's** _ MVP will allow a user to practice their typing with the tex
 
 #### Wireframes
 
-![Dummy Link](url)
-
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+https://xd.adobe.com/view/5e5f3b27-baf0-4a43-b6e2-d679036453f6-0b0c/screen/215de92e-28cd-457f-9a27-39eb40ac2d77
+(Desktop Wireframe 7 screens)
 
 #### Component Tree
 
 > Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
 
 #### Component Hierarchy
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
