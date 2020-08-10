@@ -70,3 +70,542 @@ FOREIGN KEY ("text_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(498120874959919575)[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (6.5ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "F. Scott Fitzgerald"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(498120874959919575)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveTextRefToAuthor (20200810215951)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200810215951"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(498120874959919575)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(498120874959919575)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveTextRefFromAuthor (20200810220037)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200810220037"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(498120874959919575)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(498120874959919575)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveTextRefFromAuthor (20200810220137)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.6ms)[0m  [1m[35mALTER TABLE "authors" DROP COLUMN "text_id"[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200810220137"]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(498120874959919575)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (2.3ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "F. Scott Fitzgerald"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "The Romantic Egotist"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for ::1 at 2020-08-10 18:10:56 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jacqueline-janedenney/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jacqueline-janedenney/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.7ms | Allocations: 482)
+Completed 200 OK in 31ms (Views: 24.6ms | ActiveRecord: 0.0ms | Allocations: 2713)
+
+
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mText Load (1.0ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "The Romantic Egotist"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mText Load (1.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "The Romantic Egotist"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mText Create (8.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "The Romantic Egotist"], ["words", 48084], ["characters", 269646], ["content", "test12test12"], ["author_id", 2]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (15.1ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "The Romantic Egotist"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "The Romantic Egotist"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (87.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WriterTyper_development"[0m
+  [1m[35m (63.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WriterTyper_test"[0m
+  [1m[35m (218.9ms)[0m  [1m[35mCREATE DATABASE "WriterTyper_development" ENCODING = 'unicode'[0m
+  [1m[35m (101.9ms)[0m  [1m[35mCREATE DATABASE "WriterTyper_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "biography" character varying, "controversy" character varying)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "scores" CASCADE[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "scores" ("id" bigserial primary key, "username" character varying, "word_per_minute" integer, "accuracy" decimal, "estimate" integer, "score" integer, "text_id" bigint NOT NULL)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_scores_on_text_id" ON "scores"  ("text_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "texts" CASCADE[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "texts" ("id" bigserial primary key, "title" character varying, "words" integer, "characters" integer, "author" character varying, "content" character varying, "author_id" bigint NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_texts_on_author_id" ON "texts"  ("author_id")[0m
+  [1m[35m (7.9ms)[0m  [1m[35mALTER TABLE "scores" ADD CONSTRAINT "fk_rails_da36e48312"
+FOREIGN KEY ("text_id")
+  REFERENCES "texts" ("id")
+[0m
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "texts" ADD CONSTRAINT "fk_rails_2a848cd1aa"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810220137)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810160359),
+(20200810160458),
+(20200810161015),
+(20200810172753),
+(20200810180103),
+(20200810180134),
+(20200810180210),
+(20200810215951);
+
+[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-10 22:34:45.017828"], ["updated_at", "2020-08-10 22:34:45.017828"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "28cabd861cdf3a8da09cc04d11c96ac397babe59"], ["created_at", "2020-08-10 22:34:45.035710"], ["updated_at", "2020-08-10 22:34:45.035710"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  [1m[35m (19.1ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "biography" character varying, "controversy" character varying)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "scores" CASCADE[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "scores" ("id" bigserial primary key, "username" character varying, "word_per_minute" integer, "accuracy" decimal, "estimate" integer, "score" integer, "text_id" bigint NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_scores_on_text_id" ON "scores"  ("text_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "texts" CASCADE[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "texts" ("id" bigserial primary key, "title" character varying, "words" integer, "characters" integer, "author" character varying, "content" character varying, "author_id" bigint NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_texts_on_author_id" ON "texts"  ("author_id")[0m
+  [1m[35m (5.4ms)[0m  [1m[35mALTER TABLE "scores" ADD CONSTRAINT "fk_rails_da36e48312"
+FOREIGN KEY ("text_id")
+  REFERENCES "texts" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "texts" ADD CONSTRAINT "fk_rails_2a848cd1aa"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810220137)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810160359),
+(20200810160458),
+(20200810161015),
+(20200810172753),
+(20200810180103),
+(20200810180134),
+(20200810180210),
+(20200810215951);
+
+[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-10 22:34:45.196438"], ["updated_at", "2020-08-10 22:34:45.196438"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (2.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-10 22:34:45.224024"], ["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "28cabd861cdf3a8da09cc04d11c96ac397babe59"], ["created_at", "2020-08-10 22:34:45.234332"], ["updated_at", "2020-08-10 22:34:45.234332"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.7ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "F. Scott Fitzgerald"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "The Romantic Egotist"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "The Romantic Egotist"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (73.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WriterTyper_development"[0m
+  [1m[35m (59.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WriterTyper_test"[0m
+  [1m[35m (140.2ms)[0m  [1m[35mCREATE DATABASE "WriterTyper_development" ENCODING = 'unicode'[0m
+  [1m[35m (58.6ms)[0m  [1m[35mCREATE DATABASE "WriterTyper_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "biography" character varying, "controversy" character varying)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "scores" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "scores" ("id" bigserial primary key, "username" character varying, "word_per_minute" integer, "accuracy" decimal, "estimate" integer, "score" integer, "text_id" bigint NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_scores_on_text_id" ON "scores"  ("text_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "texts" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "texts" ("id" bigserial primary key, "title" character varying, "words" integer, "characters" integer, "author" character varying, "content" character varying, "author_id" bigint NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_texts_on_author_id" ON "texts"  ("author_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "scores" ADD CONSTRAINT "fk_rails_da36e48312"
+FOREIGN KEY ("text_id")
+  REFERENCES "texts" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "texts" ADD CONSTRAINT "fk_rails_2a848cd1aa"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810220137)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810160359),
+(20200810160458),
+(20200810161015),
+(20200810172753),
+(20200810180103),
+(20200810180134),
+(20200810180210),
+(20200810215951);
+
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-10 22:42:23.042159"], ["updated_at", "2020-08-10 22:42:23.042159"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "28cabd861cdf3a8da09cc04d11c96ac397babe59"], ["created_at", "2020-08-10 22:42:23.053287"], ["updated_at", "2020-08-10 22:42:23.053287"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  [1m[35m (19.3ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "biography" character varying, "controversy" character varying)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "scores" CASCADE[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "scores" ("id" bigserial primary key, "username" character varying, "word_per_minute" integer, "accuracy" decimal, "estimate" integer, "score" integer, "text_id" bigint NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_scores_on_text_id" ON "scores"  ("text_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "texts" CASCADE[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "texts" ("id" bigserial primary key, "title" character varying, "words" integer, "characters" integer, "author" character varying, "content" character varying, "author_id" bigint NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_texts_on_author_id" ON "texts"  ("author_id")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mALTER TABLE "scores" ADD CONSTRAINT "fk_rails_da36e48312"
+FOREIGN KEY ("text_id")
+  REFERENCES "texts" ("id")
+[0m
+  [1m[35m (4.7ms)[0m  [1m[35mALTER TABLE "texts" ADD CONSTRAINT "fk_rails_2a848cd1aa"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810220137)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810160359),
+(20200810160458),
+(20200810161015),
+(20200810172753),
+(20200810180103),
+(20200810180134),
+(20200810180210),
+(20200810215951);
+
+[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-10 22:42:23.239970"], ["updated_at", "2020-08-10 22:42:23.239970"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-10 22:42:23.251451"], ["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "28cabd861cdf3a8da09cc04d11c96ac397babe59"], ["created_at", "2020-08-10 22:42:23.260966"], ["updated_at", "2020-08-10 22:42:23.260966"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.7ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "F. Scott Fitzgerald"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "The Romantic Egotist"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "Emily Dickinson"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.4ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Emily Dickinson"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "A Bird Came Down The Walk"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mText Create (1.1ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "A Bird Came Down The Walk"], ["words", 115], ["characters", 566], ["content", "A Bird, came down the Walk - \nHe did not know I saw -\nHe bit an Angle Worm in halves\nAnd ate the fellow, raw, \n \nAnd then, he drank a Dew\nFrom a convenient Grass -\nAnd then hopped sidewise to the Wall\nTo let a Beetle pass -\n \nHe glanced with rapid eyes,\nThat hurried all abroad -\nThey looked like frightened Beads, I thought,\nHe stirred his Velvet Head. - \n \nLike one in danger, Cautious,\nI offered him a Crumb,\nAnd he unrolled his feathers, \nAnd rowed him softer Home -\n \nThan Oars divide the Ocean,\nToo silver for a seam,\nOr Butterflies, off Banks of Noon,\nLeap, plashless as they swim. \n"], ["author_id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (61.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WriterTyper_development"[0m
+  [1m[35m (36.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WriterTyper_test"[0m
+  [1m[35m (141.9ms)[0m  [1m[35mCREATE DATABASE "WriterTyper_development" ENCODING = 'unicode'[0m
+  [1m[35m (57.5ms)[0m  [1m[35mCREATE DATABASE "WriterTyper_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "biography" character varying, "controversy" character varying)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "scores" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "scores" ("id" bigserial primary key, "username" character varying, "word_per_minute" integer, "accuracy" decimal, "estimate" integer, "score" integer, "text_id" bigint NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_scores_on_text_id" ON "scores"  ("text_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "texts" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "texts" ("id" bigserial primary key, "title" character varying, "words" integer, "characters" integer, "author" character varying, "content" character varying, "author_id" bigint NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_texts_on_author_id" ON "texts"  ("author_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "scores" ADD CONSTRAINT "fk_rails_da36e48312"
+FOREIGN KEY ("text_id")
+  REFERENCES "texts" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "texts" ADD CONSTRAINT "fk_rails_2a848cd1aa"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810220137)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810160359),
+(20200810160458),
+(20200810161015),
+(20200810172753),
+(20200810180103),
+(20200810180134),
+(20200810180210),
+(20200810215951);
+
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-10 22:47:08.511599"], ["updated_at", "2020-08-10 22:47:08.511599"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "28cabd861cdf3a8da09cc04d11c96ac397babe59"], ["created_at", "2020-08-10 22:47:08.522494"], ["updated_at", "2020-08-10 22:47:08.522494"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "biography" character varying, "controversy" character varying)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "scores" CASCADE[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "scores" ("id" bigserial primary key, "username" character varying, "word_per_minute" integer, "accuracy" decimal, "estimate" integer, "score" integer, "text_id" bigint NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_scores_on_text_id" ON "scores"  ("text_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "texts" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "texts" ("id" bigserial primary key, "title" character varying, "words" integer, "characters" integer, "author" character varying, "content" character varying, "author_id" bigint NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_texts_on_author_id" ON "texts"  ("author_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mALTER TABLE "scores" ADD CONSTRAINT "fk_rails_da36e48312"
+FOREIGN KEY ("text_id")
+  REFERENCES "texts" ("id")
+[0m
+  [1m[35m (4.1ms)[0m  [1m[35mALTER TABLE "texts" ADD CONSTRAINT "fk_rails_2a848cd1aa"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810220137)[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810160359),
+(20200810160458),
+(20200810161015),
+(20200810172753),
+(20200810180103),
+(20200810180134),
+(20200810180210),
+(20200810215951);
+
+[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-10 22:47:08.682395"], ["updated_at", "2020-08-10 22:47:08.682395"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-10 22:47:08.701991"], ["key", "environment"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "28cabd861cdf3a8da09cc04d11c96ac397babe59"], ["created_at", "2020-08-10 22:47:08.719926"], ["updated_at", "2020-08-10 22:47:08.719926"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "F. Scott Fitzgerald"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.8ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "F. Scott Fitzgerald"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "The Romantic Egotist"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "Emily Dickinson"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.6ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Emily Dickinson"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "A Bird Came Down The Walk"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mText Create (1.5ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "A Bird Came Down The Walk"], ["words", 115], ["characters", 566], ["content", "A Bird, came down the Walk - \nHe did not know I saw -\nHe bit an Angle Worm in halves\nAnd ate the fellow, raw, \n \nAnd then, he drank a Dew\nFrom a convenient Grass -\nAnd then hopped sidewise to the Wall\nTo let a Beetle pass -\n \nHe glanced with rapid eyes,\nThat hurried all abroad -\nThey looked like frightened Beads, I thought,\nHe stirred his Velvet Head. - \n \nLike one in danger, Cautious,\nI offered him a Crumb,\nAnd he unrolled his feathers, \nAnd rowed him softer Home -\n \nThan Oars divide the Ocean,\nToo silver for a seam,\nOr Butterflies, off Banks of Noon,\nLeap, plashless as they swim. \n"], ["author_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "John Donne"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.5ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "John Donne"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Meditation 17"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Meditation 17"], ["words", 48084], ["characters", 269646], ["content", "No man is an island,\n entire of itself;\n every man is a piece of the continent,\n a part of the main.\n If a clod be washed away by the sea,\n Europe is the less,\n as well as if a promontory were.\n as well as if a manor of thy friend’s\n or of thine own were.\n Any man’s death diminishes me,\n because I am involved in mankind;\n and therefore never send to know for whom the bell tolls;\n it tolls for thee."], ["author_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/authors" for ::1 at 2020-08-10 18:52:17 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 23ms (Views: 11.6ms | ActiveRecord: 4.6ms | Allocations: 5409)
+
+
+Started GET "/texts" for ::1 at 2020-08-10 18:52:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/texts"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/text" for ::1 at 2020-08-10 18:52:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/text"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/authors/2/texts" for ::1 at 2020-08-10 18:53:37 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:6:in `index'
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 13.5ms | ActiveRecord: 4.6ms | Allocations: 10862)
+
+
