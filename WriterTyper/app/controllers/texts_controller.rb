@@ -1,10 +1,10 @@
 class TextsController < ApplicationController
-  before_action :set_author, only: [:show, :update, :destroy]
   before_action :set_text, only: [:show, :update, :destroy]
 
   def index
     @author = Author.find(params[:author_id])
     @texts = Text.where(author_id: @author.id)
+
     render json: @texts, include: :author, status: :ok
   end
 
@@ -12,14 +12,23 @@ class TextsController < ApplicationController
     render json: @text
   end
 
+  # POST /users
   def create
-    render json: @text
+    @text = Text.new(text_params)
+
+    if @text.save
+      render json: @text, status: :created
+    else
+      render json: @text.errors, status: :unprocessable_entity
+    end
   end
 
   def update
-    @text.update(params)
-
-    render json: @text
+    if @text.update(text_params)
+      render json: @text
+    else
+      render json: @text.errors, status: :unprocessable_entity
+    end
   end
 
   def destroy
@@ -27,12 +36,8 @@ class TextsController < ApplicationController
   end
 
   private
-
-  def set_author
-    @author = Author.find(params[:id])
-  end
-
-  def set_text
-  @text = Text.where(author_id: @author.id)
-  end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_text
+      @text = Text.find(params[:id])
+    end
 end
