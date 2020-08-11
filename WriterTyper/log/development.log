@@ -648,3 +648,507 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WriterTyper_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WriterTyper_test"[0m
+  [1m[35m (289.4ms)[0m  [1m[35mCREATE DATABASE "WriterTyper_development" ENCODING = 'unicode'[0m
+  [1m[35m (93.4ms)[0m  [1m[35mCREATE DATABASE "WriterTyper_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "biography" character varying, "controversy" character varying)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "scores" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "scores" ("id" bigserial primary key, "username" character varying, "word_per_minute" integer, "accuracy" decimal, "estimate" integer, "score" integer, "text_id" bigint NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_scores_on_text_id" ON "scores"  ("text_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "texts" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "texts" ("id" bigserial primary key, "title" character varying, "words" integer, "characters" integer, "author" character varying, "content" character varying, "author_id" bigint NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_texts_on_author_id" ON "texts"  ("author_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "scores" ADD CONSTRAINT "fk_rails_da36e48312"
+FOREIGN KEY ("text_id")
+  REFERENCES "texts" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "texts" ADD CONSTRAINT "fk_rails_2a848cd1aa"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810220137)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810160359),
+(20200810160458),
+(20200810161015),
+(20200810172753),
+(20200810180103),
+(20200810180134),
+(20200810180210),
+(20200810215951);
+
+[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-11 21:15:29.170712"], ["updated_at", "2020-08-11 21:15:29.170712"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "28cabd861cdf3a8da09cc04d11c96ac397babe59"], ["created_at", "2020-08-11 21:15:29.177417"], ["updated_at", "2020-08-11 21:15:29.177417"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "biography" character varying, "controversy" character varying)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "scores" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "scores" ("id" bigserial primary key, "username" character varying, "word_per_minute" integer, "accuracy" decimal, "estimate" integer, "score" integer, "text_id" bigint NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_scores_on_text_id" ON "scores"  ("text_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "texts" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "texts" ("id" bigserial primary key, "title" character varying, "words" integer, "characters" integer, "author" character varying, "content" character varying, "author_id" bigint NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_texts_on_author_id" ON "texts"  ("author_id")[0m
+  [1m[35m (5.5ms)[0m  [1m[35mALTER TABLE "scores" ADD CONSTRAINT "fk_rails_da36e48312"
+FOREIGN KEY ("text_id")
+  REFERENCES "texts" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "texts" ADD CONSTRAINT "fk_rails_2a848cd1aa"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810220137)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810160359),
+(20200810160458),
+(20200810161015),
+(20200810172753),
+(20200810180103),
+(20200810180134),
+(20200810180210),
+(20200810215951);
+
+[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-11 21:15:29.266910"], ["updated_at", "2020-08-11 21:15:29.266910"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-11 21:15:29.276114"], ["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "28cabd861cdf3a8da09cc04d11c96ac397babe59"], ["created_at", "2020-08-11 21:15:29.283361"], ["updated_at", "2020-08-11 21:15:29.283361"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "Emily Dickinson"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.7ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Emily Dickinson"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "A Bird Came Down The Walk"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (1.1ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "A Bird Came Down The Walk"], ["words", 115], ["characters", 566], ["content", "A Bird, came down the Walk -\nHe did not know I saw -\nHe bit an Angle Worm in halves\nAnd ate the fellow, raw,\n\nAnd then, he drank a Dew\nFrom a convenient Grass -\nAnd then hopped sidewise to the Wall\nTo let a Beetle pass -\n\nHe glanced with rapid eyes,\nThat hurried all abroad -\nThey looked like frightened Beads, I thought,\nHe stirred his Velvet Head. -\n\nLike one in danger, Cautious,\nI offered him a Crumb,\nAnd he unrolled his feathers,\nAnd rowed him softer Home -\n\nThan Oars divide the Ocean,\nToo silver for a seam,\nOr Butterflies, off Banks of Noon,\nLeap, plashless as they swim.\n"], ["author_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", " Knows how to forget!"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", " Knows how to forget!"], ["words", 96], ["characters", 472], ["content", "Knows how to forget!\nBut could It teach it?\nEasiest of Arts, they say\nWhen one learn how\n\nDull Hearts have died\nIn the Acquisition\nSacrificed for Science\nIs common, though, now —\n\nI went to School\nBut was not wiser\nGlobe did not teach it\nNor Logarithm Show\n\n'How to forget'!\nSay — some — Philosopher!\nAh, to be erudite\nEnough to know!\n\nIs it in a Book?\nSo, I could buy it —\nIs it like a Planet?\nTelescopes would know —\n\nIf it be invention\nIt must have a Patent.\nRabbi of the Wise Book\nDon't you know?"], ["author_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "John Donne"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.4ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "John Donne"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Meditation 17"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Meditation 17"], ["words", 81], ["characters", 389], ["content", "No man is an island,\n entire of itself;\n every man is a piece of the continent,\n a part of the main.\n If a clod be washed away by the sea,\n Europe is the less,\n as well as if a promontory were.\n as well as if a manor of thy friend’s\n or of thine own were.\n Any man’s death diminishes me,\n because I am involved in mankind;\n and therefore never send to know for whom the bell tolls;\n it tolls for thee."], ["author_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/authors/1/texts/2" for ::1 at 2020-08-11 17:15:50 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"2"}
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 85ms (Views: 30.2ms | ActiveRecord: 10.7ms | Allocations: 14058)
+
+
+Started GET "/authors/1/texts/" for ::1 at 2020-08-11 17:15:54 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 19.3ms | ActiveRecord: 1.2ms | Allocations: 3856)
+
+
+Started GET "/authors/2/texts/" for ::1 at 2020-08-11 17:16:09 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 1.9ms | Allocations: 2663)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "Emily Dickinson"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "A Bird Came Down The Walk"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Knows how to forget!"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Knows how to forget!"], ["words", 96], ["characters", 472], ["content", "Knows how to forget!\nBut could It teach it?\nEasiest of Arts, they say\nWhen one learn how\n\nDull Hearts have died\nIn the Acquisition\nSacrificed for Science\nIs common, though, now —\n\nI went to School\nBut was not wiser\nGlobe did not teach it\nNor Logarithm Show\n\nHow to forget!\nSay — some — Philosopher!\nAh, to be erudite\nEnough to know!\n\nIs it in a Book?\nSo, I could buy it —\nIs it like a Planet?\nTelescopes would know —\n\nIf it be invention\nIt must have a Patent.\nRabbi of the Wise Book\nDont you know?"], ["author_id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Success is counted sweetest"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.2ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Success is counted sweetest"], ["words", 103], ["characters", 461], ["content", "Success is counted sweetest\nBy those who ne;er succeed.\nTo comprehend a nectar\nRequires sorest need.\n\nNot one of all the Purple Host\nWho took the Flag today\nCan tell the definition\nSo clear of Victory\n\nAs he defeated – dying –\nOn whose forbidden ear\nThe distant strains of triumph\nBurst agonized and clear."], ["author_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Im nobody! Who are you?"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.2ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Im nobody! Who are you?"], ["words", 44], ["characters", 228], ["content", "Im Nobody! Who are you?\nAre you – Nobody – too?\nThen theres a pair of us!\nDont tell! theyd advertise - you know!\n\nHow dreary – to be – Somebody!\nHow public – like a Frog –\nTo tell ones name - the livelong June –\nTo an admiring Bog!"], ["author_id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Hope is the thing with feathers"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Hope is the thing with feathers"], ["words", 69], ["characters", 363], ["content", "Hope is the thing with feathers –\nThat perches in the soul –\nAnd sings the tune without the words –\nAnd never stops – at all –\n\nAnd sweetest – in the Gale – is heard –\nAnd sore must be the storm –\nThat could abash the little Bird\nThat kept so many warm –\n\nI’ve heard it in the chillest land –\nAnd on the strangest Sea –\nYet – never – in Extremity,\nIt asked a crumb – of me."], ["author_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "I felt a Funeral, in my Brain"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "I felt a Funeral, in my Brain"], ["words", 116], ["characters", 605], ["content", "I felt a Funeral, in my Brain,\nAnd Mourners to and fro\nKept treading – treading – till it seemed\nThat Sense was breaking through –\n\nAnd when they all were seated,\nA Service, like a Drum –\nKept beating – beating – till I thought\nMy Mind was going numb –\n\nAnd then I heard them lift a Box\nAnd creak across my Soul\nWith those same Boots of Lead, again,\nThen Space – began to toll,\n\nAs all the Heavens were a Bell,\nAnd Being, but an Ear,\nAnd I, and Silence, some strange Race\nWrecked, solitary, here –\n\nAnd then a Plank in Reason, broke,\nAnd I dropped down, and down –\nAnd hit a World, at every plunge,\nAnd Finished knowing – then –"], ["author_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "There’s a certain Slant of light"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.2ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "There’s a certain Slant of light"], ["words", 73], ["characters", 417], ["content", "There’s a certain Slant of light,\nWinter Afternoons –\nThat oppresses, like the Heft\nOf Cathedral Tunes –\n\nHeavenly Hurt, it gives us –\nWe can find no scar,\nBut internal difference –\nWhere the Meanings, are –\n\nNone may teach it – Any –\n’Tis the seal Despair –\nAn imperial affliction\nSent us of the Air –\n\nWhen it comes, the Landscape listens –\nShadows – hold their breath –\nWhen it goes, ’tis like the Distance\nOn the look of Death –"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Wild Nights – Wild Nights!"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.2ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Wild Nights – Wild Nights!"], ["words", 43], ["characters", 221], ["content", "Wild Nights – Wild Nights!\nWere I with thee\nWild Nights should be\nOur luxury!\n\nFutile – the Winds –\nTo a Heart in port –\nDone with the Compass –\nDone with the Chart!\n\nRowing in Eden –\nAh, the Sea!\nMight I but moor – Tonight –\nIn Thee!”, author_id: 1)\nText.create(title: “This is my letter to the World”, words: 40, characters: 215, content: “This is my letter to the World\nThat never wrote to Me–\nThe simple News that Nature told–\nWith tender Majesty\n\nHer Message is committed\nTo Hands I cannot see–\nFor love of Her– Sweet– countrymen–\nJudge tenderly– of Me"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "I dwell in Possibility"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.2ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "I dwell in Possibility"], ["words", 50], ["characters", 251], ["content", "I dwell in Possibility– \nA fairer House than Prose–\nMore numerous of Windows–\nSuperior– for Doors–\n\nOf Chambers as the Cedars–\nImpregnable of Eye–\nAnd for an Everlasting Roof\nThe Gambrels of the Sky–\n\nOf Visitors– the fairest–\nFor Occupation– This–\nThe spreading wide my narrow Hands\nTo gather Paradise–"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "I heard a Fly buzz– when I died"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.2ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "I heard a Fly buzz– when I died"], ["words", 92], ["characters", 479], ["content", "I heard a Fly buzz– when I died–\nThe Stillness in the Room\nWas like the Stillness in the Air –\nBetween the Heaves of Storm–\n\nThe Eyes around– had wrung them dry–\nAnd Breaths were gathering firm\nFor that last Onset– when the King\nBe witnessed– in the Room–\n\nI willed my Keepsakes– Signed away\nWhat portions of me be\nAssignable– and then it was\nThere interposed a Fly–\n\nWith Blue– uncertain– stumbling Buzz–\nBetween the light– and me –\nAnd then the Windows failed – and then\nI could not see to see–"], ["author_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "It was not Death, for I stood up"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.2ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "It was not Death, for I stood up"], ["words", 136], ["characters", 706], ["content", "It was not Death, for I stood up,\nAnd all the Dead, lie down–\nIt was not Night, for all the Bells\nPut out their Tongues, for Noon.\n\nIt was not Frost, for on my Flesh\nI felt Siroccos– crawl–\nNor Fire– for just my Marble feet\nCould keep a Chancel, cool– \n\nAnd yet, it tasted, like them all,\nThe Figures I have seen\nSet orderly, for Burial,\nReminded me, of mine–\n\nAs if my life were shaven,\nAnd fitted to a frame,\nAnd could not breathe without a key,\nAnd twas like Midnight, some–\n\nWhen everything that ticked– has stopped– \nAnd Space stares– all around– \nOr Grisly frosts– first Autumn morns,\nRepeal the Beating Ground–\n\nBut, most, like Chaos– Stopless– cool– \nWithout a Chance, or Spar–\nOr even a Report of Land– \nTo justify– Despair."], ["author_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Before I got my eye put out"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (1.5ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Before I got my eye put out"], ["words", 119], ["characters", 588], ["content", "Before I got my eye put out–\nI liked as well to see\nAs other creatures, that have eyes–\nAnd know no other way–\n\nBut were it told to me, Today,\nThat I might have the Sky\nFor mine, I tell you that my Heart\nWould split, for size of me–\n\nThe Meadows– mine –\nThe Mountains– mine –\nAll Forests– Stintless stars–\nAs much of noon, as I could take–\nBetween my finite eyes–\n\nThe Motions of the Dipping Birds–\nThe Morning’s Amber Road–\nFor mine– to look at when I liked,\nThe news would strike me dead–\n\nSo safer– guess– with just my soul\nOpon the window pane\nWhere other creatures put their eye –\nIncautious– of the Sun–"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "After great pain, a formal feeling comes"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "After great pain, a formal feeling comes"], ["words", 724], ["characters", 424], ["content", "After great pain, a formal feeling comes–\nThe Nerves sit ceremonious, like tombs–\nThe stiff Heart questions \"was it He, that bore,\nAnd \"Yesterday, or Centuries before\"?\n\nThe Feet, mechanical, go round–\nA Wooden way\nOf Ground, or Air, or Ought–\nRegardless grown,\nA Quartz contentment, like a stone–\n\nThis is the Hour of Lead–\nRemembered, if outlived,\nAs Freezing persons, recollect the snow–\nFirst– Chill– then stupor– then the letting go–"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Because I could not stop for Death"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Because I could not stop for Death"], ["words", 127], ["characters", 679], ["content", "Because I could not stop for Death–\nHe kindly stopped for me–\nThe Carriage held but just Ourselves–\nAnd Immortality.\n\nWe slowly drove– He knew no haste\nAnd I had put away\nMy labor and my leisure too,\nFor His Civility–\n\nWe passed the School, where Children strove\nAt Recess– in the Ring–\nWe passed the Fields of Gazing Grain–\nWe passed the Setting Sun–\n\nOr rather– He passed Us–\nThe Dews drew quivering and Chill–\nFor only Gossamer, my Gown–\nMy Tippet– only Tulle–\n\nWe paused before a House that seemed\nA Swelling of the Ground–\nThe Roof was scarcely visible–\nThe Cornice– in the Ground–\n\nSince then– tis Centuries– and yet\nFeels shorter than the Day\nI first surmised the Horses Heads\nWere toward Eternity–"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "My Life has stood– a Loaded Gun"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.2ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Life has stood– a Loaded Gun"], ["words", 137], ["characters", 652], ["content", "My Life had stood– a Loaded Gun\nIn Corners– till a Day\nThe Owner passed– identified\nAnd carried Me away\n\nAnd now We roam in Sovereign Woods\nAnd now We hunt the Doe\nAnd every time I speak for Him\nThe Mountains straight reply\n\nAnd do I smile, such cordial light\nUpon the Valley glow\nIt is as a Vesuvian face\nHad let its pleasure through\n\nAnd when at Night– Our good Day done\nI guard My Masters Head\nTis better than the Eider-Ducks\nDeep Pillow– to have shared\n\nTo foe of His– Im deadly foe\nNone stir the second time\nOn whom I lay a Yellow Eye\nOr an emphatic Thumb\n\nThough I than He– may longer live\nHe longer must– than I\nFor I have but the power to kill\nWithout–the power to die"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Tell all the truth but tell it slant"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Tell all the truth but tell it slant"], ["words", 42], ["characters", 231], ["content", "Tell all the truth but tell it slant–\nSuccess in Circuit lies\nToo bright for our infirm Delight\nThe Truth’s superb surprise\nAs Lightning to the Children eased\nWith explanation kind\nThe Truth must dazzle gradually\nOr every man be blind–"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "John Donne"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Meditation 17"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (41.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WriterTyper_development"[0m
+  [1m[35m (42.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "WriterTyper_test"[0m
+  [1m[35m (112.9ms)[0m  [1m[35mCREATE DATABASE "WriterTyper_development" ENCODING = 'unicode'[0m
+  [1m[35m (53.4ms)[0m  [1m[35mCREATE DATABASE "WriterTyper_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "biography" character varying, "controversy" character varying)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "scores" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "scores" ("id" bigserial primary key, "username" character varying, "word_per_minute" integer, "accuracy" decimal, "estimate" integer, "score" integer, "text_id" bigint NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_scores_on_text_id" ON "scores"  ("text_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "texts" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "texts" ("id" bigserial primary key, "title" character varying, "words" integer, "characters" integer, "author" character varying, "content" character varying, "author_id" bigint NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_texts_on_author_id" ON "texts"  ("author_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "scores" ADD CONSTRAINT "fk_rails_da36e48312"
+FOREIGN KEY ("text_id")
+  REFERENCES "texts" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "texts" ADD CONSTRAINT "fk_rails_2a848cd1aa"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810220137)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810160359),
+(20200810160458),
+(20200810161015),
+(20200810172753),
+(20200810180103),
+(20200810180134),
+(20200810180210),
+(20200810215951);
+
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-11 21:58:02.580925"], ["updated_at", "2020-08-11 21:58:02.580925"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "28cabd861cdf3a8da09cc04d11c96ac397babe59"], ["created_at", "2020-08-11 21:58:02.589474"], ["updated_at", "2020-08-11 21:58:02.589474"]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "biography" character varying, "controversy" character varying)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "scores" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "scores" ("id" bigserial primary key, "username" character varying, "word_per_minute" integer, "accuracy" decimal, "estimate" integer, "score" integer, "text_id" bigint NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_scores_on_text_id" ON "scores"  ("text_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "texts" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "texts" ("id" bigserial primary key, "title" character varying, "words" integer, "characters" integer, "author" character varying, "content" character varying, "author_id" bigint NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_texts_on_author_id" ON "texts"  ("author_id")[0m
+  [1m[35m (4.7ms)[0m  [1m[35mALTER TABLE "scores" ADD CONSTRAINT "fk_rails_da36e48312"
+FOREIGN KEY ("text_id")
+  REFERENCES "texts" ("id")
+[0m
+  [1m[35m (7.8ms)[0m  [1m[35mALTER TABLE "texts" ADD CONSTRAINT "fk_rails_2a848cd1aa"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810220137)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810160359),
+(20200810160458),
+(20200810161015),
+(20200810172753),
+(20200810180103),
+(20200810180134),
+(20200810180210),
+(20200810215951);
+
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-11 21:58:02.666485"], ["updated_at", "2020-08-11 21:58:02.666485"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-11 21:58:02.671481"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "28cabd861cdf3a8da09cc04d11c96ac397babe59"], ["created_at", "2020-08-11 21:58:02.677198"], ["updated_at", "2020-08-11 21:58:02.677198"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "Emily Dickinson"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.6ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Emily Dickinson"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "A Bird Came Down The Walk"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.8ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "A Bird Came Down The Walk"], ["words", 115], ["characters", 566], ["content", "A Bird, came down the Walk -\nHe did not know I saw -\nHe bit an Angle Worm in halves\nAnd ate the fellow, raw,\n\nAnd then, he drank a Dew\nFrom a convenient Grass -\nAnd then hopped sidewise to the Wall\nTo let a Beetle pass -\n\nHe glanced with rapid eyes,\nThat hurried all abroad -\nThey looked like frightened Beads, I thought,\nHe stirred his Velvet Head. -\n\nLike one in danger, Cautious,\nI offered him a Crumb,\nAnd he unrolled his feathers,\nAnd rowed him softer Home -\n\nThan Oars divide the Ocean,\nToo silver for a seam,\nOr Butterflies, off Banks of Noon,\nLeap, plashless as they swim."], ["author_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Knows how to forget!"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Knows how to forget!"], ["words", 96], ["characters", 472], ["content", "Knows how to forget!\nBut could It teach it?\nEasiest of Arts, they say\nWhen one learn how\n\nDull Hearts have died\nIn the Acquisition\nSacrificed for Science\nIs common, though, now —\n\nI went to School\nBut was not wiser\nGlobe did not teach it\nNor Logarithm Show\n\nHow to forget!\nSay — some — Philosopher!\nAh, to be erudite\nEnough to know!\n\nIs it in a Book?\nSo, I could buy it —\nIs it like a Planet?\nTelescopes would know —\n\nIf it be invention\nIt must have a Patent.\nRabbi of the Wise Book\nDont you know?"], ["author_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Success is counted sweetest"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Success is counted sweetest"], ["words", 103], ["characters", 461], ["content", "Success is counted sweetest\nBy those who ne;er succeed.\nTo comprehend a nectar\nRequires sorest need.\n\nNot one of all the Purple Host\nWho took the Flag today\nCan tell the definition\nSo clear of Victory\n\nAs he defeated – dying –\nOn whose forbidden ear\nThe distant strains of triumph\nBurst agonized and clear."], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Im nobody! Who are you?"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Im nobody! Who are you?"], ["words", 44], ["characters", 228], ["content", "Im Nobody! Who are you?\nAre you – Nobody – too?\nThen theres a pair of us!\nDont tell! theyd advertise - you know!\n\nHow dreary – to be – Somebody!\nHow public – like a Frog –\nTo tell ones name - the livelong June –\nTo an admiring Bog!"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Hope is the thing with feathers"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.8ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Hope is the thing with feathers"], ["words", 69], ["characters", 363], ["content", "Hope is the thing with feathers –\nThat perches in the soul –\nAnd sings the tune without the words –\nAnd never stops – at all –\n\nAnd sweetest – in the Gale – is heard –\nAnd sore must be the storm –\nThat could abash the little Bird\nThat kept so many warm –\n\nI’ve heard it in the chillest land –\nAnd on the strangest Sea –\nYet – never – in Extremity,\nIt asked a crumb – of me."], ["author_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "I felt a Funeral, in my Brain"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.4ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "I felt a Funeral, in my Brain"], ["words", 116], ["characters", 605], ["content", "I felt a Funeral, in my Brain,\nAnd Mourners to and fro\nKept treading – treading – till it seemed\nThat Sense was breaking through –\n\nAnd when they all were seated,\nA Service, like a Drum –\nKept beating – beating – till I thought\nMy Mind was going numb –\n\nAnd then I heard them lift a Box\nAnd creak across my Soul\nWith those same Boots of Lead, again,\nThen Space – began to toll,\n\nAs all the Heavens were a Bell,\nAnd Being, but an Ear,\nAnd I, and Silence, some strange Race\nWrecked, solitary, here –\n\nAnd then a Plank in Reason, broke,\nAnd I dropped down, and down –\nAnd hit a World, at every plunge,\nAnd Finished knowing – then –"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "There’s a certain Slant of light"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "There’s a certain Slant of light"], ["words", 73], ["characters", 417], ["content", "There’s a certain Slant of light,\nWinter Afternoons –\nThat oppresses, like the Heft\nOf Cathedral Tunes –\n\nHeavenly Hurt, it gives us –\nWe can find no scar,\nBut internal difference –\nWhere the Meanings, are –\n\nNone may teach it – Any –\n’Tis the seal Despair –\nAn imperial affliction\nSent us of the Air –\n\nWhen it comes, the Landscape listens –\nShadows – hold their breath –\nWhen it goes, ’tis like the Distance\nOn the look of Death –"], ["author_id", 1]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Wild Nights – Wild Nights!"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Wild Nights – Wild Nights!"], ["words", 43], ["characters", 221], ["content", "Wild Nights – Wild Nights!\nWere I with thee\nWild Nights should be\nOur luxury!\n\nFutile – the Winds –\nTo a Heart in port –\nDone with the Compass –\nDone with the Chart!\n\nRowing in Eden –\nAh, the Sea!\nMight I but moor – Tonight –\nIn Thee!”, author_id: 1)\nText.create(title: “This is my letter to the World”, words: 40, characters: 215, content: “This is my letter to the World\nThat never wrote to Me–\nThe simple News that Nature told–\nWith tender Majesty\n\nHer Message is committed\nTo Hands I cannot see–\nFor love of Her– Sweet– countrymen–\nJudge tenderly– of Me"], ["author_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "I dwell in Possibility"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "I dwell in Possibility"], ["words", 50], ["characters", 251], ["content", "I dwell in Possibility– \nA fairer House than Prose–\nMore numerous of Windows–\nSuperior– for Doors–\n\nOf Chambers as the Cedars–\nImpregnable of Eye–\nAnd for an Everlasting Roof\nThe Gambrels of the Sky–\n\nOf Visitors– the fairest–\nFor Occupation– This–\nThe spreading wide my narrow Hands\nTo gather Paradise–"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "I heard a Fly buzz– when I died"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.4ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "I heard a Fly buzz– when I died"], ["words", 92], ["characters", 479], ["content", "I heard a Fly buzz– when I died–\nThe Stillness in the Room\nWas like the Stillness in the Air –\nBetween the Heaves of Storm–\n\nThe Eyes around– had wrung them dry–\nAnd Breaths were gathering firm\nFor that last Onset– when the King\nBe witnessed– in the Room–\n\nI willed my Keepsakes– Signed away\nWhat portions of me be\nAssignable– and then it was\nThere interposed a Fly–\n\nWith Blue– uncertain– stumbling Buzz–\nBetween the light– and me –\nAnd then the Windows failed – and then\nI could not see to see–"], ["author_id", 1]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "It was not Death, for I stood up"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "It was not Death, for I stood up"], ["words", 136], ["characters", 706], ["content", "It was not Death, for I stood up,\nAnd all the Dead, lie down–\nIt was not Night, for all the Bells\nPut out their Tongues, for Noon.\n\nIt was not Frost, for on my Flesh\nI felt Siroccos– crawl–\nNor Fire– for just my Marble feet\nCould keep a Chancel, cool– \n\nAnd yet, it tasted, like them all,\nThe Figures I have seen\nSet orderly, for Burial,\nReminded me, of mine–\n\nAs if my life were shaven,\nAnd fitted to a frame,\nAnd could not breathe without a key,\nAnd twas like Midnight, some–\n\nWhen everything that ticked– has stopped– \nAnd Space stares– all around– \nOr Grisly frosts– first Autumn morns,\nRepeal the Beating Ground–\n\nBut, most, like Chaos– Stopless– cool– \nWithout a Chance, or Spar–\nOr even a Report of Land– \nTo justify– Despair."], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Before I got my eye put out"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Before I got my eye put out"], ["words", 119], ["characters", 588], ["content", "Before I got my eye put out–\nI liked as well to see\nAs other creatures, that have eyes–\nAnd know no other way–\n\nBut were it told to me, Today,\nThat I might have the Sky\nFor mine, I tell you that my Heart\nWould split, for size of me–\n\nThe Meadows– mine –\nThe Mountains– mine –\nAll Forests– Stintless stars–\nAs much of noon, as I could take–\nBetween my finite eyes–\n\nThe Motions of the Dipping Birds–\nThe Morning’s Amber Road–\nFor mine– to look at when I liked,\nThe news would strike me dead–\n\nSo safer– guess– with just my soul\nOpon the window pane\nWhere other creatures put their eye –\nIncautious– of the Sun–"], ["author_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "After great pain, a formal feeling comes"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "After great pain, a formal feeling comes"], ["words", 724], ["characters", 424], ["content", "After great pain, a formal feeling comes–\nThe Nerves sit ceremonious, like tombs–\nThe stiff Heart questions \"was it He, that bore,\nAnd \"Yesterday, or Centuries before\"?\n\nThe Feet, mechanical, go round–\nA Wooden way\nOf Ground, or Air, or Ought–\nRegardless grown,\nA Quartz contentment, like a stone–\n\nThis is the Hour of Lead–\nRemembered, if outlived,\nAs Freezing persons, recollect the snow–\nFirst– Chill– then stupor– then the letting go–"], ["author_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Because I could not stop for Death"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.5ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Because I could not stop for Death"], ["words", 127], ["characters", 679], ["content", "Because I could not stop for Death–\nHe kindly stopped for me–\nThe Carriage held but just Ourselves–\nAnd Immortality.\n\nWe slowly drove– He knew no haste\nAnd I had put away\nMy labor and my leisure too,\nFor His Civility–\n\nWe passed the School, where Children strove\nAt Recess– in the Ring–\nWe passed the Fields of Gazing Grain–\nWe passed the Setting Sun–\n\nOr rather– He passed Us–\nThe Dews drew quivering and Chill–\nFor only Gossamer, my Gown–\nMy Tippet– only Tulle–\n\nWe paused before a House that seemed\nA Swelling of the Ground–\nThe Roof was scarcely visible–\nThe Cornice– in the Ground–\n\nSince then– tis Centuries– and yet\nFeels shorter than the Day\nI first surmised the Horses Heads\nWere toward Eternity–"], ["author_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "My Life has stood– a Loaded Gun"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.2ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Life has stood– a Loaded Gun"], ["words", 137], ["characters", 652], ["content", "My Life had stood– a Loaded Gun\nIn Corners– till a Day\nThe Owner passed– identified\nAnd carried Me away\n\nAnd now We roam in Sovereign Woods\nAnd now We hunt the Doe\nAnd every time I speak for Him\nThe Mountains straight reply\n\nAnd do I smile, such cordial light\nUpon the Valley glow\nIt is as a Vesuvian face\nHad let its pleasure through\n\nAnd when at Night– Our good Day done\nI guard My Masters Head\nTis better than the Eider-Ducks\nDeep Pillow– to have shared\n\nTo foe of His– Im deadly foe\nNone stir the second time\nOn whom I lay a Yellow Eye\nOr an emphatic Thumb\n\nThough I than He– may longer live\nHe longer must– than I\nFor I have but the power to kill\nWithout–the power to die"], ["author_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Tell all the truth but tell it slant"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Tell all the truth but tell it slant"], ["words", 42], ["characters", 231], ["content", "Tell all the truth but tell it slant–\nSuccess in Circuit lies\nToo bright for our infirm Delight\nThe Truth’s superb surprise\nAs Lightning to the Children eased\nWith explanation kind\nThe Truth must dazzle gradually\nOr every man be blind–"], ["author_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 LIMIT $2[0m  [["name", "John Donne"], ["LIMIT", 1]]
+  [1m[36mAuthor Create (0.4ms)[0m  [1m[32mINSERT INTO "authors" ("name", "biography", "controversy") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "John Donne"], ["biography", "TBA"], ["controversy", "TBA"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mText Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 LIMIT $2[0m  [["title", "Meditation 17"], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mText Create (0.3ms)[0m  [1m[32mINSERT INTO "texts" ("title", "words", "characters", "content", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Meditation 17"], ["words", 81], ["characters", 389], ["content", "No man is an island,\n entire of itself;\n every man is a piece of the continent,\n a part of the main.\n If a clod be washed away by the sea,\n Europe is the less,\n as well as if a promontory were.\n as well as if a manor of thy friend’s\n or of thine own were.\n Any man’s death diminishes me,\n because I am involved in mankind;\n and therefore never send to know for whom the bell tolls;\n it tolls for thee."], ["author_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/authors/2/texts/" for ::1 at 2020-08-11 17:58:30 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 67ms (Views: 30.1ms | ActiveRecord: 7.3ms | Allocations: 14935)
+
+
+Started GET "/authors/1/texts/" for ::1 at 2020-08-11 17:58:39 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 51ms (Views: 32.5ms | ActiveRecord: 1.6ms | Allocations: 18763)
+
+
+Started GET "/authors/texts/" for ::1 at 2020-08-11 17:59:03 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"texts"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 692)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=texts):
+  
+app/controllers/authors_controller.rb:40:in `set_author'
+Started GET "/authors/" for ::1 at 2020-08-11 17:59:07 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 1070)
+
+
