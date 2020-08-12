@@ -40,4 +40,7 @@ class TextsController < ApplicationController
     def set_text
       @text = Text.find(params[:id])
     end
+    def text_params
+      params.require(:text).permit(:title, :words, :characters, :content)
+    end
 end

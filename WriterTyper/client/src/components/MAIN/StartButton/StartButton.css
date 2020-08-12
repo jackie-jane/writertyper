@@ -7,4 +7,7 @@
   font-size: 35px;
   height: 10vh;
   width: 10vw;
+  position: fixed;
+  align-self: center;
+  margin-top: 50vh;
 }
