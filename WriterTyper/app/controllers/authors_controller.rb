@@ -39,4 +39,7 @@ class AuthorsController < ApplicationController
     def set_author
       @author = Author.find(params[:id])
     end
+    def author_params
+      params.require(:author).permit(:name, :biography, :controversy)
+    end
 end
