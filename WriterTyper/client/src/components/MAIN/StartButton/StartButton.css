@@ -1,0 +1,10 @@
+@import url("https://use.typekit.net/yns4wlf.css");
+.startButton {
+  background-color: #04AD04;
+  color: black;
+  font-family: itc-american-typewriter, serif;
+  font-weight: 400;
+  font-size: 35px;
+  height: 10vh;
+  width: 10vw;
+}
