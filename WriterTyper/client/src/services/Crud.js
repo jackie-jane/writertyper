@@ -30,3 +30,8 @@ export const createText = async (authorId, textData) => {
   return resp.data;
 }
 
+export const deleteText = async (authorId, textId) => {
+  const resp = await api.delete(`/authors/${authorId}/texts/${textId}`);
+}
+
+
