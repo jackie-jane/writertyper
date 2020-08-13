@@ -10,6 +10,7 @@ class Read extends Component {
       authors: [],
       valueId: 0,
       texts: [],
+      submit: false
     }
   }
   async componentDidMount() {
@@ -21,18 +22,26 @@ class Read extends Component {
     }
   }
   async componentDidUpdate() {
-    try {
-      const id = this.state.valueId
-      const writerTexts = await readAllTextByAuthor(id)
-      this.setState({ texts: writerTexts })
-    } catch (err) {
-      console.log(`encountered an error described here: ${err}`)
+    if (this.state.submit === true) {
+      try {
+        const id = this.state.valueId
+        const writerTexts = await readAllTextByAuthor(id)
+        this.setState({
+          texts: writerTexts,
+          submit: false
+        })
+      } catch (err) {
+        console.log(`encountered an error described here: ${err}`)
+      }
+    } else {
+      console.log('nothing needs to be changed')
     }
   }
   handleChange = (e) => {
     const value = e.target.value
     this.setState({
-      valueId: value
+      valueId: value,
+      submit: true
     })
   }
   handleDelete = (e) => {

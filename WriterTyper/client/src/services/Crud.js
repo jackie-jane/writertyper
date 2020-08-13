@@ -34,4 +34,8 @@ export const deleteText = async (authorId, textId) => {
   const resp = await api.delete(`/authors/${authorId}/texts/${textId}`);
 }
 
+export const editText = async (authorId, textId, textData) => {
+  const resp = await api.put(`/authors/${authorId}/texts/${textId}`, { text: textData });
+  return resp.data;
+}
 
