@@ -5,10 +5,8 @@ import StartButton from '../../components/MAIN/StartButton/StartButton'
 function Main(props) {
   return (
     <>
-      <Layout>
         <Introduction />
         <StartButton />
-      </Layout>
     </>
   );
 }

@@ -3,8 +3,8 @@ import Layout from '../../components/SHARED/Layout/Layout'
 
 function Type(props) {
   return (
-    <Layout>
-    </Layout>
+    <>
+    </>
   );
 }
 
