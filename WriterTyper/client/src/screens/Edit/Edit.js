@@ -41,7 +41,7 @@ class Edit extends Component {
       text: {
         content: newText,
         words: wordArr,
-        character: charArr
+        characters: charArr
       }
     })
   }
@@ -64,7 +64,6 @@ class Edit extends Component {
           </textarea>
           <button type='submit'>Submit</button>
         </form>
-
       </>
     );
   }
