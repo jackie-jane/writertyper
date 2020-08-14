@@ -1,0 +1,43 @@
+@import url("https://use.typekit.net/yns4wlf.css");
+.formRead{
+  display: flex;
+  flex-flow: column;
+}
+.labelRead {
+  color: #04AD04;
+}
+.selectRead {
+background-color: black;
+border: 1px solid #04AD04;
+}
+.textCont {
+  color: #04AD04;
+  border: 1px solid #04AD04;
+  font-family: itc-american-typewriter, serif;
+  display: flex;
+  flex-flow: column;
+  margin: 10vh 20vw 10vh 20vw;
+}
+.topDivRead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.titleAndAuthor {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+.editButtonOnRead, .deleteButtonOnRead {
+  background-color: #04AD04;
+  color: black;
+  font-family: itc-american-typewriter, serif;
+  font-weight: 400;
+  font-size: 20px;
+  height: 35px;
+  width: 75px;
+}
+.contentOnRead {
+  padding: 25px;
+}
