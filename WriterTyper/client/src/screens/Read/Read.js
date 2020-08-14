@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { readAllAuthors, readAllTextByAuthor, deleteText } from '../../services/Crud'
+import { readAllAuthors, readAllTextByAuthor, readOneAuthor, deleteText } from '../../services/Crud'
 import './Read.css'
 
 class Read extends Component {
@@ -10,7 +10,8 @@ class Read extends Component {
       authors: [],
       valueId: 0,
       texts: [],
-      submit: false
+      submit: false,
+      author: [],
     }
   }
   async componentDidMount() {
@@ -26,8 +27,10 @@ class Read extends Component {
       try {
         const id = this.state.valueId
         const writerTexts = await readAllTextByAuthor(id)
+        const writerInfo = await readOneAuthor(id)
         this.setState({
           texts: writerTexts,
+          author: writerInfo,
           submit: false
         })
       } catch (err) {
@@ -53,8 +56,9 @@ class Read extends Component {
     const author = this.state.valueId
     const authors = this.state.authors
     const texts = this.state.texts
+    const bio = this.state.author
     return (
-      <div>
+      <>
         <form className='formRead'>
           <label htmlFor="authorSelect"
             className='labelRead'>
@@ -104,7 +108,7 @@ class Read extends Component {
           :
           null
         }
-      </div>
+      </>
     );
   }
 }

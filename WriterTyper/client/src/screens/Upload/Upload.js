@@ -11,8 +11,8 @@ class Upload extends Component {
         words: '',
         characters: '',
         content: '',
+        author_id: '',
       },
-      authorId: '',
       authors: [],
     }
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -36,7 +36,10 @@ class Upload extends Component {
   }
   handleChange = (e) => {
     this.setState({
-      authorId: e.target.value
+      text: {
+        ...this.state.text,
+        author_id: e.target.value
+      }
     })
   }
   handleInput = (e) => {
@@ -54,15 +57,14 @@ class Upload extends Component {
   }
   handleSubmit(e) {
     e.preventDefault()
-    const authorId = this.state.authorId
+    const author_id = this.state.text.author_id
     const textData = this.state.text
     console.log(textData)
-    createText(authorId, textData)
-    console.log('created')
+    createText(author_id, textData)
   }
   render() {
     const authors = this.state.authors
-    const valid = this.state.authorId
+    const valid = this.state.text.author_id
     return (
       <>
         <form className='formUpload'>

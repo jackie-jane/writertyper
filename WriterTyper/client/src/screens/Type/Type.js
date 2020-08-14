@@ -1,11 +1,23 @@
-import React from 'react';
-import Layout from '../../components/SHARED/Layout/Layout'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-function Type(props) {
-  return (
-    <>
-    </>
-  );
+class Type extends Component {
+  constructor(props) {
+    super(props);
+
+  }
+
+  componentDidMount() {
+
+  }
+
+  render() {
+    return (
+      <div>
+
+      </div>
+    );
+  }
 }
 
 export default Type;
