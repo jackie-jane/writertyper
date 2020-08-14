@@ -41,6 +41,6 @@ class TextsController < ApplicationController
       @text = Text.find(params[:id])
     end
     def text_params
-      params.require(:title).permit( :words, :characters, :content, :author_id)
+      params.require(:text).permit( :title, :words, :characters, :content, :author_id)
     end
 end

@@ -11,7 +11,6 @@ class Read extends Component {
       valueId: 0,
       texts: [],
       submit: false,
-      author: [],
     }
   }
   async componentDidMount() {
@@ -30,7 +29,6 @@ class Read extends Component {
         const writerInfo = await readOneAuthor(id)
         this.setState({
           texts: writerTexts,
-          author: writerInfo,
           submit: false
         })
       } catch (err) {
@@ -51,12 +49,14 @@ class Read extends Component {
     const textId = e.target.value
     const authId = this.state.valueId
     deleteText(authId, textId)
+    this.setState({
+      submit: true
+    })
   }
   render() {
     const author = this.state.valueId
     const authors = this.state.authors
     const texts = this.state.texts
-    const bio = this.state.author
     return (
       <>
         <form className='formRead'>
@@ -81,6 +81,26 @@ class Read extends Component {
         </form>
         {texts ?
           <>
+            <div className='textCont'>
+                <div className='topDivRead'>
+                  <div className='titleAndAuthor'>
+                    <h2>{this.state.texts[0].author.name}</h2>
+                  </div>
+                  <Link to={`/edit/${author}/${element.id}`}>
+                    <button
+                      className='editButtonOnRead'>
+                      Edit
+                      </button>
+                  </Link>
+                  <button
+                    className='deleteButtonOnRead'
+                    onClick={this.handleDelete}
+                    value={element.id}>
+                    Delete
+                    </button>
+                </div>
+                <p className='contentOnRead'>{element.content}</p>
+              </div>
             {texts.map(element =>
               <div className='textCont'>
                 <div className='topDivRead'>
