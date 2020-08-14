@@ -26,7 +26,8 @@ export const createAuthor = async (author) => {
 }
 
 export const createText = async (authorId, textData) => {
-  const resp = await api.post(`/authors/${authorId}/texts`, { text: textData });
+  const resp = await api.post(`/authors/${authorId}/texts`, `{ "text": { ${textData} }`);
+  console.log(textData)
   return resp.data;
 }
 

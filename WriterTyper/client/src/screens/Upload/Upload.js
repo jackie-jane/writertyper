@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { createText, readAllAuthors } from '../../services/Crud'
+import './Upload.css'
 
 class Upload extends Component {
   constructor(props) {
@@ -11,8 +12,10 @@ class Upload extends Component {
         characters: '',
         content: '',
       },
-      authorId: ''
+      authorId: '',
+      authors: [],
     }
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
   async componentDidMount() {
     try {
@@ -23,17 +26,17 @@ class Upload extends Component {
     }
   }
   handleTitleInput = (e) => {
+    const newTitle = e.target.value
     this.setState({
       text: {
-        title: e.target.value
+        ...this.state.text,
+        title: newTitle
       }
     })
   }
   handleChange = (e) => {
     this.setState({
-      text: {
-        authorId: e.target.value
-      }
+      authorId: e.target.value
     })
   }
   handleInput = (e) => {
@@ -42,19 +45,23 @@ class Upload extends Component {
     const charArr = newText.split('').length
     this.setState({
       text: {
+        ...this.state.text,
         content: newText,
         words: wordArr,
         characters: charArr
       }
     })
   }
-  handleSubmit = () => {
+  handleSubmit(e) {
+    e.preventDefault()
     const authorId = this.state.authorId
     const textData = this.state.text
+    console.log(textData)
     createText(authorId, textData)
     console.log('created')
   }
   render() {
+    const authors = this.state.authors
     const valid = this.state.authorId
     return (
       <>
@@ -86,7 +93,8 @@ class Upload extends Component {
             </input>
             <textarea
               placeholder='copy and paste text here'
-              onChange={this.handleInput}>
+              onChange={this.handleInput}
+            >
             </textarea>
             <button type='submit'>Submit</button>
           </form>
