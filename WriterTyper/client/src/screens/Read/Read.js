@@ -45,6 +45,9 @@ class Read extends Component {
       submit: true
     })
   }
+  handleAuthDelete = (e) => {
+    console.log('TBA')
+  }
   handleDelete = (e) => {
     const textId = e.target.value
     const authId = this.state.valueId
@@ -82,31 +85,33 @@ class Read extends Component {
         {texts ?
           <>
             <div className='textCont'>
-                <div className='topDivRead'>
-                  <div className='titleAndAuthor'>
-                    <h2>{this.state.texts[0].author.name}</h2>
-                  </div>
-                  <Link to={`/edit/${author}/${element.id}`}>
-                    <button
-                      className='editButtonOnRead'>
-                      Edit
-                      </button>
-                  </Link>
-                  <button
-                    className='deleteButtonOnRead'
-                    onClick={this.handleDelete}
-                    value={element.id}>
-                    Delete
-                    </button>
+              <div className='topDivRead'>
+                <div className='titleAndAuthor'>
+                  <h2>{this.state.texts.author.name}</h2>
                 </div>
-                <p className='contentOnRead'>{element.content}</p>
+                <Link to={`/eit/${author}/${this.state.valueId}`}>
+                  <button
+                    className='editButtonOnRead'>
+                    Edit
+                      </button>
+                </Link>
+                <button
+                  className='deleteButtonOnRead'
+                  onClick={this.handleAuthDelete}
+                  value={this.state.valueId}>
+                  Delete
+                    </button>
               </div>
+              <p className='contentOnRead'>{this.state.texts[0].author.biography}
+                <br></br><br></br>
+              </p>
+              {this.state.texts[0].author.controversy}
+            </div>
             {texts.map(element =>
               <div className='textCont'>
                 <div className='topDivRead'>
                   <div className='titleAndAuthor'>
-                    <h2>{element.title}</h2>
-                    <h4>{element.author.name}</h4>
+                    <h2>{this.state.texts[0].author.bio}</h2>
                   </div>
                   <Link to={`/edit/${author}/${element.id}`}>
                     <button
