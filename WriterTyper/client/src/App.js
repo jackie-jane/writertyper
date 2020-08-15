@@ -5,7 +5,7 @@ import Upload from './screens/Upload/Upload'
 import Read from './screens/Read/Read'
 import Type from './screens/Type/Type'
 import TextEdit from './screens/TextEdit/Edit'
-import AuthorEdit from './screens/AuthorEdit/AuthorEdit'
+import AuthorEdit from './screens/AuthorEdit'
 import Layout from './components/SHARED/Layout/Layout'
 import About from './screens/About/About'
 import './App.css';
