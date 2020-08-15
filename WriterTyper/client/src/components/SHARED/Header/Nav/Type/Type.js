@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import './Read.css'
+import '../NavButtonDesign/Button.css'
 
-function ReadButton() {
+function TypeButton() {
   return (
-    <Link to='/read' className='navLink'>
+    <Link to='/about' className='navLink'>
       <button className='navButton'>
-        Read
+        Type
       </button>
     </Link>
   );
 }
-export default ReadButton;
+export default TypeButton;
