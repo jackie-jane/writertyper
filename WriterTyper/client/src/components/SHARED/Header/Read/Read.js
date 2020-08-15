@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import './Upload.css'
+import './Read.css'
 
-function UploadButton() {
+function ReadButton() {
   return (
-    <Link to='/upload' className='navLink'>
+    <Link to='/read' className='navLink'>
       <button className='navButton'>
-        Upload
+        Read
       </button>
     </Link>
   );
 }
-export default UploadButton;
+export default ReadButton;
