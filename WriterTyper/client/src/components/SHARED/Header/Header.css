@@ -8,4 +8,8 @@ header {
   display: flex;
   flex-flow: row;
   align-items: center;
+  text-decoration: none;
+}
+.navButton, .navLink, .navItem {
+  text-decoration: none;
 }

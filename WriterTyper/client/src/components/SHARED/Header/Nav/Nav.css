@@ -3,13 +3,5 @@
   display: flex;
   margin-left: 400px;
   align-items: center;
-}
-.navItem {
-  display: inline;
   text-decoration: none;
-  padding-right: 55px;
-  font-size: 40px;
-  font-family: itc-american-typewriter-cond, serif;
-  font-weight: 500;
-  font-style: normal;
 }
