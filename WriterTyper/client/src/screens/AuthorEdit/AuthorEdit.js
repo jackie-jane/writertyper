@@ -9,7 +9,11 @@ class AuthorEdit extends Component {
     this.state = {
       author: []
     }
+    this.handleChangeName = this.handleChangeName.bind(this)
+    this.handleChangeBio = this.handleChangeBio.bind(this)
+    this.handleChangeCon = this.handleChangeCon.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.componentDidMount = this.componentDidMount.bind(this)
   }
   async componentDidMount() {
     const id = this.props.match.params.authorId
@@ -19,13 +23,34 @@ class AuthorEdit extends Component {
       author: res
     })
   }
-  handleChange = (e) => {
+
+  handleChangeName = (e) => {
     e.preventDefault()
-    const { name, value } = e.target
+    const value = e.target.value
     this.setState({
       author: {
-        ...this.state.profile,
-        [name]: value
+        ...this.state.author,
+        name: value
+      }
+    })
+  }
+  handleChangeBio = (e) => {
+    e.preventDefault()
+    const value = e.target.value
+    this.setState({
+      author: {
+        ...this.state.author,
+        biography: value
+      }
+    })
+  }
+  handleChangeCon = (e) => {
+    e.preventDefault()
+    const value = e.target.value
+    this.setState({
+      author: {
+        ...this.state.author,
+        controversy: value
       }
     })
   }
@@ -43,21 +68,21 @@ class AuthorEdit extends Component {
           name='name'
           className='authNameInput'
           value={this.state.author.name}
-          onChange={this.handleChange}
+          onChange={this.handleChangeName}
         ></input>
         <input
           type='text'
           name='biography'
           className='authBioInput'
           value={this.state.author.biography}
-          onChange={this.handleChange}
+          onChange={this.handleChangeBio}
         ></input>
         <input
           type='text'
           name='controversy'
           className='authNameInput'
           value={this.state.author.controversy}
-          onChange={this.handleChange}
+          onChange={this.handleChangeCon}
         ></input>
         <button type='submit'>Submit</button>
       </form>

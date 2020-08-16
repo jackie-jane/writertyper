@@ -8275,3 +8275,763 @@ Processing by AuthorsController#show as HTML
 Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 739)
 
 
+Started GET "/authors/1" for ::1 at 2020-08-16 17:07:35 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 807)
+
+
+Started PUT "/authors/1" for ::1 at 2020-08-16 17:07:48 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"controversy"=>"zzzdddamda"}, "id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "Emily Dickinson"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Update (2.8ms)[0m  [1m[33mUPDATE "authors" SET "controversy" = $1 WHERE "authors"."id" = $2[0m  [["controversy", "zzzdddamda"], ["id", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 6.5ms | Allocations: 4387)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-16 17:08:10 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 739)
+
+
+Started GET "/authors" for ::1 at 2020-08-16 17:09:07 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.3ms | Allocations: 1113)
+
+
+Started GET "/authors/3/texts" for ::1 at 2020-08-16 17:09:10 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 3]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.8ms | Allocations: 1488)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:09:10 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 741)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-16 17:09:12 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.2ms | Allocations: 2644)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-16 17:09:12 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 739)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-16 17:09:15 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 739)
+
+
+Started PUT "/authors/2" for ::1 at 2020-08-16 17:09:19 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"controversy"=>"TBAasdfdasf"}, "id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "John Donne"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Update (0.2ms)[0m  [1m[33mUPDATE "authors" SET "controversy" = $1 WHERE "authors"."id" = $2[0m  [["controversy", "TBAasdfdasf"], ["id", 2]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 4369)
+
+
+Started PUT "/authors/2" for ::1 at 2020-08-16 17:09:22 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"controversy"=>"TBAasdfdasf"}, "id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "John Donne"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 3565)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-16 17:09:24 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 739)
+
+
+Started GET "/authors" for ::1 at 2020-08-16 17:09:32 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1110)
+
+
+Started GET "/authors/" for ::1 at 2020-08-16 17:09:58 -0400
+Processing by AuthorsController#index as */*
+  Parameters: {"author"=>{"name"=>"Emily Dickinson", "controversy"=>"789", "biography"=>"1235"}}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1112)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-16 17:10:09 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.8ms | Allocations: 12303)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-16 17:10:09 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 739)
+
+
+Started GET "/authors/3/texts" for ::1 at 2020-08-16 17:10:11 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 3]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 1485)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:10:11 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 741)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:10:12 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 741)
+
+
+Started PUT "/authors/3" for ::1 at 2020-08-16 17:10:26 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"name"=>"Jackie Janesa"}, "id"=>"3"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "Jackie Janesa"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Update (0.4ms)[0m  [1m[33mUPDATE "authors" SET "name" = $1 WHERE "authors"."id" = $2[0m  [["name", "Jackie Janesa"], ["id", 3]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 4369)
+
+
+Started PUT "/authors/3" for ::1 at 2020-08-16 17:10:28 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"name"=>"Jackie Janesa"}, "id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "Jackie Janesa"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3567)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:10:29 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 741)
+
+
+Started PUT "/authors/3" for ::1 at 2020-08-16 17:11:22 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"controversy"=>"tah"}, "id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "Jackie Janesa"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Update (0.2ms)[0m  [1m[33mUPDATE "authors" SET "controversy" = $1 WHERE "authors"."id" = $2[0m  [["controversy", "tah"], ["id", 3]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 4369)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:11:35 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 740)
+
+
+Started PUT "/authors/3" for ::1 at 2020-08-16 17:11:56 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"controversy"=>"tahthis"}, "id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "Jackie Janesa"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Update (1.5ms)[0m  [1m[33mUPDATE "authors" SET "controversy" = $1 WHERE "authors"."id" = $2[0m  [["controversy", "tahthis"], ["id", 3]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 4369)
+
+
+Started PUT "/authors/3" for ::1 at 2020-08-16 17:12:47 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"controversy"=>"tahthis"}, "id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "Jackie Janesa"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 3566)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:14:25 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:14:44 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:14:49 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (2.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:15:06 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:15:44 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 743)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:17:01 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (1.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:17:02 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:17:06 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:17:07 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:18:07 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:18:27 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:18:28 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:18:29 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (2.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 2.2ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:18:31 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (2.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:18:36 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:18:37 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:18:38 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:18:40 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (2.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:18:57 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:19:12 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:20:00 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:20:00 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:23:50 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:24:20 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:24:55 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (2.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:25:31 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:25:45 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:25:54 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (2.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.2ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:25:56 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-16 17:26:21 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1109)
+
+
+Started GET "/authors/3/texts" for ::1 at 2020-08-16 17:26:24 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 3]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 1485)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:26:24 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:26:25 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 740)
+
+
+Started PUT "/authors/3" for ::1 at 2020-08-16 17:26:41 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"name"=>"Jackie Jane"}, "id"=>"3"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "Jackie Jane"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Update (0.8ms)[0m  [1m[33mUPDATE "authors" SET "name" = $1 WHERE "authors"."id" = $2[0m  [["name", "Jackie Jane"], ["id", 3]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.8ms | Allocations: 4369)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:26:45 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:27:23 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:27:24 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:29:27 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:30:03 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:30:06 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:30:08 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:30:09 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (10.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 10.5ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:30:38 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (5.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 5.0ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:30:47 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (2.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 2.0ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:30:48 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:30:51 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (1.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:31:48 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (24.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 24.2ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:31:54 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (8.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 8.0ms | Allocations: 743)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:31:55 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:31:56 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:31:57 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (3.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 3.4ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:32:08 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:32:12 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (44.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 48ms (Views: 0.4ms | ActiveRecord: 44.7ms | Allocations: 740)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:32:14 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (26.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 26.1ms | Allocations: 740)
+
+
+Started PUT "/authors/3" for ::1 at 2020-08-16 17:32:37 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"id"=>3, "name"=>"Jackie Jane", "biography"=>"a fucking miserab", "controversy"=>"jimmytha"}, "id"=>"3"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "Jackie Jane"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Update (1.5ms)[0m  [1m[33mUPDATE "authors" SET "biography" = $1, "controversy" = $2 WHERE "authors"."id" = $3[0m  [["biography", "a fucking miserab"], ["controversy", "jimmytha"], ["id", 3]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 4448)
+
+
+Started GET "/authors/3" for ::1 at 2020-08-16 17:32:39 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 739)
+
+
