@@ -93,7 +93,7 @@ class Read extends Component {
                 <div className='titleAndAuthor'>
                   <h2>{writer.name}</h2>
                 </div>
-                <Link to={`/${author}/${this.state.valueId}`}>
+                <Link to={`/author/${this.state.valueId}`}>
                   <button
                     className='editButtonOnRead'>
                     Edit
