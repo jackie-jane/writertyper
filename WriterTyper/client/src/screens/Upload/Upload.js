@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'
 import { createText, readAllAuthors, createAuthor } from '../../services/Crud'
 import './Upload.css'
 
@@ -48,10 +49,11 @@ class Upload extends Component {
       }
     })
   }
-  handleAuthSubmit(e) {
+  async handleAuthSubmit(e) {
     e.preventDefault()
     const author = this.state.author
-    createAuthor(author)
+    await createAuthor(author)
+    this.props.history.push('./read')
   }
   WordCount = (e) => {
     const str = e.target.value
@@ -75,12 +77,13 @@ class Upload extends Component {
       }
     })
   }
-  handleTextSubmit(e) {
+  async handleTextSubmit(e) {
     e.preventDefault()
     const author_id = this.state.text.author_id
     const textData = this.state.text
     console.log(textData)
-    createText(author_id, textData)
+    await createText(author_id, textData)
+    this.props.history.push('./read')
   }
   render() {
     const newAuthor = this.state.newWriter
@@ -133,7 +136,9 @@ class Upload extends Component {
               onChange={this.handleAuthInput}
             >
             </textarea>
-            <button type='submit'>Submit</button>
+            <button type='submit'>
+              Submit
+              </button>
           </form>
           :
           null
@@ -162,4 +167,4 @@ class Upload extends Component {
   }
 }
 
-export default Upload;
+export default withRouter(Upload);
