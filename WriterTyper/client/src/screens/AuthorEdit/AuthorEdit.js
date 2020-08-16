@@ -9,6 +9,7 @@ class AuthorEdit extends Component {
     this.state = {
       author: []
     }
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
   async componentDidMount() {
     const id = this.props.match.params.authorId
@@ -28,11 +29,11 @@ class AuthorEdit extends Component {
       }
     })
   }
-  handleSubmit = (e) => {
+  async handleSubmit(e) {
     e.preventDefault()
     const id = this.props.match.params.authorId
-    const authorData = this.state.autho
-    editAuthor(id, authorData)
+    const authorData = this.state.author
+    await editAuthor(id, authorData)
   }
   render() {
     return (
@@ -41,21 +42,21 @@ class AuthorEdit extends Component {
           type='text'
           name='name'
           className='authNameInput'
-          defaultValue={this.state.author.name}
+          value={this.state.author.name}
           onChange={this.handleChange}
         ></input>
         <input
           type='text'
           name='biography'
           className='authBioInput'
-          defaultValue={this.state.author.biography}
+          value={this.state.author.biography}
           onChange={this.handleChange}
         ></input>
         <input
           type='text'
           name='controversy'
           className='authNameInput'
-          defaultValue={this.state.author.controversy}
+          value={this.state.author.controversy}
           onChange={this.handleChange}
         ></input>
         <button type='submit'>Submit</button>

@@ -41,7 +41,7 @@ export const editText = async (authorId, textId, textData) => {
 }
 
 export const editAuthor = async (authorId, authorData) => {
-  const resp = await api.put(`/authors/:id(`, { author: authorData });
+  const resp = await api.put(`/authors/${authorId}`, { author: authorData });
   return resp.data;
 }
 
