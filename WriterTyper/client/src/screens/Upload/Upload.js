@@ -6,19 +6,14 @@ class Upload extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: {
-        title: '',
-        words: '',
-        characters: '',
-        content: '',
-        author_id: '',
-      },
+      text: {},
       authors: [],
-      author: [],
+      author: {},
       newWriter: 0
     }
     this.handleTextSubmit = this.handleTextSubmit.bind(this)
     this.handleAuthSubmit = this.handleAuthSubmit.bind(this)
+    this.handleAuthInput = this.handleAuthInput.bind(this)
   }
   async componentDidMount() {
     try {
@@ -27,15 +22,6 @@ class Upload extends Component {
     } catch (err) {
       console.log(`encountered an error described here: ${err}`)
     }
-  }
-  handleTitleInput = (e) => {
-    const newTitle = e.target.value
-    this.setState({
-      text: {
-        ...this.state.text,
-        title: newTitle
-      }
-    })
   }
   handleChange = (e) => {
     const value = e.target.value
@@ -53,24 +39,39 @@ class Upload extends Component {
       })
     }
   }
-  handleInput = (e) => {
-    const newText = e.target.value
-    const wordArr = newText.split(' ').length
-    const charArr = newText.split('').length
+  handleAuthInput(e) {
+    const { name, value } = e.target
     this.setState({
-      text: {
-        ...this.state.text,
-        content: newText,
-        words: wordArr,
-        characters: charArr
+      author: {
+        ...this.state.author,
+        [name]: value
       }
     })
   }
-  handleAuthInput(e) {
-    console.log('jimmy jam')
-  }
   handleAuthSubmit(e) {
     console.log('jimmy jam')
+  }
+  WordCount = (e) => {
+    const str = e.target.value
+    const wordCount = str.split(' ').length
+    const charCount = str.split('').length
+    this.setState({
+      text: {
+        ...this.state.text,
+        content: str,
+        words: wordCount,
+        characters: charCount
+      }
+    })
+  }
+  handleTextInput = (e) => {
+    const { name, value } = e.target
+    this.setState({
+      text: {
+        ...this.state.text,
+        [name]: value
+      }
+    })
   }
   handleTextSubmit(e) {
     e.preventDefault()
@@ -82,7 +83,6 @@ class Upload extends Component {
   render() {
     const newAuthor = this.state.newWriter
     const authors = this.state.authors
-    const valid = this.state.text.author_id
     return (
       <>
         <form className='formUpload'>
@@ -117,14 +117,17 @@ class Upload extends Component {
             onSubmit={this.handleAuthSubmit}>
             <input
               placeholder="Writer's name"
+              name='name'
               onChange={this.handleAuthInput}>
             </input>
             <textarea
               placeholder="Writer's biography"
+              name='biography'
               onChange={this.handleAuthInput}
             ></textarea>
             <textarea
               placeholder="Notable controversy"
+              name='controversy'
               onChange={this.handleAuthInput}
             >
             </textarea>
@@ -138,11 +141,13 @@ class Upload extends Component {
             onSubmit={this.handleTextSubmit}>
             <input
               placeholder='copy and paste title here'
-              onChange={this.handleTitleInput}>
+              name='title'
+              onChange={this.handleTextInput}>
             </input>
             <textarea
               placeholder='copy and paste text here'
-              onChange={this.handleInput}
+              name='content'
+              onChange={this.WordCount}
             >
             </textarea>
             <button type='submit'>Submit</button>
