@@ -8,11 +8,14 @@ class Read extends Component {
     super(props);
     this.state = {
       authors: [],
-      valueId: 0,
+      valueId: '',
       texts: [],
       submit: false,
-      author: [],
+      writerInfo: []
     }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleAuthDelete = this.handleAuthDelete.bind(this)
+    this.handleDelete = this.handleDelete.bind(this)
   }
   async componentDidMount() {
     try {
@@ -30,14 +33,12 @@ class Read extends Component {
         const writerInfo = await readOneAuthor(id)
         this.setState({
           texts: writerTexts,
-          author: writerInfo,
-          submit: false
+          submit: false,
+          writerInfo: writerInfo
         })
       } catch (err) {
         console.log(`encountered an error described here: ${err}`)
       }
-    } else {
-      console.log('nothing needs to be changed')
     }
   }
   handleChange = (e) => {
@@ -47,16 +48,22 @@ class Read extends Component {
       submit: true
     })
   }
+  handleAuthDelete = (e) => {
+    console.log('TBA')
+  }
   handleDelete = (e) => {
     const textId = e.target.value
     const authId = this.state.valueId
     deleteText(authId, textId)
+    this.setState({
+      submit: true
+    })
   }
   render() {
     const author = this.state.valueId
     const authors = this.state.authors
     const texts = this.state.texts
-    const bio = this.state.author
+    const writer = this.state.writerInfo
     return (
       <>
         <form className='formRead'>
@@ -79,14 +86,36 @@ class Read extends Component {
             )}
           </select>
         </form>
-        {texts ?
+        {author ?
           <>
+            <div className='textCont'>
+              <div className='topDivRead'>
+                <div className='titleAndAuthor'>
+                  <h2>{writer.name}</h2>
+                </div>
+                <Link to={`/author/${this.state.valueId}`}>
+                  <button
+                    className='editButtonOnRead'>
+                    Edit
+                      </button>
+                </Link>
+                <button
+                  className='deleteButtonOnRead'
+                  onClick={this.handleAuthDelete}
+                  value={this.state.valueId}>
+                  Delete
+                    </button>
+              </div>
+              <p className='contentOnRead'>{writer.biography}
+                <br></br><br></br>
+              </p>
+              {writer.controversy}
+            </div>
             {texts.map(element =>
               <div className='textCont'>
                 <div className='topDivRead'>
                   <div className='titleAndAuthor'>
                     <h2>{element.title}</h2>
-                    <h4>{element.author.name}</h4>
                   </div>
                   <Link to={`/edit/${author}/${element.id}`}>
                     <button
@@ -101,7 +130,11 @@ class Read extends Component {
                     Delete
                     </button>
                 </div>
-                <p className='contentOnRead'>{element.content}</p>
+                <textarea
+                  className='contentOnRead'
+                  value={element.content}
+                  disabled="disabled" >
+                </textarea>
               </div>
             )}
           </>
