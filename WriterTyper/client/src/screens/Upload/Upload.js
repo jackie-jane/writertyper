@@ -14,8 +14,11 @@ class Upload extends Component {
         author_id: '',
       },
       authors: [],
+      author: [],
+      newWriter: 0
     }
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleTextSubmit = this.handleTextSubmit.bind(this)
+    this.handleAuthSubmit = this.handleAuthSubmit.bind(this)
   }
   async componentDidMount() {
     try {
@@ -35,12 +38,20 @@ class Upload extends Component {
     })
   }
   handleChange = (e) => {
-    this.setState({
-      text: {
-        ...this.state.text,
-        author_id: e.target.value
-      }
-    })
+    const value = e.target.value
+    if (value < 1) {
+      this.setState({
+        newWriter: 1
+      })
+    } else {
+      this.setState({
+        text: {
+          ...this.state.text,
+          author_id: e.target.value
+        },
+        newWriter: 2
+      })
+    }
   }
   handleInput = (e) => {
     const newText = e.target.value
@@ -55,7 +66,13 @@ class Upload extends Component {
       }
     })
   }
-  handleSubmit(e) {
+  handleAuthInput(e) {
+    console.log('jimmy jam')
+  }
+  handleAuthSubmit(e) {
+    console.log('jimmy jam')
+  }
+  handleTextSubmit(e) {
     e.preventDefault()
     const author_id = this.state.text.author_id
     const textData = this.state.text
@@ -63,6 +80,7 @@ class Upload extends Component {
     createText(author_id, textData)
   }
   render() {
+    const newAuthor = this.state.newWriter
     const authors = this.state.authors
     const valid = this.state.text.author_id
     return (
@@ -76,6 +94,14 @@ class Upload extends Component {
             id="selectRead"
             className='selectRead'
             onChange={this.handleChange}>
+            <option
+              value='default'>
+              Choose a writer
+                </option>
+            <option
+              value='0'>
+              Add a writer
+                </option>
             {authors.map(element =>
               <>
                 <option
@@ -86,9 +112,30 @@ class Upload extends Component {
             )}
           </select>
         </form>
-        {valid ?
+        {newAuthor === 1 ?
           <form
-            onSubmit={this.handleSubmit}>
+            onSubmit={this.handleAuthSubmit}>
+            <input
+              placeholder="Writer's name"
+              onChange={this.handleAuthInput}>
+            </input>
+            <textarea
+              placeholder="Writer's biography"
+              onChange={this.handleAuthInput}
+            ></textarea>
+            <textarea
+              placeholder="Notable controversy"
+              onChange={this.handleAuthInput}
+            >
+            </textarea>
+            <button type='submit'>Submit</button>
+          </form>
+          :
+          null
+        }
+        {newAuthor === 2 ?
+          <form
+            onSubmit={this.handleTextSubmit}>
             <input
               placeholder='copy and paste title here'
               onChange={this.handleTitleInput}>
