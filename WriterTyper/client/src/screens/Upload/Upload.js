@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createText, readAllAuthors } from '../../services/Crud'
+import { createText, readAllAuthors, createAuthor } from '../../services/Crud'
 import './Upload.css'
 
 class Upload extends Component {
@@ -49,7 +49,9 @@ class Upload extends Component {
     })
   }
   handleAuthSubmit(e) {
-    console.log('jimmy jam')
+    e.preventDefault()
+    const author = this.state.author
+    createAuthor(author)
   }
   WordCount = (e) => {
     const str = e.target.value
