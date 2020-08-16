@@ -9,9 +9,10 @@ class AuthorEdit extends Component {
     this.state = {
       author: []
     }
-    this.handleChangeName = this.handleChangeName.bind(this)
-    this.handleChangeBio = this.handleChangeBio.bind(this)
-    this.handleChangeCon = this.handleChangeCon.bind(this)
+    // this.handleChangeName = this.handleChangeName.bind(this)
+    // this.handleChangeBio = this.handleChangeBio.bind(this)
+    // this.handleChangeCon = this.handleChangeCon.bind(this)
+    this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.componentDidMount = this.componentDidMount.bind(this)
   }
@@ -23,34 +24,13 @@ class AuthorEdit extends Component {
       author: res
     })
   }
-
-  handleChangeName = (e) => {
+  handleChange = (e) => {
     e.preventDefault()
-    const value = e.target.value
+    const { name, value } = e.target
     this.setState({
       author: {
         ...this.state.author,
-        name: value
-      }
-    })
-  }
-  handleChangeBio = (e) => {
-    e.preventDefault()
-    const value = e.target.value
-    this.setState({
-      author: {
-        ...this.state.author,
-        biography: value
-      }
-    })
-  }
-  handleChangeCon = (e) => {
-    e.preventDefault()
-    const value = e.target.value
-    this.setState({
-      author: {
-        ...this.state.author,
-        controversy: value
+        [name]: value
       }
     })
   }
@@ -68,21 +48,21 @@ class AuthorEdit extends Component {
           name='name'
           className='authNameInput'
           value={this.state.author.name}
-          onChange={this.handleChangeName}
+          onChange={this.handleChange}
         ></input>
         <input
           type='text'
           name='biography'
           className='authBioInput'
           value={this.state.author.biography}
-          onChange={this.handleChangeBio}
+          onChange={this.handleChange}
         ></input>
         <input
           type='text'
           name='controversy'
           className='authNameInput'
           value={this.state.author.controversy}
-          onChange={this.handleChangeCon}
+          onChange={this.handleChange}
         ></input>
         <button type='submit'>Submit</button>
       </form>
