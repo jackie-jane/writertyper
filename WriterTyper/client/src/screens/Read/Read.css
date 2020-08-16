@@ -40,4 +40,10 @@ border: 1px solid #04AD04;
 }
 .contentOnRead {
   padding: 25px;
+  background-color:  black;
+  color: #04AD04;
+  font-size: 20px;
+  height: 50vh;
+  align-items: center;
+  align-content: center;
 }
