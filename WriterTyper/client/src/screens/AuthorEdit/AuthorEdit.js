@@ -9,12 +9,8 @@ class AuthorEdit extends Component {
     this.state = {
       author: []
     }
-    // this.handleChangeName = this.handleChangeName.bind(this)
-    // this.handleChangeBio = this.handleChangeBio.bind(this)
-    // this.handleChangeCon = this.handleChangeCon.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.componentDidMount = this.componentDidMount.bind(this)
   }
   async componentDidMount() {
     const id = this.props.match.params.authorId
