@@ -35,6 +35,7 @@ class AuthorEdit extends Component {
     const id = this.props.match.params.authorId
     const authorData = this.state.author
     await editAuthor(id, authorData)
+    this.props.history.push('/read')
   }
   render() {
     return (
