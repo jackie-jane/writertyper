@@ -69,26 +69,27 @@ class Read extends Component {
     const writer = this.state.writerInfo
     return (
       <>
-        <form className='formRead'>
-          <label htmlFor="authorSelect"
-            className='labelRead'>
-            Choose a writer:
-            </label>
-          <select
-            name="author_id"
-            id="author_id"
-            className='selectRead'
-            onChange={this.handleChange}>
-            {authors.map(element =>
-              <>
-                <option
-                  value={element.id}>
-                  {element.name}
-                </option>
-              </>
-            )}
-          </select>
-        </form>
+        <div className='selectCont'>
+          <form className='formRead'>
+            <select
+              name="author_id"
+              id="author_id"
+              className='selectRead'
+              onChange={this.handleChange}>
+              <option>
+                Choose a writer
+            </option>
+              {authors.map(element =>
+                <>
+                  <option
+                    value={element.id}>
+                    {element.name}
+                  </option>
+                </>
+              )}
+            </select>
+          </form>
+        </div>
         {author ?
           <>
             <div className='textCont'>
