@@ -5,7 +5,7 @@ import './Logo.css'
 function Logo(props) {
   return (
     <p className='logo'>
-      <Link to='/'>
+      <Link to='/' className='logoLink'>
         WriterTyper
       </Link>
     </p>

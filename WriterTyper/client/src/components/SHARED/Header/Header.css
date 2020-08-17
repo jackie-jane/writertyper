@@ -1,15 +1,11 @@
 header {
-  margin-top: -16px;
-  height: 11.5vh;
   top: 0px;
   left: 0;
   right: 0;
   background-color: #74888a;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   align-items: center;
-  text-decoration: none;
-}
-.navButton, .navLink, .navItem {
+  justify-content: center;
   text-decoration: none;
 }
