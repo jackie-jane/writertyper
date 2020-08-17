@@ -11960,3 +11960,389 @@ Processing by AuthorsController#show as HTML
 Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 739)
 
 
+Started GET "/authors" for ::1 at 2020-08-17 15:09:13 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.9ms | Allocations: 1059)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:29:11 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (3.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 3.2ms | Allocations: 1059)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:29:27 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (25.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 28ms (Views: 2.8ms | ActiveRecord: 25.0ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:29:47 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (32.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 37ms (Views: 4.3ms | ActiveRecord: 32.3ms | Allocations: 1022)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:29:49 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:29:53 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.8ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:29:55 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:30:25 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:34:58 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.9ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:36:12 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.6ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:36:40 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.9ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:39:23 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:39:29 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:40:16 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 1.6ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:40:19 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.7ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:40:27 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.6ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:40:53 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1021)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-17 15:40:57 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (1.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 2.5ms | Allocations: 2694)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-17 15:40:57 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 739)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-17 15:41:24 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 1.2ms | Allocations: 18739)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-17 15:41:24 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 739)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-17 15:43:16 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 739)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:43:19 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:43:20 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:45:39 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:45:55 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (2.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 2.2ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:52:11 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 1.1ms | Allocations: 1059)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:53:48 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:53:49 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:53:51 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:53:52 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:53:53 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:53:54 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1022)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:54:36 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:54:47 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:54:48 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:38 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:41 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:42 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:43 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:43 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:44 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:44 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:47 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:47 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:48 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:49 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:49 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-17 15:55:52 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1021)
+
+

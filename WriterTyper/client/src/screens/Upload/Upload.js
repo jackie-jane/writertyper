@@ -91,13 +91,10 @@ class Upload extends Component {
     return (
       <>
         <form className='formUpload'>
-          <label className='labelUpload'>
-            Choose a writer:
-          </label>
           <select
+            className='selectUpload'
             name="selectRead"
             id="selectRead"
-            className='selectRead'
             onChange={this.handleChange}>
             <option
               value='default'>
@@ -119,20 +116,24 @@ class Upload extends Component {
         </form>
         {newAuthor === 1 ?
           <form
-            onSubmit={this.handleAuthSubmit}>
+            onSubmit={this.handleAuthSubmit}
+            className='formUpload'>
             <input
               placeholder="Writer's name"
               name='name'
+              className='shortInput'
               onChange={this.handleAuthInput}>
             </input>
             <textarea
               placeholder="Writer's biography"
               name='biography'
+              className='longInput'
               onChange={this.handleAuthInput}
             ></textarea>
             <textarea
               placeholder="Notable controversy"
               name='controversy'
+              className='longInput'
               onChange={this.handleAuthInput}
             >
             </textarea>

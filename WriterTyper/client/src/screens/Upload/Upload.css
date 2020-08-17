@@ -1,0 +1,31 @@
+@import url("https://use.typekit.net/yns4wlf.css");
+.formUpload, .labelUpload, .shortInput, .longInput {
+background-color: black;
+color: #04AD04;
+font-size: 20px;
+border: 1px solid #04AD04;
+margin: 
+}
+.formUpload {
+  border: none
+}
+::placeholder {
+  color: #04AD04;
+}
+.shortInput {
+  width: 50vw;
+}
+.longInput {
+  width: 50vw;
+  height: 50vh;
+}
+.selectUpload {
+  background-color: black;
+  border: 1px solid #04AD04;
+  width: 200px;
+  margin: 25px 0 0 20vw;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: itc-american-typewriter, serif;
+  color: #04AD04;
+  }
