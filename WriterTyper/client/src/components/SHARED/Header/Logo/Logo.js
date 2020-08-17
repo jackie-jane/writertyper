@@ -4,11 +4,12 @@ import './Logo.css'
 
 function Logo(props) {
   return (
-    <p className='logo'>
-      <Link to='/' className='logoLink'>
+
+    <Link to='/' className='logoLink'>
+      <p className='logo'>
         WriterTyper
-      </Link>
-    </p>
+      </p>
+    </Link>
   );
 }
 

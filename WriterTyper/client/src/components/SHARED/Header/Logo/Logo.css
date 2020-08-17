@@ -1,13 +1,14 @@
 @import url("https://use.typekit.net/yns4wlf.css");
-.logo {
-  font-family: itc-american-typewriter, serif;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 50px;
-  margin-left: 100px;
-  text-decoration: none;
+.logo{
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 .logoLink {
   text-decoration: none;
   color: black;
+  font-family: itc-american-typewriter, serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 50px;
+  text-decoration: none;
 }
