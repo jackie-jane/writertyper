@@ -12,14 +12,13 @@ class Type extends Component {
     }
   }
 
-  async componentDidMount(z) {
+  async componentDidMount() {
     const authorId = this.props.match.params.authorId
     const textId = this.props.match.params.textId
     const text = await readOneByAuthor(authorId, textId)
     const str = text.content
     const strArr = str.split('')
     const firstLetter = strArr.shift()
-    // const upcomingArr = strArr.slice(0, 1)
     this.setState({
       text: str,
       currentChar: firstLetter,
@@ -31,22 +30,62 @@ class Type extends Component {
     const userInput = e.target.value
     const char = this.state.currentChar
     if (userInput === char) {
-      console.log('correct')
+      const newCompleted = this.state.completed
+      const newUpcoming = this.state.upcoming
+      const nextChar = newUpcoming.shift()
+      newCompleted.push(userInput)
+      console.log(newCompleted)
+      console.log(newUpcoming)
+      console.log(nextChar)
+      this.setState({
+        upcoming: newUpcoming,
+        completed: newCompleted,
+        currentChar: nextChar
+      })
+      e.target.value = ''
     }
   }
 
   render() {
+    const completeRender = this.state.completed.join('')
+    const upcomingRender = this.state.upcoming.join('')
     return (
       <>
-        <textarea
-          value={this.state.currentChar}
-          disabled='disabled'
-        >
-        </textarea>
-        <textarea
-          onKeyUp={this.handleType}
-        >
-        </textarea>
+        {this.state.completed ?
+          <>
+            <p
+              style={{
+                color: "white"
+              }}>
+              {completeRender}
+            </p>
+            <p
+              style={{
+                color: "white"
+              }}>
+              {this.state.currentChar}
+            </p>
+            <p
+              style={{
+                color: "white"
+              }}>
+              {upcomingRender}
+            </p>
+            <textarea
+              onKeyUp={this.handleType}>
+            </textarea>
+          </>
+          :
+          <>
+            <textarea
+              value={this.state.currentChar}
+              disabled='disabled'
+            ></textarea>
+            <textarea
+              onKeyUp={this.handleType}
+            ></textarea>
+          </>
+        }
       </>
     );
   }

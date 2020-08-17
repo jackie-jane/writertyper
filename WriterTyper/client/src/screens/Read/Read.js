@@ -32,6 +32,7 @@ class Read extends Component {
         const id = this.state.valueId
         const writerTexts = await readAllTextByAuthor(id)
         const writerInfo = await readOneAuthor(id)
+        console.log(writerTexts)
         this.setState({
           texts: writerTexts,
           submit: false,
