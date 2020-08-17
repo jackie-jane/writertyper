@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { readOneAuthor, editAuthor } from '../../services/Crud'
 
-
 class AuthorEdit extends Component {
   constructor(props) {
     super(props);
