@@ -9491,3 +9491,780 @@ Processing by AuthorsController#show as HTML
 Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 739)
 
 
+Started GET "/authors" for ::1 at 2020-08-16 21:58:34 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (21.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 37ms (Views: 12.0ms | ActiveRecord: 21.9ms | Allocations: 1146)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 21:59:30 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (8.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (1.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 149ms (Views: 24.3ms | ActiveRecord: 47.1ms | Allocations: 1931)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 21:59:36 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (3.0ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (23.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 38ms (Views: 8.1ms | ActiveRecord: 26.2ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 21:59:54 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 1.4ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:00:22 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 1.4ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:01:12 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.0ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 2.3ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:02:44 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.0ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.5ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:02:53 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (2.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 3.4ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:03:00 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (1.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 2.8ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:03:05 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 1.2ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:03:07 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 2.2ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:03:08 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 1.0ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:03:09 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (27.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (3.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 236ms (Views: 201.8ms | ActiveRecord: 30.6ms | Allocations: 1779)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:03:15 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (23.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 32ms (Views: 4.1ms | ActiveRecord: 24.9ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:03:17 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 1.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:03:19 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (2.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 2.8ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:04:02 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.0ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:04:13 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (24.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 30ms (Views: 3.2ms | ActiveRecord: 25.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:04:26 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (23.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 30ms (Views: 3.4ms | ActiveRecord: 24.3ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:04:38 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (2.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 3.4ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:04:39 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 1.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:11:43 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (9.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 15ms (Views: 2.5ms | ActiveRecord: 10.0ms | Allocations: 1859)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:12:00 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 1.0ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:12:04 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (3.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 4.6ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:14:49 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (15.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 22ms (Views: 3.8ms | ActiveRecord: 15.7ms | Allocations: 1774)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:15:01 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (25.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 32ms (Views: 4.0ms | ActiveRecord: 25.7ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:15:06 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.1ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 1.6ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:15:30 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:15:40 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (1.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 2.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:15:48 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:16:10 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (4.1ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 11ms (Views: 3.9ms | ActiveRecord: 4.5ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:16:30 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (32.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (7.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 47ms (Views: 4.3ms | ActiveRecord: 39.8ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:16:44 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (2.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (5.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 16ms (Views: 5.0ms | ActiveRecord: 8.0ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:16:58 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 1.2ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:16:59 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 1.0ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:17:07 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (3.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (31.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 43ms (Views: 4.7ms | ActiveRecord: 35.7ms | Allocations: 1774)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:17:14 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (4.1ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (3.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 15ms (Views: 4.5ms | ActiveRecord: 7.3ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:17:32 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.8ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:17:33 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (9.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 20ms (Views: 5.6ms | ActiveRecord: 11.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:17:34 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 1.5ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:17:38 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:17:41 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (23.1ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 32ms (Views: 4.9ms | ActiveRecord: 24.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:26:21 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 1.3ms | Allocations: 1860)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:33:20 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.0ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 2.3ms | Allocations: 1859)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:33:27 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (27.1ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (14.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 80ms (Views: 35.5ms | ActiveRecord: 42.1ms | Allocations: 1777)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:34:21 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (4.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 2.3ms | ActiveRecord: 4.9ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:34:38 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 1.3ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:34:39 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (4.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 11ms (Views: 3.0ms | ActiveRecord: 5.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:34:59 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:35:01 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:44:22 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 1.5ms | Allocations: 1859)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:44:25 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (3.0ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (25.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 34ms (Views: 3.5ms | ActiveRecord: 28.4ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:44:28 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 2.0ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:44:29 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.0ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 1.4ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:44:31 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.8ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:44:32 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 1.0ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 22:44:33 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (5.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 13ms (Views: 4.0ms | ActiveRecord: 6.3ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:02:42 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 12ms (Views: 4.6ms | ActiveRecord: 2.0ms | Allocations: 1859)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:02:47 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 2.3ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:08:26 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 1.9ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:08:34 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (37.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (5.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 53ms (Views: 6.4ms | ActiveRecord: 43.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:08:43 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (23.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 31ms (Views: 4.1ms | ActiveRecord: 24.2ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:08:54 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 1.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:10:57 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:12:02 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (6.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 12ms (Views: 2.8ms | ActiveRecord: 7.2ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:12:20 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:12:24 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.9ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:12:25 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (25.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 32ms (Views: 3.8ms | ActiveRecord: 25.5ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:12:31 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (23.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 31ms (Views: 4.8ms | ActiveRecord: 23.9ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:13:29 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 1.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:13:30 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.8ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:13:46 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (15.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 23ms (Views: 4.1ms | ActiveRecord: 16.3ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:13:47 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 1.0ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:13:51 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 1.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:14:01 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (1.1ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 1.5ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:14:02 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (27.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 36ms (Views: 4.0ms | ActiveRecord: 28.0ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:19:21 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.7ms | Allocations: 1774)
+
+
+Started GET "/authors/1/texts/5" for ::1 at 2020-08-16 23:21:05 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"5"}
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 1.1ms | Allocations: 1773)
+
+
