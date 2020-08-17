@@ -7,9 +7,9 @@ import './Nav.css'
 function Nav(props) {
   return (
     <ul className='navCont'>
-      <li className='navItem'><AboutButton /></li>
-      <li className='navItem'><UploadButton /></li>
-      <li className='navItem'><ReadButton /></li>
+      <li><AboutButton /></li>
+      <li><UploadButton /></li>
+      <li><ReadButton /></li>
     </ul>
   );
 }

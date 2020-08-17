@@ -4,9 +4,15 @@
   border: none;
   display: inline;
   text-decoration: none;
-  padding-right: 20px;
   font-size: 40px;
   font-family: itc-american-typewriter-cond, serif;
   font-weight: 500;
   font-style: normal;
+  padding: 0 60px 0 0;
+  margin-top: -80px;
+  margin-bottom: -10px;
+  cursor: pointer;
+}
+.navLink {
+  text-decoration: none;
 }
