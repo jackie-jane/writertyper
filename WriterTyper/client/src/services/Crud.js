@@ -20,6 +20,11 @@ export const readOneByAuthor = async (authorId, textId) => {
   return res.data;
 }
 
+export const deleteAuthor = async (authorId) => {
+  const res = await api.delete(`/authors/${authorId}`)
+  return res.data;
+}
+
 export const createAuthor = async (author) => {
   const res = await api.post('/authors', author);
   return res.data;

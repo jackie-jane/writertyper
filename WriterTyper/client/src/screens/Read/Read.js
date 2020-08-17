@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { readAllAuthors, readAllTextByAuthor, readOneAuthor, deleteText } from '../../services/Crud'
+import { deleteAuthor, readAllAuthors, readAllTextByAuthor, readOneAuthor, deleteText } from '../../services/Crud'
 import './Read.css'
 
 class Read extends Component {
@@ -16,6 +16,7 @@ class Read extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleAuthDelete = this.handleAuthDelete.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
+    this.handleAuthDelete = this.handleAuthDelete.bind(this)
   }
   async componentDidMount() {
     try {
@@ -48,8 +49,10 @@ class Read extends Component {
       submit: true
     })
   }
-  handleAuthDelete = (e) => {
-    console.log('TBA')
+  async handleAuthDelete() {
+    const id = this.state.valueId
+    await deleteAuthor(id)
+    window.location.reload(false);
   }
   handleDelete = (e) => {
     const textId = e.target.value
