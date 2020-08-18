@@ -150,11 +150,13 @@ class Upload extends Component {
             <input
               placeholder='copy and paste title here'
               name='title'
+              className='shortInput'
               onChange={this.handleTextInput}>
             </input>
             <textarea
               placeholder='copy and paste text here'
               name='content'
+              className='longInput'
               onChange={this.WordCount}
             >
             </textarea>
