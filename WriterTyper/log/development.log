@@ -15236,3 +15236,40 @@ Processing by TextsController#show as HTML
 Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 1773)
 
 
+Started GET "/authors" for ::1 at 2020-08-18 15:40:33 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (23.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 33ms (Views: 7.8ms | ActiveRecord: 23.3ms | Allocations: 1061)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 15:40:37 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (1.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 6.2ms | ActiveRecord: 25.3ms | Allocations: 2695)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 15:40:38 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 740)
+
+
+Started GET "/authors/2/texts/17" for ::1 at 2020-08-18 15:40:44 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"2", "id"=>"17"}
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.7ms | Allocations: 1776)
+
+
