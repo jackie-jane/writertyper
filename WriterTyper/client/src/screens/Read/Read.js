@@ -93,47 +93,68 @@ class Read extends Component {
         </div>
         {author ?
           <>
-            <div className='textCont'>
-              <div className='topDivRead'>
-                <div className='titleAndAuthor'>
-                  <h2>{writer.name}</h2>
-                </div>
-                <Link to={`/author/${this.state.valueId}`}>
+            <div
+              className='textCont'>
+              <div
+                className='topDivRead'>
+                <h2
+                  className='writerNameRead'>
+                  {writer.name}
+                </h2>
+                <div
+                  className='buttonCont'>
+                  <Link
+                    to={`/author/${this.state.valueId}`}>
+                    <button
+                      className='editButtonOnRead'>
+                      Edit
+                        </button>
+                  </Link>
                   <button
-                    className='editButtonOnRead'>
-                    Edit
-                      </button>
-                </Link>
-                <button
-                  className='deleteButtonOnRead'
-                  onClick={this.handleAuthDelete}
-                  value={this.state.valueId}>
-                  Delete
-                    </button>
+                    className='deleteButtonOnRead'
+                    onClick={this.handleAuthDelete}
+                    value={this.state.valueId}>
+                    Delete
+                  </button>
+                </div>
               </div>
-              <p className='contentOnRead'>{writer.biography}
+              <p
+                className='contentOnRead'>
+                <h3>Biography</h3>
+                {writer.biography}
                 <br></br><br></br>
+                <h3>Controversy:</h3>
+                {writer.controversy}
               </p>
-              {writer.controversy}
             </div>
             {texts.map(element =>
               <div className='textCont'>
                 <div className='topDivRead'>
-                  <div className='titleAndAuthor'>
-                    <h2>{element.title}</h2>
-                  </div>
-                  <Link to={`/edit/${author}/${element.id}`}>
-                    <button
-                      className='editButtonOnRead'>
-                      Edit
+                  <h2
+                    className='textTitleRead'>
+                    {element.title}
+                  </h2>
+                  <div
+                    className='buttonCont'>
+                    <Link to={`/edit/${author}/${element.id}`}>
+                      <button
+                        className='editButtonOnRead'>
+                        Edit
                       </button>
-                  </Link>
-                  <button
-                    className='deleteButtonOnRead'
-                    onClick={this.handleDelete}
-                    value={element.id}>
-                    Delete
+                    </Link>
+                    <Link to={`/type/${author}/${element.id}`}>
+                      <button
+                        className='typeButtonOnRead'>
+                        Type
+                      </button>
+                    </Link>
+                    <button
+                      className='deleteButtonOnRead'
+                      onClick={this.handleDelete}
+                      value={element.id}>
+                      Delete
                     </button>
+                  </div>
                 </div>
                 <textarea
                   className='contentOnRead'

@@ -33,6 +33,14 @@ class Edit extends Component {
       characterCount: textArr.length
     })
   }
+  handleTitleChange = (event) => {
+    const newTitle = event.target.value
+    this.setState({
+      text: {
+        title: newTitle,
+      }
+    })
+  }
   handleChange = (event) => {
     const newText = event.target.value
     const wordArr = newText.split(' ').length
@@ -57,13 +65,25 @@ class Edit extends Component {
     const text = this.state.text
     return (
       <>
-        <form onSubmit={this.handleSubmit}>
+        <form
+          onSubmit={this.handleSubmit}
+          className='formEdit'>
+          <textarea
+            defaultValue={text.title}
+            onChange={this.handleChange}
+            className='shortInput'
+          ></textarea>
           <textarea
             defaultValue={text.content}
             onChange={this.handleChange}
+            className='longInput'
           >
           </textarea>
-          <button type='submit'>Submit</button>
+          <button
+            type='submit'
+            className='submitEdit'>
+            Submit
+            </button>
         </form>
       </>
     );

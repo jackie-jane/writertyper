@@ -12479,3 +12479,1906 @@ Processing by AuthorsController#index as HTML
 Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.8ms | Allocations: 1021)
 
 
+Started GET "/authors" for ::1 at 2020-08-18 09:58:32 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (4.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 10.3ms | ActiveRecord: 4.2ms | Allocations: 1059)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 09:58:34 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 1.4ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:00:53 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.9ms | Allocations: 1021)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:00:55 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1021)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 10:00:59 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (3.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 81ms (Views: 71.0ms | ActiveRecord: 5.3ms | Allocations: 18789)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:01:00 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 739)
+
+
+Started GET "/authors/1/texts/1" for ::1 at 2020-08-18 10:01:02 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1776)
+
+
+Started GET "/authors/1/texts/1" for ::1 at 2020-08-18 10:01:23 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (24.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 38ms (Views: 8.6ms | ActiveRecord: 25.6ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/1" for ::1 at 2020-08-18 10:01:31 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (8.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (21.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 41ms (Views: 7.7ms | ActiveRecord: 30.0ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/1" for ::1 at 2020-08-18 10:01:34 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (1.0ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (3.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 17ms (Views: 8.0ms | ActiveRecord: 4.9ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/1" for ::1 at 2020-08-18 10:01:46 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (2.0ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (26.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 43ms (Views: 9.6ms | ActiveRecord: 28.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/1" for ::1 at 2020-08-18 10:02:15 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (0.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 1.3ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/1" for ::1 at 2020-08-18 10:02:21 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 1.1ms | Allocations: 1773)
+
+
+Started GET "/authors/1/texts/1" for ::1 at 2020-08-18 10:02:48 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (2.1ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (22.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 37ms (Views: 7.4ms | ActiveRecord: 24.4ms | Allocations: 1776)
+
+
+Started GET "/authors/1/texts/1" for ::1 at 2020-08-18 10:03:38 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (2.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (2.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 16ms (Views: 6.9ms | ActiveRecord: 5.0ms | Allocations: 1773)
+
+
+Started PUT "/authors/1/texts/1" for ::1 at 2020-08-18 10:04:13 -0400
+Processing by TextsController#update as HTML
+  Parameters: {"text"=>{"content"=>"A Bird, came down the Walk -\nHe did not know I saw -\nHe bit an Angle Worm in halves\nAnd ate the fellow, raw,\n\nAnd then, he drank a Dew\nFrom a convenient Grass -\nAnd then hopped sidewise to the Wall\nTo let a Beetle pass -\n\nHe glanced with rapid eyes,\nThat hurried all abroad -\nThey looked like frightened Beads, I thought,\nHe stirred his Velvet Head. -\n\nLike one in danger, Cautious,\nI offered him a Crumb,\nAnd he unrolled his feathers,\nAnd rowed him softer Home -\n\nThan Oars divide the Ocean,\nToo silver for a seam,\nOr Butterflies, off Banks of Noon,\nLeap, plashless as they swim.", "words"=>96, "characters"=>580}, "author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+  [1m[36mText Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 AND "texts"."id" != $2 LIMIT $3[0m  [["title", "A Bird Came Down The Walk"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+  [1m[36mAuthor Load (3.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+  [1m[36mText Update (6.4ms)[0m  [1m[33mUPDATE "texts" SET "words" = $1, "characters" = $2 WHERE "texts"."id" = $3[0m  [["words", 96], ["characters", 580], ["id", 1]]
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+  [1m[35m (30.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+Completed 200 OK in 101ms (Views: 0.4ms | ActiveRecord: 41.7ms | Allocations: 5702)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:04:13 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.6ms | Allocations: 1021)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 10:13:51 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 2.0ms | Allocations: 18827)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:13:51 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 740)
+
+
+Started GET "/authors/1/texts/1" for ::1 at 2020-08-18 10:21:21 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (0.9ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 13ms (Views: 5.6ms | ActiveRecord: 1.6ms | Allocations: 1859)
+
+
+Started PUT "/authors/1/texts/1" for ::1 at 2020-08-18 10:21:23 -0400
+Processing by TextsController#update as HTML
+  Parameters: {"text"=>{"id"=>1, "title"=>"A Bird Came Down The Walk", "words"=>96, "characters"=>580, "author"=>{"id"=>1, "name"=>"Emily Dickinson", "biography"=>"TBA", "controversy"=>"TBA"}, "content"=>"A Bird, came down the Walk -\nHe did not know I saw -\nHe bit an Angle Worm in halves\nAnd ate the fellow, raw,\n\nAnd then, he drank a Dew\nFrom a convenient Grass -\nAnd then hopped sidewise to the Wall\nTo let a Beetle pass -\n\nHe glanced with rapid eyes,\nThat hurried all abroad -\nThey looked like frightened Beads, I thought,\nHe stirred his Velvet Head. -\n\nLike one in danger, Cautious,\nI offered him a Crumb,\nAnd he unrolled his feathers,\nAnd rowed him softer Home -\n\nThan Oars divide the Ocean,\nToo silver for a seam,\nOr Butterflies, off Banks of Noon,\nLeap, plashless as they swim.", "author_id"=>1}, "author_id"=>"1", "id"=>"1"}
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+[31mUnpermitted parameters: :id, :author[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+  [1m[36mText Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 AND "texts"."id" != $2 LIMIT $3[0m  [["title", "A Bird Came Down The Walk"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 3.2ms | Allocations: 4936)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:21:23 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1021)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 10:21:27 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (2.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 42ms (Views: 36.4ms | ActiveRecord: 3.8ms | Allocations: 18742)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:21:27 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 739)
+
+
+Started GET "/authors/1/texts/4" for ::1 at 2020-08-18 10:23:49 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"4"}
+  [1m[36mText Load (3.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (26.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 46ms (Views: 9.3ms | ActiveRecord: 29.6ms | Allocations: 1772)
+
+
+Started PUT "/authors/1/texts/4" for ::1 at 2020-08-18 10:23:53 -0400
+Processing by TextsController#update as HTML
+  Parameters: {"text"=>{"id"=>4, "title"=>"Im nobody! Who are you?", "words"=>44, "characters"=>228, "author"=>{"id"=>1, "name"=>"Emily Dickinson", "biography"=>"TBA", "controversy"=>"TBA"}, "content"=>"Im Nobody! Who are you?\nAre you – Nobody – too?\nThen theres a pair of us!\nDont tell! theyd advertise - you know!\n\nHow dreary – to be – Somebody!\nHow public – like a Frog –\nTo tell ones name - the livelong June –\nTo an admiring Bog!", "author_id"=>1}, "author_id"=>"1", "id"=>"4"}
+  [1m[36mText Load (1.0ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+[31mUnpermitted parameters: :id, :author[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+  [1m[36mText Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "texts" WHERE "texts"."title" = $1 AND "texts"."id" != $2 LIMIT $3[0m  [["title", "Im nobody! Who are you?"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/texts_controller.rb:27:in `update'
+Completed 200 OK in 22ms (Views: 1.7ms | ActiveRecord: 3.2ms | Allocations: 4930)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:23:53 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 1.9ms | Allocations: 1022)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 10:23:56 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (1.8ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 235ms (Views: 227.8ms | ActiveRecord: 3.7ms | Allocations: 18743)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:23:57 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (23.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 28ms (Views: 0.7ms | ActiveRecord: 23.8ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:26:12 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (3.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 51ms (Views: 34.5ms | ActiveRecord: 3.5ms | Allocations: 1022)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:26:12 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (4.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 4.0ms | Allocations: 1022)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:26:14 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (2.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 2.2ms | Allocations: 1022)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:26:15 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (48.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 58ms (Views: 8.4ms | ActiveRecord: 48.5ms | Allocations: 1022)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:26:15 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (24.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 30ms (Views: 5.0ms | ActiveRecord: 24.7ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:26:17 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.4ms | Allocations: 1022)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:26:36 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1022)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 10:26:48 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 79ms (Views: 71.0ms | ActiveRecord: 2.1ms | Allocations: 18740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:26:49 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:26:50 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:27:38 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (40.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 47ms (Views: 0.9ms | ActiveRecord: 40.9ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:28:03 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:28:04 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (2.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 2.2ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:28:26 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:29:02 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (3.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 3.0ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:29:04 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (3.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 3.8ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:29:06 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:29:32 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:29:34 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:29:37 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 1.0ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:29:39 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (1.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 1.8ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:29:42 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:29:54 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (28.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 33ms (Views: 0.7ms | ActiveRecord: 28.8ms | Allocations: 740)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:30:27 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (8.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 8.9ms | Allocations: 743)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:30:33 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 740)
+
+
+Started PUT "/authors/1" for ::1 at 2020-08-18 10:32:52 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"id"=>1, "name"=>"Emily Dickinson", "biography"=>"Dickinson's poems generally fall into three distinct periods, the works in each period having certain general characters in common.\n\nPre-1861. These are often conventional and sentimental in nature.[144] Thomas H. Johnson, who later published The Poems of Emily Dickinson, was able to date only five of Dickinson's poems before 1858.[145] Two of these are mock valentines done in an ornate and humorous style, and two others are conventional lyrics, one of which is about missing her brother Austin. The fifth poem, which begins \"I have a Bird in spring\", conveys her grief over the feared loss of friendship and was sent to her friend Sue Gilbert.[145]\n1861–1865. This was her most creative period—these poems represent her most vigorous and creative work. Johnson estimated that she composed 86 poems in 1861, 366 in 1862, 141 in 1863, and 174 in 1864. He also believed that during this period, she fully developed her themes of life and mortality.[146]\nPost-1866. It is estimated that two-thirds of the entire body of her poetry was written before this year.[146]\nStructure and syntax\n\nDickinson's handwritten manuscript of her poem \"Wild Nights – Wild Nights!\"\nThe extensive use of dashes and unconventional capitalization in Dickinson's manuscripts, and the idiosyncratic vocabulary and imagery, combine to create a body of work that is \"far more various in its styles and forms than is commonly supposed\".[4][147] Dickinson avoids pentameter, opting more generally for trimeter, tetrameter and, less often, dimeter. Sometimes her use of these meters is regular, but oftentimes it is irregular. The regular form that she most often employs is the ballad stanza, a traditional form that is divided into quatrains, using tetrameter for the first and third lines and trimeter for the second and fourth, while rhyming the second and fourth lines (ABCB). Though Dickinson often uses perfect rhymes for lines two and four, she also makes frequent use of slant rhyme.[148] In some of her poems, she varies the meter from the traditional ballad stanza by using trimeter for lines one, two and four, while only using tetrameter for line three.\n\nSince many of her poems were written in traditional ballad stanzas with ABCB rhyme schemes, some of these poems can be sung to fit the melodies of popular folk songs and hymns that also use the common meter, employing alternating lines of iambic tetrameter and iambic trimeter.[149] Familiar examples of such songs are \"O Little Town of Bethlehem\" and \"Amazing Grace'\".\n\nDickinson scholar and poet Anthony Hecht finds resonances in Dickinson's poetry not only with hymns and song-forms but also with psalms and riddles, citing the following example: \"Who is the East? / The Yellow Man / Who may be Purple if he can / That carries in the Sun. / Who is the West? / The Purple Man / Who may be Yellow if He can / That lets Him out again.\"[147]\n\nLate 20th-century scholars are \"deeply interested\" by Dickinson's highly individual use of punctuation and lineation (line lengths and line breaks).[132] Following the publication of one of the few poems that appeared in her lifetime – \"A Narrow Fellow in the Grass\", published as \"The Snake\" in the Republican – Dickinson complained that the edited punctuation (an added comma and a full stop substitution for the original dash) altered the meaning of the entire poem.[127]\n\nOriginal wording\nA narrow Fellow in the Grass\nOccasionally rides –\nYou may have met Him – did you not\nHis notice sudden is –\n\nRepublican version[127]\nA narrow Fellow in the Grass\nOccasionally rides –\nYou may have met Him – did you not,\nHis notice sudden is.\n\nAs Farr points out, \"snakes instantly notice you\"; Dickinson's version captures the \"breathless immediacy\" of the encounter; and The Republican's punctuation renders \"her lines more commonplace\".[132] With the increasingly close focus on Dickinson's structures and syntax has come a growing appreciation that they are \"aesthetically based\".[132] Although Johnson's landmark 1955 edition of poems was relatively unaltered from the original, later scholars critiqued it for deviating from the style and layout of Dickinson's manuscripts. Meaningful distinctions, these scholars assert, can be drawn from varying lengths and angles of dash, and differing arrangements of text on the page.[150] Several volumes have attempted to render Dickinson's handwritten dashes using many typographic symbols of varying length and angle. R. W. Franklin's 1998 variorum edition of the poems provided alternate wordings to those chosen by Johnson, in a more limited editorial intervention. Franklin also used typeset dashes of varying length to approximate the manuscripts' dashes more closely.[141]\n\nMajor themes\nDickinson left no formal statement of her aesthetic intentions and, because of the variety of her themes, her work does not fit conveniently into any one genre. She has been regarded, alongside Emerson (whose poems Dickinson admired), as a Transcendentalist.[151] However, Farr disagrees with this analysis, saying that Dickinson's \"relentlessly measuring mind ... deflates the airy elevation of the Transcendental\".[152] Apart from the major themes discussed below, Dickinson's poetry frequently uses humor, puns, irony and satire.[153]\n\nFlowers and gardens: Farr notes that Dickinson's \"poems and letters almost wholly concern flowers\" and that allusions to gardens often refer to an \"imaginative realm ... wherein flowers [are] often emblems for actions and emotions\".[154] She associates some flowers, like gentians and anemones, with youth and humility; others with prudence and insight.[154] Her poems were often sent to friends with accompanying letters and nosegays.[154] Farr notes that one of Dickinson's earlier poems, written about 1859, appears to \"conflate her poetry itself with the posies\": \"My nosegays are for Captives – / Dim – long expectant eyes – / Fingers denied the plucking, / Patient till Paradise – / To such, if they sh'd whisper / Of morning and the moor – / They bear no other errand, / And I, no other prayer\".[154]\n\nThe Master poems: Dickinson left a large number of poems addressed to \"Signor\", \"Sir\" and \"Master\", who is characterized as Dickinson's \"lover for all eternity\".[155] These confessional poems are often \"searing in their self-inquiry\" and \"harrowing to the reader\" and typically take their metaphors from texts and paintings of Dickinson's day.[155] The Dickinson family themselves believed these poems were addressed to actual individuals but this view is frequently rejected by scholars. Farr, for example, contends that the Master is an unattainable composite figure, \"human, with specific characteristics, but godlike\" and speculates that Master may be a \"kind of Christian muse\".[155]\n\nMorbidity: Dickinson's poems reflect her \"early and lifelong fascination\" with illness, dying and death.[156] Perhaps surprisingly for a New England spinster, her poems allude to death by many methods: \"crucifixion, drowning, hanging, suffocation, freezing, premature burial, shooting, stabbing and guillotinage\".[156] She reserved her sharpest insights into the \"death blow aimed by God\" and the \"funeral in the brain\", often reinforced by images of thirst and starvation. Dickinson scholar Vivian Pollak considers these references an autobiographical reflection of Dickinson's \"thirsting-starving persona\", an outward expression of her needy self-image as small, thin and frail.[156] Dickinson's most psychologically complex poems explore the theme that the loss of hunger for life causes the death of self and place this at \"the interface of murder and suicide\".[156]\n\nGospel poems: Throughout her life, Dickinson wrote poems reflecting a preoccupation with the teachings of Jesus Christ and, indeed, many are addressed to him.[157] She stresses the Gospels' contemporary pertinence and recreates them, often with \"wit and American colloquial language\".[157] Scholar Dorothy Oberhaus finds that the \"salient feature uniting Christian poets ... is their reverential attention to the life of Jesus Christ\" and contends that Dickinson's deep structures place her in the \"poetic tradition of Christian devotion\" alongside Hopkins, Eliot and Auden.[157] In a Nativity poem, Dickinson combines lightness and wit to revisit an ancient theme: \"The Savior must have been / A docile Gentleman – / To come so far so cold a Day / For little Fellowmen / The Road to Bethlehem / Since He and I were Boys / Was leveled, but for that twould be / A rugged billion Miles –\".[157]\n\nThe Undiscovered Continent: Academic Suzanne Juhasz considers that Dickinson saw the mind and spirit as tangible visitable places and that for much of her life she lived within them.[158] Often, this intensely private place is referred to as the \"undiscovered continent\" and the \"landscape of the spirit\" and embellished with nature imagery. At other times, the imagery is darker and forbidding—castles or prisons, complete with corridors and rooms—to create a dwelling place of \"oneself\" where one resides with one's other selves.[158] An example that brings together many of these ideas is: \"Me from Myself – to banish – / Had I Art – / Impregnable my Fortress / Unto All Heart – / But since myself—assault Me – / How have I peace / Except by subjugating / Consciousness. / And since We're mutual Monarch / How this be / Except by Abdication – / Me – of Me?\".[158]\n\nReception\n\nDickinson wrote and sent this poem (\"A Route of Evanescence\") to Thomas Higginson in 1880.\nThe surge of posthumous publication gave Dickinson's poetry its first public exposure. Backed by Higginson and with a favorable notice from William Dean Howells, an editor of Harper's Magazine, the poetry received mixed reviews after it was first published in 1890. Higginson himself stated in his preface to the first edition of Dickinson's published work that the poetry's quality \"is that of extraordinary grasp and insight\",[159] albeit \"without the proper control and chastening\" that the experience of publishing during her lifetime might have conferred.[160] His judgment that her opus was \"incomplete and unsatisfactory\" would be echoed in the essays of the New Critics in the 1930s.\n\nMaurice Thompson, who was literary editor of The Independent for twelve years, noted in 1891 that her poetry had \"a strange mixture of rare individuality and originality\".[161] Some critics hailed Dickinson's effort, but disapproved of her unusual non-traditional style. Andrew Lang, a British writer, dismissed Dickinson's work, stating that \"if poetry is to exist at all, it really must have form and grammar, and must rhyme when it professes to rhyme. The wisdom of the ages and the nature of man insist on so much\".[162] Thomas Bailey Aldrich, a poet and novelist, equally dismissed Dickinson's poetic technique in The Atlantic Monthly in January 1892: \"It is plain that Miss Dickinson possessed an extremely unconventional and grotesque fancy. She was deeply tinged by the mysticism of Blake, and strongly influenced by the mannerism of Emerson ... But the incoherence and formlessness of her — versicles are fatal ... an eccentric, dreamy, half-educated recluse in an out-of-the-way New England village (or anywhere else) cannot with impunity set at defiance the laws of gravitation and grammar\".[163]\n\nCritical attention to Dickinson's poetry was meager from 1897 to the early 1920s.[164] By the start of the 20th century, interest in her poetry became broader in scope and some critics began to consider Dickinson as essentially modern. Rather than seeing Dickinson's poetic styling as a result of lack of knowledge or skill, modern critics believed the irregularities were consciously artistic.[165] In a 1915 essay, Elizabeth Shepley Sergeant called the poet's inspiration \"daring\" and named her \"one of the rarest flowers the sterner New England land ever bore\".[166] With the growing popularity of modernist poetry in the 1920s, Dickinson's failure to conform to 19th-century poetic form was no longer surprising nor distasteful to new generations of readers. Dickinson was suddenly referred to by various critics as a great woman poet, and a cult following began to form.[167]\n\nIn the 1930s, a number of the New Critics – among them R. P. Blackmur, Allen Tate, Cleanth Brooks and Yvor Winters – appraised the significance of Dickinson's poetry. As critic Roland Hagenbüchle pointed out, their \"affirmative and prohibitive tenets turned out to be of special relevance to Dickinson scholarship\".[168] Blackmur, in an attempt to focus and clarify the major claims for and against the poet's greatness, wrote in a landmark 1937 critical essay: \"... she was a private poet who wrote as indefatigably as some women cook or knit. Her gift for words and the cultural predicament of her time drove her to poetry instead of antimacassars ... She came ... at the right time for one kind of poetry: the poetry of sophisticated, eccentric vision.\"[169]\n\nThe second wave of feminism created greater cultural sympathy for her as a female poet. In the first collection of critical essays on Dickinson from a feminist perspective, she is heralded as the greatest woman poet in the English language.[170] Biographers and theorists of the past tended to separate Dickinson's roles as a woman and a poet. For example, George Whicher wrote in his 1952 book This Was a Poet: A Critical Biography of Emily Dickinson, \"Perhaps as a poet [Dickinson] could find the fulfillment she had missed as a woman.\" Feminist criticism, on the other hand, declares that there is a necessary and powerful conjunction between Dickinson being a woman and a poet.[171] Adrienne Rich theorized in Vesuvius at Home: The Power of Emily Dickinson (1976) that Dickinson's identity as a woman poet brought her power: \"[she] chose her seclusion, knowing she was exceptional and knowing what she needed ... She carefully selected her society and controlled the disposal of her time ... neither eccentric nor quaint; she was determined to survive, to use her powers, to practice necessary economics.\"[172]\n\nSome scholars question the poet's sexuality, theorizing that the numerous letters and poems that were dedicated to Susan Gilbert Dickinson indicate a lesbian romance, and speculating about how this may have influenced her poetry.[173] Critics such as John Cody, Lillian Faderman, Vivian R. Pollak, Paula Bennett, Judith Farr, Ellen Louise Hart, and Martha Nell Smith have argued that Susan was the central erotic relationship in Dickinson's life.[174]\n\nLegacy\nIn the early 20th century, Martha Dickinson Bianchi and Millicent Todd Bingham kept the achievement of Emily Dickinson alive. Bianchi promoted Dickinson's poetic achievement. Bianchi inherited The Evergreens as well as the copyright for her aunt's poetry from her parents, publishing works such as Emily Dickinson Face to Face and Letters of Emily Dickinson, which stoked public curiosity about her aunt. Bianchi's books perpetrated legends about her aunt in the context of family tradition, personal recollection and correspondence. In contrast, Millicent Todd Bingham's took a more objective and realistic approach to the poet.[175]\n\nEmily Dickinson is now considered a powerful and persistent figure in American culture.[176] Although much of the early reception concentrated on Dickinson's eccentric and secluded nature, she has become widely acknowledged as an innovative, proto-modernist poet.[177] As early as 1891, William Dean Howells wrote that \"If nothing else had come out of our life but this strange poetry, we should feel that in the work of Emily Dickinson, America, or New England rather, had made a distinctive addition to the literature of the world, and could not be left out of any record of it.\"[178] Critic Harold Bloom has placed her alongside Walt Whitman, Wallace Stevens, Robert Frost, T. S. Eliot, and Hart Crane as a major American poet,[179] and in 1994 listed her among the 26 central writers of Western civilization.[180]\n\nDickinson is taught in American literature and poetry classes in the United States from middle school to college. Her poetry is frequently anthologized and has been used as text for art songs by composers such as Aaron Copland, Nick Peros, John Adams and Michael Tilson Thomas.[181] Several schools have been established in her name; for example, Emily Dickinson Elementary Schools exist in Bozeman, Montana,[182]Redmond, Washington,[183] and New York City.[184] A few literary journals—including The Emily Dickinson Journal, the official publication of the Emily Dickinson International Society—have been founded to examine her work.[185] An 8-cent commemorative stamp in honor of Dickinson was issued by the United States Postal Service on August 28, 1971 as the second stamp in the \"American Poet\" series.[186] Dickinson was inducted into the National Women's Hall of Fame in 1973.[187] A one-woman play titled The Belle of Amherst appeared on Broadway in 1976, winning several awards; it was later adapted for television.[188]\n\nDickinson's herbarium, which is now held in the Houghton Library at Harvard University, was published in 2006 as Emily Dickinson's Herbarium by Harvard University Press.[189] The original work was compiled by Dickinson during her years at Amherst Academy, and consists of 424 pressed specimens of plants arranged on 66 pages of a bound album. A digital facsimile of the herbarium is available online.[190] The town of Amherst Jones Library's Special Collections department has an Emily Dickinson Collection consisting of approximately seven thousand items, including original manuscript poems and letters, family correspondence, scholarly articles and books, newspaper clippings, theses, plays, photographs and contemporary artwork and prints.[191] The Archives and Special Collections at Amherst College has substantial holdings of Dickinson's manuscripts and letters as well as a lock of Dickinson's hair and the original of the only positively identified image of the poet. In 1965, in recognition of Dickinson's growing stature as a poet, the Homestead was purchased by Amherst College. It opened to the public for tours, and also served as a faculty residence for many years. The Emily Dickinson Museum was created in 2003 when ownership of the Evergreens, which had been occupied by Dickinson family heirs until 1988, was transferred to the college.[192]", "controversy"=>"TBA"}, "id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "Emily Dickinson"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Update (30.8ms)[0m  [1m[33mUPDATE "authors" SET "biography" = $1 WHERE "authors"."id" = $2[0m  [["biography", "Dickinson's poems generally fall into three distinct periods, the works in each period having certain general characters in common.\n\nPre-1861. These are often conventional and sentimental in nature.[144] Thomas H. Johnson, who later published The Poems of Emily Dickinson, was able to date only five of Dickinson's poems before 1858.[145] Two of these are mock valentines done in an ornate and humorous style, and two others are conventional lyrics, one of which is about missing her brother Austin. The fifth poem, which begins \"I have a Bird in spring\", conveys her grief over the feared loss of friendship and was sent to her friend Sue Gilbert.[145]\n1861–1865. This was her most creative period—these poems represent her most vigorous and creative work. Johnson estimated that she composed 86 poems in 1861, 366 in 1862, 141 in 1863, and 174 in 1864. He also believed that during this period, she fully developed her themes of life and mortality.[146]\nPost-1866. It is estimated that two-thirds of the entire body of her poetry was written before this year.[146]\nStructure and syntax\n\nDickinson's handwritten manuscript of her poem \"Wild Nights – Wild Nights!\"\nThe extensive use of dashes and unconventional capitalization in Dickinson's manuscripts, and the idiosyncratic vocabulary and imagery, combine to create a body of work that is \"far more various in its styles and forms than is commonly supposed\".[4][147] Dickinson avoids pentameter, opting more generally for trimeter, tetrameter and, less often, dimeter. Sometimes her use of these meters is regular, but oftentimes it is irregular. The regular form that she most often employs is the ballad stanza, a traditional form that is divided into quatrains, using tetrameter for the first and third lines and trimeter for the second and fourth, while rhyming the second and fourth lines (ABCB). Though Dickinson often uses perfect rhymes for lines two and four, she also makes frequent use of slant rhyme.[148] In some of her poems, she varies the meter from the traditional ballad stanza by using trimeter for lines one, two and four, while only using tetrameter for line three.\n\nSince many of her poems were written in traditional ballad stanzas with ABCB rhyme schemes, some of these poems can be sung to fit the melodies of popular folk songs and hymns that also use the common meter, employing alternating lines of iambic tetrameter and iambic trimeter.[149] Familiar examples of such songs are \"O Little Town of Bethlehem\" and \"Amazing Grace'\".\n\nDickinson scholar and poet Anthony Hecht finds resonances in Dickinson's poetry not only with hymns and song-forms but also with psalms and riddles, citing the following example: \"Who is the East? / The Yellow Man / Who may be Purple if he can / That carries in the Sun. / Who is the West? / The Purple Man / Who may be Yellow if He can / That lets Him out again.\"[147]\n\nLate 20th-century scholars are \"deeply interested\" by Dickinson's highly individual use of punctuation and lineation (line lengths and line breaks).[132] Following the publication of one of the few poems that appeared in her lifetime – \"A Narrow Fellow in the Grass\", published as \"The Snake\" in the Republican – Dickinson complained that the edited punctuation (an added comma and a full stop substitution for the original dash) altered the meaning of the entire poem.[127]\n\nOriginal wording\nA narrow Fellow in the Grass\nOccasionally rides –\nYou may have met Him – did you not\nHis notice sudden is –\n\nRepublican version[127]\nA narrow Fellow in the Grass\nOccasionally rides –\nYou may have met Him – did you not,\nHis notice sudden is.\n\nAs Farr points out, \"snakes instantly notice you\"; Dickinson's version captures the \"breathless immediacy\" of the encounter; and The Republican's punctuation renders \"her lines more commonplace\".[132] With the increasingly close focus on Dickinson's structures and syntax has come a growing appreciation that they are \"aesthetically based\".[132] Although Johnson's landmark 1955 edition of poems was relatively unaltered from the original, later scholars critiqued it for deviating from the style and layout of Dickinson's manuscripts. Meaningful distinctions, these scholars assert, can be drawn from varying lengths and angles of dash, and differing arrangements of text on the page.[150] Several volumes have attempted to render Dickinson's handwritten dashes using many typographic symbols of varying length and angle. R. W. Franklin's 1998 variorum edition of the poems provided alternate wordings to those chosen by Johnson, in a more limited editorial intervention. Franklin also used typeset dashes of varying length to approximate the manuscripts' dashes more closely.[141]\n\nMajor themes\nDickinson left no formal statement of her aesthetic intentions and, because of the variety of her themes, her work does not fit conveniently into any one genre. She has been regarded, alongside Emerson (whose poems Dickinson admired), as a Transcendentalist.[151] However, Farr disagrees with this analysis, saying that Dickinson's \"relentlessly measuring mind ... deflates the airy elevation of the Transcendental\".[152] Apart from the major themes discussed below, Dickinson's poetry frequently uses humor, puns, irony and satire.[153]\n\nFlowers and gardens: Farr notes that Dickinson's \"poems and letters almost wholly concern flowers\" and that allusions to gardens often refer to an \"imaginative realm ... wherein flowers [are] often emblems for actions and emotions\".[154] She associates some flowers, like gentians and anemones, with youth and humility; others with prudence and insight.[154] Her poems were often sent to friends with accompanying letters and nosegays.[154] Farr notes that one of Dickinson's earlier poems, written about 1859, appears to \"conflate her poetry itself with the posies\": \"My nosegays are for Captives – / Dim – long expectant eyes – / Fingers denied the plucking, / Patient till Paradise – / To such, if they sh'd whisper / Of morning and the moor – / They bear no other errand, / And I, no other prayer\".[154]\n\nThe Master poems: Dickinson left a large number of poems addressed to \"Signor\", \"Sir\" and \"Master\", who is characterized as Dickinson's \"lover for all eternity\".[155] These confessional poems are often \"searing in their self-inquiry\" and \"harrowing to the reader\" and typically take their metaphors from texts and paintings of Dickinson's day.[155] The Dickinson family themselves believed these poems were addressed to actual individuals but this view is frequently rejected by scholars. Farr, for example, contends that the Master is an unattainable composite figure, \"human, with specific characteristics, but godlike\" and speculates that Master may be a \"kind of Christian muse\".[155]\n\nMorbidity: Dickinson's poems reflect her \"early and lifelong fascination\" with illness, dying and death.[156] Perhaps surprisingly for a New England spinster, her poems allude to death by many methods: \"crucifixion, drowning, hanging, suffocation, freezing, premature burial, shooting, stabbing and guillotinage\".[156] She reserved her sharpest insights into the \"death blow aimed by God\" and the \"funeral in the brain\", often reinforced by images of thirst and starvation. Dickinson scholar Vivian Pollak considers these references an autobiographical reflection of Dickinson's \"thirsting-starving persona\", an outward expression of her needy self-image as small, thin and frail.[156] Dickinson's most psychologically complex poems explore the theme that the loss of hunger for life causes the death of self and place this at \"the interface of murder and suicide\".[156]\n\nGospel poems: Throughout her life, Dickinson wrote poems reflecting a preoccupation with the teachings of Jesus Christ and, indeed, many are addressed to him.[157] She stresses the Gospels' contemporary pertinence and recreates them, often with \"wit and American colloquial language\".[157] Scholar Dorothy Oberhaus finds that the \"salient feature uniting Christian poets ... is their reverential attention to the life of Jesus Christ\" and contends that Dickinson's deep structures place her in the \"poetic tradition of Christian devotion\" alongside Hopkins, Eliot and Auden.[157] In a Nativity poem, Dickinson combines lightness and wit to revisit an ancient theme: \"The Savior must have been / A docile Gentleman – / To come so far so cold a Day / For little Fellowmen / The Road to Bethlehem / Since He and I were Boys / Was leveled, but for that twould be / A rugged billion Miles –\".[157]\n\nThe Undiscovered Continent: Academic Suzanne Juhasz considers that Dickinson saw the mind and spirit as tangible visitable places and that for much of her life she lived within them.[158] Often, this intensely private place is referred to as the \"undiscovered continent\" and the \"landscape of the spirit\" and embellished with nature imagery. At other times, the imagery is darker and forbidding—castles or prisons, complete with corridors and rooms—to create a dwelling place of \"oneself\" where one resides with one's other selves.[158] An example that brings together many of these ideas is: \"Me from Myself – to banish – / Had I Art – / Impregnable my Fortress / Unto All Heart – / But since myself—assault Me – / How have I peace / Except by subjugating / Consciousness. / And since We're mutual Monarch / How this be / Except by Abdication – / Me – of Me?\".[158]\n\nReception\n\nDickinson wrote and sent this poem (\"A Route of Evanescence\") to Thomas Higginson in 1880.\nThe surge of posthumous publication gave Dickinson's poetry its first public exposure. Backed by Higginson and with a favorable notice from William Dean Howells, an editor of Harper's Magazine, the poetry received mixed reviews after it was first published in 1890. Higginson himself stated in his preface to the first edition of Dickinson's published work that the poetry's quality \"is that of extraordinary grasp and insight\",[159] albeit \"without the proper control and chastening\" that the experience of publishing during her lifetime might have conferred.[160] His judgment that her opus was \"incomplete and unsatisfactory\" would be echoed in the essays of the New Critics in the 1930s.\n\nMaurice Thompson, who was literary editor of The Independent for twelve years, noted in 1891 that her poetry had \"a strange mixture of rare individuality and originality\".[161] Some critics hailed Dickinson's effort, but disapproved of her unusual non-traditional style. Andrew Lang, a British writer, dismissed Dickinson's work, stating that \"if poetry is to exist at all, it really must have form and grammar, and must rhyme when it professes to rhyme. The wisdom of the ages and the nature of man insist on so much\".[162] Thomas Bailey Aldrich, a poet and novelist, equally dismissed Dickinson's poetic technique in The Atlantic Monthly in January 1892: \"It is plain that Miss Dickinson possessed an extremely unconventional and grotesque fancy. She was deeply tinged by the mysticism of Blake, and strongly influenced by the mannerism of Emerson ... But the incoherence and formlessness of her — versicles are fatal ... an eccentric, dreamy, half-educated recluse in an out-of-the-way New England village (or anywhere else) cannot with impunity set at defiance the laws of gravitation and grammar\".[163]\n\nCritical attention to Dickinson's poetry was meager from 1897 to the early 1920s.[164] By the start of the 20th century, interest in her poetry became broader in scope and some critics began to consider Dickinson as essentially modern. Rather than seeing Dickinson's poetic styling as a result of lack of knowledge or skill, modern critics believed the irregularities were consciously artistic.[165] In a 1915 essay, Elizabeth Shepley Sergeant called the poet's inspiration \"daring\" and named her \"one of the rarest flowers the sterner New England land ever bore\".[166] With the growing popularity of modernist poetry in the 1920s, Dickinson's failure to conform to 19th-century poetic form was no longer surprising nor distasteful to new generations of readers. Dickinson was suddenly referred to by various critics as a great woman poet, and a cult following began to form.[167]\n\nIn the 1930s, a number of the New Critics – among them R. P. Blackmur, Allen Tate, Cleanth Brooks and Yvor Winters – appraised the significance of Dickinson's poetry. As critic Roland Hagenbüchle pointed out, their \"affirmative and prohibitive tenets turned out to be of special relevance to Dickinson scholarship\".[168] Blackmur, in an attempt to focus and clarify the major claims for and against the poet's greatness, wrote in a landmark 1937 critical essay: \"... she was a private poet who wrote as indefatigably as some women cook or knit. Her gift for words and the cultural predicament of her time drove her to poetry instead of antimacassars ... She came ... at the right time for one kind of poetry: the poetry of sophisticated, eccentric vision.\"[169]\n\nThe second wave of feminism created greater cultural sympathy for her as a female poet. In the first collection of critical essays on Dickinson from a feminist perspective, she is heralded as the greatest woman poet in the English language.[170] Biographers and theorists of the past tended to separate Dickinson's roles as a woman and a poet. For example, George Whicher wrote in his 1952 book This Was a Poet: A Critical Biography of Emily Dickinson, \"Perhaps as a poet [Dickinson] could find the fulfillment she had missed as a woman.\" Feminist criticism, on the other hand, declares that there is a necessary and powerful conjunction between Dickinson being a woman and a poet.[171] Adrienne Rich theorized in Vesuvius at Home: The Power of Emily Dickinson (1976) that Dickinson's identity as a woman poet brought her power: \"[she] chose her seclusion, knowing she was exceptional and knowing what she needed ... She carefully selected her society and controlled the disposal of her time ... neither eccentric nor quaint; she was determined to survive, to use her powers, to practice necessary economics.\"[172]\n\nSome scholars question the poet's sexuality, theorizing that the numerous letters and poems that were dedicated to Susan Gilbert Dickinson indicate a lesbian romance, and speculating about how this may have influenced her poetry.[173] Critics such as John Cody, Lillian Faderman, Vivian R. Pollak, Paula Bennett, Judith Farr, Ellen Louise Hart, and Martha Nell Smith have argued that Susan was the central erotic relationship in Dickinson's life.[174]\n\nLegacy\nIn the early 20th century, Martha Dickinson Bianchi and Millicent Todd Bingham kept the achievement of Emily Dickinson alive. Bianchi promoted Dickinson's poetic achievement. Bianchi inherited The Evergreens as well as the copyright for her aunt's poetry from her parents, publishing works such as Emily Dickinson Face to Face and Letters of Emily Dickinson, which stoked public curiosity about her aunt. Bianchi's books perpetrated legends about her aunt in the context of family tradition, personal recollection and correspondence. In contrast, Millicent Todd Bingham's took a more objective and realistic approach to the poet.[175]\n\nEmily Dickinson is now considered a powerful and persistent figure in American culture.[176] Although much of the early reception concentrated on Dickinson's eccentric and secluded nature, she has become widely acknowledged as an innovative, proto-modernist poet.[177] As early as 1891, William Dean Howells wrote that \"If nothing else had come out of our life but this strange poetry, we should feel that in the work of Emily Dickinson, America, or New England rather, had made a distinctive addition to the literature of the world, and could not be left out of any record of it.\"[178] Critic Harold Bloom has placed her alongside Walt Whitman, Wallace Stevens, Robert Frost, T. S. Eliot, and Hart Crane as a major American poet,[179] and in 1994 listed her among the 26 central writers of Western civilization.[180]\n\nDickinson is taught in American literature and poetry classes in the United States from middle school to college. Her poetry is frequently anthologized and has been used as text for art songs by composers such as Aaron Copland, Nick Peros, John Adams and Michael Tilson Thomas.[181] Several schools have been established in her name; for example, Emily Dickinson Elementary Schools exist in Bozeman, Montana,[182]Redmond, Washington,[183] and New York City.[184] A few literary journals—including The Emily Dickinson Journal, the official publication of the Emily Dickinson International Society—have been founded to examine her work.[185] An 8-cent commemorative stamp in honor of Dickinson was issued by the United States Postal Service on August 28, 1971 as the second stamp in the \"American Poet\" series.[186] Dickinson was inducted into the National Women's Hall of Fame in 1973.[187] A one-woman play titled The Belle of Amherst appeared on Broadway in 1976, winning several awards; it was later adapted for television.[188]\n\nDickinson's herbarium, which is now held in the Houghton Library at Harvard University, was published in 2006 as Emily Dickinson's Herbarium by Harvard University Press.[189] The original work was compiled by Dickinson during her years at Amherst Academy, and consists of 424 pressed specimens of plants arranged on 66 pages of a bound album. A digital facsimile of the herbarium is available online.[190] The town of Amherst Jones Library's Special Collections department has an Emily Dickinson Collection consisting of approximately seven thousand items, including original manuscript poems and letters, family correspondence, scholarly articles and books, newspaper clippings, theses, plays, photographs and contemporary artwork and prints.[191] The Archives and Special Collections at Amherst College has substantial holdings of Dickinson's manuscripts and letters as well as a lock of Dickinson's hair and the original of the only positively identified image of the poet. In 1965, in recognition of Dickinson's growing stature as a poet, the Homestead was purchased by Amherst College. It opened to the public for tours, and also served as a faculty residence for many years. The Emily Dickinson Museum was created in 2003 when ownership of the Evergreens, which had been occupied by Dickinson family heirs until 1988, was transferred to the college.[192]"], ["id", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 59ms (Views: 1.6ms | ActiveRecord: 36.1ms | Allocations: 4581)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:32:53 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.1ms | Allocations: 1023)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 10:32:55 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (24.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 93ms (Views: 65.2ms | ActiveRecord: 26.0ms | Allocations: 18741)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:32:55 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 741)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 10:36:38 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 1.0ms | Allocations: 741)
+
+
+Started PUT "/authors/1" for ::1 at 2020-08-18 10:36:46 -0400
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"id"=>1, "name"=>"Emily Dickinson", "biography"=>"Dickinson's poems generally fall into three distinct periods, the works in each period having certain general characters in common.\n\nPre-1861. These are often conventional and sentimental in nature.[144] Thomas H. Johnson, who later published The Poems of Emily Dickinson, was able to date only five of Dickinson's poems before 1858.[145] Two of these are mock valentines done in an ornate and humorous style, and two others are conventional lyrics, one of which is about missing her brother Austin. The fifth poem, which begins \"I have a Bird in spring\", conveys her grief over the feared loss of friendship and was sent to her friend Sue Gilbert.[145]\n1861–1865. This was her most creative period—these poems represent her most vigorous and creative work. Johnson estimated that she composed 86 poems in 1861, 366 in 1862, 141 in 1863, and 174 in 1864. He also believed that during this period, she fully developed her themes of life and mortality.[146]\nPost-1866. It is estimated that two-thirds of the entire body of her poetry was written before this year.[146]\nStructure and syntax\n\nDickinson's handwritten manuscript of her poem \"Wild Nights – Wild Nights!\"\nThe extensive use of dashes and unconventional capitalization in Dickinson's manuscripts, and the idiosyncratic vocabulary and imagery, combine to create a body of work that is \"far more various in its styles and forms than is commonly supposed\".[4][147] Dickinson avoids pentameter, opting more generally for trimeter, tetrameter and, less often, dimeter. Sometimes her use of these meters is regular, but oftentimes it is irregular. The regular form that she most often employs is the ballad stanza, a traditional form that is divided into quatrains, using tetrameter for the first and third lines and trimeter for the second and fourth, while rhyming the second and fourth lines (ABCB). Though Dickinson often uses perfect rhymes for lines two and four, she also makes frequent use of slant rhyme.[148] In some of her poems, she varies the meter from the traditional ballad stanza by using trimeter for lines one, two and four, while only using tetrameter for line three.\n\nSince many of her poems were written in traditional ballad stanzas with ABCB rhyme schemes, some of these poems can be sung to fit the melodies of popular folk songs and hymns that also use the common meter, employing alternating lines of iambic tetrameter and iambic trimeter.[149] Familiar examples of such songs are \"O Little Town of Bethlehem\" and \"Amazing Grace'\".\n\nDickinson scholar and poet Anthony Hecht finds resonances in Dickinson's poetry not only with hymns and song-forms but also with psalms and riddles, citing the following example: \"Who is the East? / The Yellow Man / Who may be Purple if he can / That carries in the Sun. / Who is the West? / The Purple Man / Who may be Yellow if He can / That lets Him out again.\"[147]\n\nLate 20th-century scholars are \"deeply interested\" by Dickinson's highly individual use of punctuation and lineation (line lengths and line breaks).[132] Following the publication of one of the few poems that appeared in her lifetime – \"A Narrow Fellow in the Grass\", published as \"The Snake\" in the Republican – Dickinson complained that the edited punctuation (an added comma and a full stop substitution for the original dash) altered the meaning of the entire poem.[127]\n\nOriginal wording\nA narrow Fellow in the Grass\nOccasionally rides –\nYou may have met Him – did you not\nHis notice sudden is –\n\nRepublican version[127]\nA narrow Fellow in the Grass\nOccasionally rides –\nYou may have met Him – did you not,\nHis notice sudden is.\n\nAs Farr points out, \"snakes instantly notice you\"; Dickinson's version captures the \"breathless immediacy\" of the encounter; and The Republican's punctuation renders \"her lines more commonplace\".[132] With the increasingly close focus on Dickinson's structures and syntax has come a growing appreciation that they are \"aesthetically based\".[132] Although Johnson's landmark 1955 edition of poems was relatively unaltered from the original, later scholars critiqued it for deviating from the style and layout of Dickinson's manuscripts. Meaningful distinctions, these scholars assert, can be drawn from varying lengths and angles of dash, and differing arrangements of text on the page.[150] Several volumes have attempted to render Dickinson's handwritten dashes using many typographic symbols of varying length and angle. R. W. Franklin's 1998 variorum edition of the poems provided alternate wordings to those chosen by Johnson, in a more limited editorial intervention. Franklin also used typeset dashes of varying length to approximate the manuscripts' dashes more closely.[141]\n\nMajor themes\nDickinson left no formal statement of her aesthetic intentions and, because of the variety of her themes, her work does not fit conveniently into any one genre. She has been regarded, alongside Emerson (whose poems Dickinson admired), as a Transcendentalist.[151] However, Farr disagrees with this analysis, saying that Dickinson's \"relentlessly measuring mind ... deflates the airy elevation of the Transcendental\".[152] Apart from the major themes discussed below, Dickinson's poetry frequently uses humor, puns, irony and satire.[153]\n\nFlowers and gardens: Farr notes that Dickinson's \"poems and letters almost wholly concern flowers\" and that allusions to gardens often refer to an \"imaginative realm ... wherein flowers [are] often emblems for actions and emotions\".[154] She associates some flowers, like gentians and anemones, with youth and humility; others with prudence and insight.[154] Her poems were often sent to friends with accompanying letters and nosegays.[154] Farr notes that one of Dickinson's earlier poems, written about 1859, appears to \"conflate her poetry itself with the posies\": \"My nosegays are for Captives – / Dim – long expectant eyes – / Fingers denied the plucking, / Patient till Paradise – / To such, if they sh'd whisper / Of morning and the moor – / They bear no other errand, / And I, no other prayer\".[154]\n\nThe Master poems: Dickinson left a large number of poems addressed to \"Signor\", \"Sir\" and \"Master\", who is characterized as Dickinson's \"lover for all eternity\".[155] These confessional poems are often \"searing in their self-inquiry\" and \"harrowing to the reader\" and typically take their metaphors from texts and paintings of Dickinson's day.[155] The Dickinson family themselves believed these poems were addressed to actual individuals but this view is frequently rejected by scholars. Farr, for example, contends that the Master is an unattainable composite figure, \"human, with specific characteristics, but godlike\" and speculates that Master may be a \"kind of Christian muse\".[155]\n\nMorbidity: Dickinson's poems reflect her \"early and lifelong fascination\" with illness, dying and death.[156] Perhaps surprisingly for a New England spinster, her poems allude to death by many methods: \"crucifixion, drowning, hanging, suffocation, freezing, premature burial, shooting, stabbing and guillotinage\".[156] She reserved her sharpest insights into the \"death blow aimed by God\" and the \"funeral in the brain\", often reinforced by images of thirst and starvation. Dickinson scholar Vivian Pollak considers these references an autobiographical reflection of Dickinson's \"thirsting-starving persona\", an outward expression of her needy self-image as small, thin and frail.[156] Dickinson's most psychologically complex poems explore the theme that the loss of hunger for life causes the death of self and place this at \"the interface of murder and suicide\".[156]\n\nGospel poems: Throughout her life, Dickinson wrote poems reflecting a preoccupation with the teachings of Jesus Christ and, indeed, many are addressed to him.[157] She stresses the Gospels' contemporary pertinence and recreates them, often with \"wit and American colloquial language\".[157] Scholar Dorothy Oberhaus finds that the \"salient feature uniting Christian poets ... is their reverential attention to the life of Jesus Christ\" and contends that Dickinson's deep structures place her in the \"poetic tradition of Christian devotion\" alongside Hopkins, Eliot and Auden.[157] In a Nativity poem, Dickinson combines lightness and wit to revisit an ancient theme: \"The Savior must have been / A docile Gentleman – / To come so far so cold a Day / For little Fellowmen / The Road to Bethlehem / Since He and I were Boys / Was leveled, but for that twould be / A rugged billion Miles –\".[157]\n\nThe Undiscovered Continent: Academic Suzanne Juhasz considers that Dickinson saw the mind and spirit as tangible visitable places and that for much of her life she lived within them.[158] Often, this intensely private place is referred to as the \"undiscovered continent\" and the \"landscape of the spirit\" and embellished with nature imagery. At other times, the imagery is darker and forbidding—castles or prisons, complete with corridors and rooms—to create a dwelling place of \"oneself\" where one resides with one's other selves.[158] An example that brings together many of these ideas is: \"Me from Myself – to banish – / Had I Art – / Impregnable my Fortress / Unto All Heart – / But since myself—assault Me – / How have I peace / Except by subjugating / Consciousness. / And since We're mutual Monarch / How this be / Except by Abdication – / Me – of Me?\".[158]\n\nReception\n\nDickinson wrote and sent this poem (\"A Route of Evanescence\") to Thomas Higginson in 1880.\nThe surge of posthumous publication gave Dickinson's poetry its first public exposure. Backed by Higginson and with a favorable notice from William Dean Howells, an editor of Harper's Magazine, the poetry received mixed reviews after it was first published in 1890. Higginson himself stated in his preface to the first edition of Dickinson's published work that the poetry's quality \"is that of extraordinary grasp and insight\",[159] albeit \"without the proper control and chastening\" that the experience of publishing during her lifetime might have conferred.[160] His judgment that her opus was \"incomplete and unsatisfactory\" would be echoed in the essays of the New Critics in the 1930s.\n\nMaurice Thompson, who was literary editor of The Independent for twelve years, noted in 1891 that her poetry had \"a strange mixture of rare individuality and originality\".[161] Some critics hailed Dickinson's effort, but disapproved of her unusual non-traditional style. Andrew Lang, a British writer, dismissed Dickinson's work, stating that \"if poetry is to exist at all, it really must have form and grammar, and must rhyme when it professes to rhyme. The wisdom of the ages and the nature of man insist on so much\".[162] Thomas Bailey Aldrich, a poet and novelist, equally dismissed Dickinson's poetic technique in The Atlantic Monthly in January 1892: \"It is plain that Miss Dickinson possessed an extremely unconventional and grotesque fancy. She was deeply tinged by the mysticism of Blake, and strongly influenced by the mannerism of Emerson ... But the incoherence and formlessness of her — versicles are fatal ... an eccentric, dreamy, half-educated recluse in an out-of-the-way New England village (or anywhere else) cannot with impunity set at defiance the laws of gravitation and grammar\".[163]\n\nCritical attention to Dickinson's poetry was meager from 1897 to the early 1920s.[164] By the start of the 20th century, interest in her poetry became broader in scope and some critics began to consider Dickinson as essentially modern. Rather than seeing Dickinson's poetic styling as a result of lack of knowledge or skill, modern critics believed the irregularities were consciously artistic.[165] In a 1915 essay, Elizabeth Shepley Sergeant called the poet's inspiration \"daring\" and named her \"one of the rarest flowers the sterner New England land ever bore\".[166] With the growing popularity of modernist poetry in the 1920s, Dickinson's failure to conform to 19th-century poetic form was no longer surprising nor distasteful to new generations of readers. Dickinson was suddenly referred to by various critics as a great woman poet, and a cult following began to form.[167]\n\nIn the 1930s, a number of the New Critics – among them R. P. Blackmur, Allen Tate, Cleanth Brooks and Yvor Winters – appraised the significance of Dickinson's poetry. As critic Roland Hagenbüchle pointed out, their \"affirmative and prohibitive tenets turned out to be of special relevance to Dickinson scholarship\".[168] Blackmur, in an attempt to focus and clarify the major claims for and against the poet's greatness, wrote in a landmark 1937 critical essay: \"... she was a private poet who wrote as indefatigably as some women cook or knit. Her gift for words and the cultural predicament of her time drove her to poetry instead of antimacassars ... She came ... at the right time for one kind of poetry: the poetry of sophisticated, eccentric vision.\"[169]\n\nThe second wave of feminism created greater cultural sympathy for her as a female poet. In the first collection of critical essays on Dickinson from a feminist perspective, she is heralded as the greatest woman poet in the English language.[170] Biographers and theorists of the past tended to separate Dickinson's roles as a woman and a poet. For example, George Whicher wrote in his 1952 book This Was a Poet: A Critical Biography of Emily Dickinson, \"Perhaps as a poet [Dickinson] could find the fulfillment she had missed as a woman.\" Feminist criticism, on the other hand, declares that there is a necessary and powerful conjunction between Dickinson being a woman and a poet.[171] Adrienne Rich theorized in Vesuvius at Home: The Power of Emily Dickinson (1976) that Dickinson's identity as a woman poet brought her power: \"[she] chose her seclusion, knowing she was exceptional and knowing what she needed ... She carefully selected her society and controlled the disposal of her time ... neither eccentric nor quaint; she was determined to survive, to use her powers, to practice necessary economics.\"[172]\n\nSome scholars question the poet's sexuality, theorizing that the numerous letters and poems that were dedicated to Susan Gilbert Dickinson indicate a lesbian romance, and speculating about how this may have influenced her poetry.[173] Critics such as John Cody, Lillian Faderman, Vivian R. Pollak, Paula Bennett, Judith Farr, Ellen Louise Hart, and Martha Nell Smith have argued that Susan was the central erotic relationship in Dickinson's life.[174]\n\nLegacy\nIn the early 20th century, Martha Dickinson Bianchi and Millicent Todd Bingham kept the achievement of Emily Dickinson alive. Bianchi promoted Dickinson's poetic achievement. Bianchi inherited The Evergreens as well as the copyright for her aunt's poetry from her parents, publishing works such as Emily Dickinson Face to Face and Letters of Emily Dickinson, which stoked public curiosity about her aunt. Bianchi's books perpetrated legends about her aunt in the context of family tradition, personal recollection and correspondence. In contrast, Millicent Todd Bingham's took a more objective and realistic approach to the poet.[175]\n\nEmily Dickinson is now considered a powerful and persistent figure in American culture.[176] Although much of the early reception concentrated on Dickinson's eccentric and secluded nature, she has become widely acknowledged as an innovative, proto-modernist poet.[177] As early as 1891, William Dean Howells wrote that \"If nothing else had come out of our life but this strange poetry, we should feel that in the work of Emily Dickinson, America, or New England rather, had made a distinctive addition to the literature of the world, and could not be left out of any record of it.\"[178] Critic Harold Bloom has placed her alongside Walt Whitman, Wallace Stevens, Robert Frost, T. S. Eliot, and Hart Crane as a major American poet,[179] and in 1994 listed her among the 26 central writers of Western civilization.[180]\n\nDickinson is taught in American literature and poetry classes in the United States from middle school to college. Her poetry is frequently anthologized and has been used as text for art songs by composers such as Aaron Copland, Nick Peros, John Adams and Michael Tilson Thomas.[181] Several schools have been established in her name; for example, Emily Dickinson Elementary Schools exist in Bozeman, Montana,[182]Redmond, Washington,[183] and New York City.[184] A few literary journals—including The Emily Dickinson Journal, the official publication of the Emily Dickinson International Society—have been founded to examine her work.[185] An 8-cent commemorative stamp in honor of Dickinson was issued by the United States Postal Service on August 28, 1971 as the second stamp in the \"American Poet\" series.[186] Dickinson was inducted into the National Women's Hall of Fame in 1973.[187] A one-woman play titled The Belle of Amherst appeared on Broadway in 1976, winning several awards; it was later adapted for television.[188]\n\nDickinson's herbarium, which is now held in the Houghton Library at Harvard University, was published in 2006 as Emily Dickinson's Herbarium by Harvard University Press.[189] The original work was compiled by Dickinson during her years at Amherst Academy, and consists of 424 pressed specimens of plants arranged on 66 pages of a bound album. A digital facsimile of the herbarium is available online.[190] The town of Amherst Jones Library's Special Collections department has an Emily Dickinson Collection consisting of approximately seven thousand items, including original manuscript poems and letters, family correspondence, scholarly articles and books, newspaper clippings, theses, plays, photographs and contemporary artwork and prints.[191] The Archives and Special Collections at Amherst College has substantial holdings of Dickinson's manuscripts and letters as well as a lock of Dickinson's hair and the original of the only positively identified image of the poet. In 1965, in recognition of Dickinson's growing stature as a poet, the Homestead was purchased by Amherst College. It opened to the public for tours, and also served as a faculty residence for many years. The Emily Dickinson Museum was created in 2003 when ownership of the Evergreens, which had been occupied by Dickinson family heirs until 1988, was transferred to the college.[192]", "controversy"=>"TBA"}, "id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (23.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[36mAuthor Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "authors" WHERE "authors"."name" = $1 AND "authors"."id" != $2 LIMIT $3[0m  [["name", "Emily Dickinson"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/authors_controller.rb:26:in `update'
+Completed 200 OK in 36ms (Views: 1.1ms | ActiveRecord: 25.2ms | Allocations: 3636)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 10:36:46 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.3ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 10:51:17 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 8.5ms | ActiveRecord: 2.7ms | Allocations: 2733)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 10:51:17 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:03:06 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (14.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 31ms (Views: 13.5ms | ActiveRecord: 14.0ms | Allocations: 1061)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:03:39 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (25.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 31ms (Views: 4.3ms | ActiveRecord: 25.8ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:04:11 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 1.1ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:04:47 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (2.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 2.5ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:05:29 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:05:35 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.2ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:05:44 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.9ms | Allocations: 1023)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 11:05:51 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 81ms (Views: 74.6ms | ActiveRecord: 2.3ms | Allocations: 18794)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 11:05:51 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 741)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:06:24 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (3.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 3.1ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:06:26 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.0ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:06:26 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:07:00 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (25.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 29ms (Views: 4.0ms | ActiveRecord: 25.1ms | Allocations: 1023)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 11:07:03 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 1.6ms | Allocations: 18741)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 11:07:03 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 741)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:07:47 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (23.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 29ms (Views: 5.2ms | ActiveRecord: 23.3ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:07:49 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.5ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 1.2ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:07:49 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:08:06 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 1.0ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:08:12 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (25.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 2.8ms | ActiveRecord: 25.7ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:08:12 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:08:35 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.9ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:08:36 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.9ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:08:36 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:08:56 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.9ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:08:59 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.7ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:08:59 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:09:06 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (2.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 2.2ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:09:28 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.0ms | Allocations: 1026)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:09:30 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:09:30 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:10:20 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.4ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:20:12 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (2.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 2.0ms | Allocations: 1061)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:20:18 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 6.1ms | ActiveRecord: 1.6ms | Allocations: 2695)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:20:18 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:20:59 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.2ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:21:01 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.9ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:21:01 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:22:15 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (7.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 6.0ms | ActiveRecord: 7.6ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:22:17 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (24.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 3.7ms | ActiveRecord: 24.9ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:22:17 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:22:39 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:22:43 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.5ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:22:47 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.8ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:22:47 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (25.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 25.5ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:23:08 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 1.3ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:23:11 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.9ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:23:11 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:28:34 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.5ms | Allocations: 1061)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:28:36 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (4.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 4.2ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:28:46 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:28:52 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (2.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 2.8ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:28:56 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 1.6ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:01 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 1.1ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:06 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (4.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 4.0ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:09 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (21.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 30ms (Views: 8.5ms | ActiveRecord: 21.1ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:10 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 102ms (Views: 100.6ms | ActiveRecord: 0.8ms | Allocations: 1026)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:15 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (43.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 49ms (Views: 4.6ms | ActiveRecord: 43.9ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:16 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:26 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.2ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:27 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.6ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:35 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:50 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (3.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 3.5ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:52 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.0ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:56 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.2ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:57 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (5.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 5.3ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:29:59 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:30:00 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.9ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:30:12 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.6ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:30:15 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.5ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:30:18 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.5ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:30:36 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.7ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 1.7ms | Allocations: 2695)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:30:36 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:30:45 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.9ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:30:49 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.9ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:31:03 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (3.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 3.7ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:31:05 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.1ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:31:17 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 1.7ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:31:30 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (33.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 40ms (Views: 5.4ms | ActiveRecord: 33.8ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:31:44 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (3.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 3.0ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:31:46 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 1.1ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:31:46 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:32:12 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.7ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:32:13 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (2.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 2.1ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:32:15 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (2.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 2.6ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:32:17 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (50.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 56ms (Views: 5.2ms | ActiveRecord: 50.0ms | Allocations: 1023)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:33:16 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.1ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:33:18 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:33:18 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 740)
+
+
+Started GET "/authors/2/texts/17" for ::1 at 2020-08-18 11:33:22 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"2", "id"=>"17"}
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 15ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 1779)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:33:27 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:33:29 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:33:29 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 11:33:33 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 1.8ms | Allocations: 18741)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 11:33:33 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 741)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:34:53 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.7ms | Allocations: 1023)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 11:34:59 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 1.5ms | Allocations: 18741)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 11:34:59 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 741)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:35:04 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.1ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:35:04 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:35:41 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:35:42 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:35:42 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:36:12 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 1.0ms | Allocations: 1023)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:36:14 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.4ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.8ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:36:14 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:36:53 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (4.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 4.2ms | Allocations: 1024)
+
+
+Started GET "/authors/2/texts" for ::1 at 2020-08-18 11:36:55 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 2645)
+
+
+Started GET "/authors/2" for ::1 at 2020-08-18 11:36:55 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 11:37:00 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (24.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.2ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 56ms (Views: 28.2ms | ActiveRecord: 25.9ms | Allocations: 18741)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 11:37:00 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 741)
+
+
+Started GET "/authors" for ::1 at 2020-08-18 11:44:56 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (1.9ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/authors_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.9ms | Allocations: 1061)
+
+
+Started GET "/authors/1/texts" for ::1 at 2020-08-18 11:44:58 -0400
+Processing by TextsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:5:in `index'
+  [1m[36mText Load (0.6ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 2.3ms | Allocations: 18791)
+
+
+Started GET "/authors/1" for ::1 at 2020-08-18 11:44:58 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:40:in `set_author'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 741)
+
+
+Started GET "/authors/1/texts/16" for ::1 at 2020-08-18 11:45:22 -0400
+Processing by TextsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"16"}
+  [1m[36mText Load (0.3ms)[0m  [1m[34mSELECT "texts".* FROM "texts" WHERE "texts"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:41:in `set_text'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/texts_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.9ms | Allocations: 1778)
+
+

@@ -1,0 +1,48 @@
+@import url("https://use.typekit.net/yns4wlf.css");
+.formEdit, .shortInput, .longInput {
+background-color: black;
+color: #04AD04;
+font-size: 20px;
+border: 1px solid #04AD04;
+}
+.formEdit {
+  border: none;
+  display: flex;
+  flex-flow: column;
+}
+::placeholder {
+  color: #04AD04;
+}
+.shortInput {
+  font-family: itc-american-typewriter, serif;
+  width: 50vw;
+  margin: 25px 0 0 20vw;
+  resize: none;
+}
+.longInput {
+  font-family: itc-american-typewriter, serif;
+  width: 50vw;
+  height: 50vh;
+  margin: 25px 0 0 20vw;
+  resize: none;
+}
+.selectUpload {
+  background-color: black;
+  border: 1px solid #04AD04;
+  width: 200px;
+  margin: 25px 0 0 20vw;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: itc-american-typewriter, serif;
+  color: #04AD04;
+  }
+  .submitEdit{
+    background-color: #04AD04;
+    color: black;
+    font-family: itc-american-typewriter, serif;
+    font-weight: 400;
+    font-size: 16px;
+    height: 35px;
+    width: 75px;
+    margin: 25px 0 0 20vw;
+  }
