@@ -12,7 +12,6 @@ class Type extends Component {
       currentChar: '',
     }
   }
-
   async componentDidMount() {
     const authorId = this.props.match.params.authorId
     const textId = this.props.match.params.textId
