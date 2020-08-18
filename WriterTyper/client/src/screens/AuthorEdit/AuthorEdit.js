@@ -39,29 +39,36 @@ class AuthorEdit extends Component {
   }
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form
+        onSubmit={this.handleSubmit}
+        className='formEdit'>
         <input
           type='text'
           name='name'
-          className='authNameInput'
+          className='shortInput'
           value={this.state.author.name}
           onChange={this.handleChange}
         ></input>
-        <input
+        <textarea
           type='text'
           name='biography'
-          className='authBioInput'
+          className='longInput'
           value={this.state.author.biography}
           onChange={this.handleChange}
-        ></input>
-        <input
+        ></textarea>
+        <textarea
           type='text'
           name='controversy'
-          className='authNameInput'
+          className='longInput'
           value={this.state.author.controversy}
           onChange={this.handleChange}
-        ></input>
-        <button type='submit'>Submit</button>
+        ></textarea>
+        <button
+          type='submit'
+          className='submitEdit'
+        >
+          Submit
+        </button>
       </form>
     );
   }

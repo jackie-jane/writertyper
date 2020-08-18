@@ -1,11 +1,10 @@
 class ScoresController < ApplicationController
   before_action :set_text, only: [:show, :update, :destroy]
   before_action :set_score, only: [:show, :update, :destroy]
-
   def index
-    @author = Text.find(params[:text_id])
+    @text = Text.find(params[:text_id])
     @score = Score.where(text_id: @text.id)
-    render json: @score, include: :texts, status: :ok
+    render json: @score, include: :text, status: :ok
   end
 
   def show
@@ -17,7 +16,7 @@ class ScoresController < ApplicationController
   end
 
   def update
-    @score.update(params)
+    @score.update(score_params)
 
     render json: @score
   end
@@ -29,7 +28,7 @@ class ScoresController < ApplicationController
   private
 
   def set_text
-    @text = Text.find(params[:id])
+    @text = Text.find(params[:text_id])
   end
 
   def set_score

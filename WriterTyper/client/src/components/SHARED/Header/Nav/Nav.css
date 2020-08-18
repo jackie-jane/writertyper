@@ -1,7 +1,7 @@
 @import url("https://use.typekit.net/yns4wlf.css");
 .navCont{
   display: flex;
-  margin-left: 400px;
-  align-items: center;
-  text-decoration: none;
+  align-self: center;
+  justify-content: space-around;
+  list-style-type: none;
 }

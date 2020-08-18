@@ -91,13 +91,10 @@ class Upload extends Component {
     return (
       <>
         <form className='formUpload'>
-          <label className='labelUpload'>
-            Choose a writer:
-          </label>
           <select
+            className='selectUpload'
             name="selectRead"
             id="selectRead"
-            className='selectRead'
             onChange={this.handleChange}>
             <option
               value='default'>
@@ -119,24 +116,31 @@ class Upload extends Component {
         </form>
         {newAuthor === 1 ?
           <form
-            onSubmit={this.handleAuthSubmit}>
+            onSubmit={this.handleAuthSubmit}
+            className='formUpload'>
             <input
               placeholder="Writer's name"
               name='name'
-              onChange={this.handleAuthInput}>
+              className='shortInput'
+              onChange={this.handleAuthInput}
+              required>
             </input>
             <textarea
               placeholder="Writer's biography"
               name='biography'
+              className='longInput'
               onChange={this.handleAuthInput}
             ></textarea>
             <textarea
               placeholder="Notable controversy"
               name='controversy'
+              className='longInput'
               onChange={this.handleAuthInput}
             >
             </textarea>
-            <button type='submit'>
+            <button
+              type='submit'
+              className='submitUpload'>
               Submit
               </button>
           </form>
@@ -147,17 +151,24 @@ class Upload extends Component {
           <form
             onSubmit={this.handleTextSubmit}>
             <input
-              placeholder='copy and paste title here'
+              placeholder='Title'
               name='title'
-              onChange={this.handleTextInput}>
+              className='shortInput'
+              onChange={this.handleTextInput}
+              required>
             </input>
             <textarea
-              placeholder='copy and paste text here'
+              placeholder='Text'
               name='content'
+              className='longInput'
               onChange={this.WordCount}
             >
             </textarea>
-            <button type='submit'>Submit</button>
+            <button
+              type='submit'
+              className='submitUpload'>
+              Submit
+            </button>
           </form>
           :
           null

@@ -28,7 +28,7 @@ function App(props) {
       <Route path='/author/:authorId/'>
         <AuthorEdit />
       </Route>
-      <Route path='/type'>
+      <Route path='/type/:authorId/:textId'>
         <Type />
       </Route>
       <Route path='/about'>

@@ -3,6 +3,17 @@
   color: #04AD04;
   font-family: itc-american-typewriter, serif;
   font-weight: 400;
-  font-size: 35px;
-  margin: 50px 200px 50px 200px;
+  font-size: 40px;
+  width: 80vw;
+  margin: 10vh 10vw 0 10vw;
+}
+@media(max-width: 950px){
+  .animated{
+    font-size: 35px;
+  }
+}
+@media(max-width: 650px){
+  .animated{
+    font-size: 30px;
+  }
 }

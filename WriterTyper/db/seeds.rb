@@ -348,3 +348,7 @@ Text.create(title: "Meditation 17", words: 81, characters: 389,
  because I am involved in mankind;
  and therefore never send to know for whom the bell tolls;
  it tolls for thee.', author_id: 2)
+ Score.create(username: "EDickinson", word_per_minute: 26, accuracy: 0.95, score: 2470, text_id: 5)
+ Score.create(username: "I.C.U.P.", word_per_minute: 34, accuracy: 0.93, score: 3162, text_id: 7)
+ Score.create(username: "Legalize_crime", word_per_minute: 12, accuracy: 0.89, score: 1068, text_id: 8)
+ Score.create(username: "Woodrow", word_per_minute: 42, accuracy: 0.83, score: 3486, text_id: 10)
