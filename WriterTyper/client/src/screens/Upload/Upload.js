@@ -122,7 +122,8 @@ class Upload extends Component {
               placeholder="Writer's name"
               name='name'
               className='shortInput'
-              onChange={this.handleAuthInput}>
+              onChange={this.handleAuthInput}
+              required>
             </input>
             <textarea
               placeholder="Writer's biography"
@@ -137,7 +138,9 @@ class Upload extends Component {
               onChange={this.handleAuthInput}
             >
             </textarea>
-            <button type='submit'>
+            <button
+              type='submit'
+              className='submitUpload'>
               Submit
               </button>
           </form>
@@ -148,19 +151,24 @@ class Upload extends Component {
           <form
             onSubmit={this.handleTextSubmit}>
             <input
-              placeholder='copy and paste title here'
+              placeholder='Title'
               name='title'
               className='shortInput'
-              onChange={this.handleTextInput}>
+              onChange={this.handleTextInput}
+              required>
             </input>
             <textarea
-              placeholder='copy and paste text here'
+              placeholder='Text'
               name='content'
               className='longInput'
               onChange={this.WordCount}
             >
             </textarea>
-            <button type='submit'>Submit</button>
+            <button
+              type='submit'
+              className='submitUpload'>
+              Submit
+            </button>
           </form>
           :
           null

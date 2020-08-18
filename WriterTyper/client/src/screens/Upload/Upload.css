@@ -6,16 +6,20 @@ font-size: 20px;
 border: 1px solid #04AD04;
 }
 .formUpload {
-  border: none
+  border: none; 
+  display: flex;
+  flex-flow: column;
 }
 ::placeholder {
   color: #04AD04;
 }
 .shortInput {
+  font-family: itc-american-typewriter, serif;
   width: 50vw;
   margin: 25px 0 0 20vw;
 }
 .longInput {
+  font-family: itc-american-typewriter, serif;
   width: 50vw;
   height: 50vh;
   margin: 25px 0 0 20vw;
@@ -30,4 +34,14 @@ border: 1px solid #04AD04;
   font-weight: 500;
   font-family: itc-american-typewriter, serif;
   color: #04AD04;
+  }
+  .submitUpload{
+    background-color: #04AD04;
+    color: black;
+    font-family: itc-american-typewriter, serif;
+    font-weight: 400;
+    font-size: 16px;
+    height: 35px;
+    width: 75px;
+    margin: 25px 0 0 20vw;
   }
