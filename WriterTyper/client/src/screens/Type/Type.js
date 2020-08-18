@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { readOneByAuthor } from '../../services/Crud'
 import { withRouter } from 'react-router-dom'
+import './Type.css'
 class Type extends Component {
   constructor(props) {
     super(props);
@@ -45,36 +46,33 @@ class Type extends Component {
       e.target.value = ''
     }
   }
-
   render() {
     const completeRender = this.state.completed.join('')
     const upcomingRender = this.state.upcoming.join('')
     return (
       <>
         {this.state.completed ?
-          <>
-            <p
-              style={{
-                color: "white"
-              }}>
-              {completeRender}
-            </p>
-            <p
-              style={{
-                color: "white"
-              }}>
-              {this.state.currentChar}
-            </p>
-            <p
-              style={{
-                color: "white"
-              }}>
-              {upcomingRender}
+          <div
+          className='typeCont'>
+            <p>
+              <span
+                className='completedText'>
+                {completeRender}
+              </span>
+              <mark
+                className='currentChar'>
+                {this.state.currentChar}
+              </mark>
+              <span
+                className='upcomingText'>
+                {upcomingRender}
+              </span>
             </p>
             <textarea
+              className='userInput'
               onKeyUp={this.handleType}>
             </textarea>
-          </>
+          </div>
           :
           <>
             <textarea
