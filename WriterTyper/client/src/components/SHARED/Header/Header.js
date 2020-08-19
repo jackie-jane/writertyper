@@ -1,20 +1,13 @@
 import React from 'react';
+import Nav from './Nav/Nav'
+import Logo from './Logo/Logo'
 import './Header.css'
 
-function Header() {
+export default function Header() {
   return (
-    <div>
-      <header>
-        <p className='logo'>WriterTyper</p>
-        <ul className='navCont'>
-          <li className='navItem'>About</li>
-          <li className='navItem'>Upload</li>
-          <li className='navItem'>Read</li>
-          <li className='navItem'>Type</li>
-        </ul>
-      </header>
-    </div>
+    <header>
+      <Logo />
+      <Nav />
+    </header>
   );
 }
-
-export default Header;

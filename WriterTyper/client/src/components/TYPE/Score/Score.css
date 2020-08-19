@@ -1,0 +1,8 @@
+.score {
+  color: black;
+  position: absolute;
+  bottom: 0;
+}
+.topScore {
+  margin: 0;
+}

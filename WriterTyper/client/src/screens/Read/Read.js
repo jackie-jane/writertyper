@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { readAllAuthors, readAllTextByAuthor, readOneAuthor, deleteText } from '../../services/Crud'
+import { deleteAuthor, readAllAuthors, readAllTextByAuthor, readOneAuthor, deleteText } from '../../services/Crud'
 import './Read.css'
 
 class Read extends Component {
@@ -8,11 +8,15 @@ class Read extends Component {
     super(props);
     this.state = {
       authors: [],
-      valueId: 0,
+      valueId: '',
       texts: [],
       submit: false,
-      author: [],
+      writerInfo: []
     }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleAuthDelete = this.handleAuthDelete.bind(this)
+    this.handleDelete = this.handleDelete.bind(this)
+    this.handleAuthDelete = this.handleAuthDelete.bind(this)
   }
   async componentDidMount() {
     try {
@@ -28,16 +32,15 @@ class Read extends Component {
         const id = this.state.valueId
         const writerTexts = await readAllTextByAuthor(id)
         const writerInfo = await readOneAuthor(id)
+        console.log(writerTexts)
         this.setState({
           texts: writerTexts,
-          author: writerInfo,
-          submit: false
+          submit: false,
+          writerInfo: writerInfo
         })
       } catch (err) {
         console.log(`encountered an error described here: ${err}`)
       }
-    } else {
-      console.log('nothing needs to be changed')
     }
   }
   handleChange = (e) => {
@@ -47,61 +50,117 @@ class Read extends Component {
       submit: true
     })
   }
+  async handleAuthDelete() {
+    const id = this.state.valueId
+    await deleteAuthor(id)
+    window.location.reload(false);
+  }
   handleDelete = (e) => {
     const textId = e.target.value
     const authId = this.state.valueId
     deleteText(authId, textId)
+    this.setState({
+      submit: true
+    })
   }
   render() {
     const author = this.state.valueId
     const authors = this.state.authors
     const texts = this.state.texts
-    const bio = this.state.author
+    const writer = this.state.writerInfo
     return (
       <>
-        <form className='formRead'>
-          <label htmlFor="authorSelect"
-            className='labelRead'>
-            Choose a writer:
-            </label>
-          <select
-            name="author_id"
-            id="author_id"
-            className='selectRead'
-            onChange={this.handleChange}>
-            {authors.map(element =>
-              <>
-                <option
-                  value={element.id}>
-                  {element.name}
-                </option>
-              </>
-            )}
-          </select>
-        </form>
-        {texts ?
+        <div className='selectCont'>
+          <form className='formRead'>
+            <select
+              name="author_id"
+              id="author_id"
+              className='selectRead'
+              onChange={this.handleChange}>
+              <option>
+                Choose a writer
+            </option>
+              {authors.map(element =>
+                <>
+                  <option
+                    value={element.id}>
+                    {element.name}
+                  </option>
+                </>
+              )}
+            </select>
+          </form>
+        </div>
+        {author ?
           <>
-            {texts.map(element =>
-              <div className='textCont'>
-                <div className='topDivRead'>
-                  <div className='titleAndAuthor'>
-                    <h2>{element.title}</h2>
-                    <h4>{element.author.name}</h4>
-                  </div>
-                  <Link to={`/edit/${author}/${element.id}`}>
+            <div
+              className='textCont'>
+              <div
+                className='topDivRead'>
+                <h2
+                  className='writerNameRead'>
+                  {writer.name}
+                </h2>
+                <div
+                  className='buttonCont'>
+                  <Link
+                    to={`/author/${this.state.valueId}`}>
                     <button
                       className='editButtonOnRead'>
                       Edit
-                      </button>
+                        </button>
                   </Link>
                   <button
                     className='deleteButtonOnRead'
-                    onClick={this.handleDelete}
-                    value={element.id}>
+                    onClick={this.handleAuthDelete}
+                    value={this.state.valueId}>
                     Delete
-                    </button>
+                  </button>
                 </div>
-                <p className='contentOnRead'>{element.content}</p>
+              </div>
+              <p
+                className='contentOnRead'>
+                <h3>Biography</h3>
+                {writer.biography}
+                <br></br><br></br>
+                <h3>Controversy:</h3>
+                {writer.controversy}
+              </p>
+            </div>
+            {texts.map(element =>
+              <div className='textCont'>
+                <div className='topDivRead'>
+                  <h2
+                    className='textTitleRead'>
+                    {element.title}
+                  </h2>
+                  <div
+                    className='buttonCont'>
+                    <Link to={`/edit/${author}/${element.id}`}>
+                      <button
+                        className='editButtonOnRead'>
+                        Edit
+                      </button>
+                    </Link>
+                    <Link to={`/type/${author}/${element.id}`}>
+                      <button
+                        className='typeButtonOnRead'>
+                        Type
+                      </button>
+                    </Link>
+                    <button
+                      className='deleteButtonOnRead'
+                      onClick={this.handleDelete}
+                      value={element.id}>
+                      Delete
+                    </button>
+                  </div>
+                </div>
+                <textarea
+                  className='contentOnRead'
+                  value={element.content}
+                  disabled="disabled" >
+                </textarea>
               </div>
             )}
           </>

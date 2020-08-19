@@ -20,6 +20,11 @@ export const readOneByAuthor = async (authorId, textId) => {
   return res.data;
 }
 
+export const deleteAuthor = async (authorId) => {
+  const res = await api.delete(`/authors/${authorId}`)
+  return res.data;
+}
+
 export const createAuthor = async (author) => {
   const res = await api.post('/authors', author);
   return res.data;
@@ -39,4 +44,15 @@ export const editText = async (authorId, textId, textData) => {
   const resp = await api.put(`/authors/${authorId}/texts/${textId}`, { text: textData });
   return resp.data;
 }
+
+export const editAuthor = async (authorId, authorData) => {
+  const resp = await api.put(`/authors/${authorId}`, { author: authorData });
+  return resp.data;
+}
+
+export const readScore = async (authorId, textId) => {
+  const res = await api.get(`/authors/${authorId}/texts/${textId}/scores`);
+  return res.data;
+}
+
 

@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './StartButton.css'
+
 function StartButton(props) {
   return (
-    <button className='startButton'>
-      Start
-    </button>
+    <Link to='/read'>
+      <button className='startButton'>
+        Start
+      </button>
+    </Link>
   );
 }
 

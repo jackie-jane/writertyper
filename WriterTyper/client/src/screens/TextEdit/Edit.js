@@ -11,7 +11,7 @@ class Edit extends Component {
       wordCount: 0,
       characterCount: 0,
     }
-
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
   async componentDidMount() {
     const authorId = this.props.match.params.authorId
@@ -33,6 +33,14 @@ class Edit extends Component {
       characterCount: textArr.length
     })
   }
+  handleTitleChange = (event) => {
+    const newTitle = event.target.value
+    this.setState({
+      text: {
+        title: newTitle,
+      }
+    })
+  }
   handleChange = (event) => {
     const newText = event.target.value
     const wordArr = newText.split(' ').length
@@ -45,24 +53,37 @@ class Edit extends Component {
       }
     })
   }
-  handleSubmit = () => {
+  async handleSubmit(e) {
+    e.preventDefault()
     const authorId = this.props.match.params.authorId
     const textId = this.props.match.params.textId
     const textData = this.state.text
-    editText(authorId, textId, textData)
-    console.log('edited')
+    await editText(authorId, textId, textData)
+    this.props.history.push('/read')
   }
   render() {
     const text = this.state.text
     return (
       <>
-        <form onSubmit={this.handleSubmit}>
+        <form
+          onSubmit={this.handleSubmit}
+          className='formEdit'>
+          <textarea
+            defaultValue={text.title}
+            onChange={this.handleChange}
+            className='shortInput'
+          ></textarea>
           <textarea
             defaultValue={text.content}
             onChange={this.handleChange}
+            className='longInput'
           >
           </textarea>
-          <button type='submit'>Submit</button>
+          <button
+            type='submit'
+            className='submitEdit'>
+            Submit
+            </button>
         </form>
       </>
     );

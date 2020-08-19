@@ -4,8 +4,10 @@ import Main from './screens/Main/Main'
 import Upload from './screens/Upload/Upload'
 import Read from './screens/Read/Read'
 import Type from './screens/Type/Type'
-import Edit from './screens/Edit/Edit'
-import Layout from './components/SHARED/Layout/Layout'
+import TextEdit from './screens/TextEdit/Edit'
+import AuthorEdit from './screens/AuthorEdit/AuthorEdit'
+import Layout from './components/SHARED/Layout'
+import About from './screens/About/About'
 import './App.css';
 
 function App(props) {
@@ -21,10 +23,16 @@ function App(props) {
         <Read />
       </Route>
       <Route path='/edit/:authorId/:textId'>
-        <Edit />
+        <TextEdit />
       </Route>
-      <Route path='/type'>
+      <Route path='/author/:authorId/'>
+        <AuthorEdit />
+      </Route>
+      <Route path='/type/:authorId/:textId'>
         <Type />
+      </Route>
+      <Route path='/about'>
+        <About />
       </Route>
     </Layout>
   );

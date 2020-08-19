@@ -17,17 +17,6 @@ function Introduction() {
             .delete(9)
             .pause(100)
             .type("following along with any book, poem, article, or essay.")
-            .pause(100)
-            .type("")
-            .type("Just picke")
-            .pause(126)
-            .delete(1)
-            .pause(39)
-            .type(" fromoe")
-            .pause(52)
-            .delete(2)
-            .pause(150)
-            .type(" one of our publicly availble poems or upload your own document.")
           return instance
         }}
         options={{

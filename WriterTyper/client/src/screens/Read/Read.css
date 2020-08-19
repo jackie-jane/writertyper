@@ -3,12 +3,18 @@
   display: flex;
   flex-flow: column;
 }
-.labelRead {
-  color: #04AD04;
-}
 .selectRead {
 background-color: black;
 border: 1px solid #04AD04;
+width: 200px;
+margin: 0 0 25 25;
+font-size: 18px;
+font-weight: 500;
+font-family: itc-american-typewriter, serif;
+color: #04AD04;
+}
+.selectCont {
+  margin: 50px 0 50px 20vw;
 }
 .textCont {
   color: #04AD04;
@@ -16,20 +22,19 @@ border: 1px solid #04AD04;
   font-family: itc-american-typewriter, serif;
   display: flex;
   flex-flow: column;
-  margin: 10vh 20vw 10vh 20vw;
+  margin: 10vh 20vw 10vh;
 }
 .topDivRead {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
-.titleAndAuthor {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
+.writerNameRead, .textTitleRead {
+  margin-left: 3vw;
 }
-.editButtonOnRead, .deleteButtonOnRead {
+.editButtonOnRead, .deleteButtonOnRead, .typeButtonOnRead {
   background-color: #04AD04;
   color: black;
   font-family: itc-american-typewriter, serif;
@@ -37,7 +42,22 @@ border: 1px solid #04AD04;
   font-size: 20px;
   height: 35px;
   width: 75px;
+  margin: 5px 3vw 5px 3vw;
 }
 .contentOnRead {
   padding: 25px;
+  background-color:  black;
+  color: #04AD04;
+  font-size: 20px;
+  height: 50vh;
+  align-items: center;
+  align-content: center;
+  resize: none;
+  overflow-y: scroll;
+}
+.buttonCont {
+display: flex;
+flex-flow: column;
+align-self: flex-end;
+justify-content: space-around;
 }
