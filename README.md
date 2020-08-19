@@ -26,17 +26,15 @@ _**writertyper** is an app for writers to practice their typing skills, learn th
 
 ## MVP
 
-_**WriterTyper's** _ MVP will allow a user to practice their typing with the text of a short story by F. Scott Fitzgerald. The inspiration for this app came from Hunter S. Thompson, who as a youg writer typed The Great Gatsby multiple times just to get "the feeling". I believe that this not only helps a writer learn to type faster and more effeicently, but better understand language patterns and the rythym of communication. Those within the visual arts often recreate a "master's" work and this app seeks to help wirters do just that. The MVP will be responsive to 3 differen screen sizes, however it will not support mobile as the practice of writing anything of significant length should not be done on a mobile device if possible. (The point of this app is to work witha full size keyboard). Our data (the text) comes from Project Gutenberg an open-source project that compiles pubilically availible text. The app will also report anyalitics in realtime such as words per minute, accuracy, and approximate writing time it would take the user to complete typing the work themselves.  
+_**WriterTyper's** _ MVP will allow a user to practice their typing with any short text from any writer. The inspiration for this app came from Hunter S. Thompson, who as a youg writer typed The Great Gatsby multiple times just to get "the feeling". I believe that this not only helps a writer learn to type faster and more effeicently, but better understand language patterns and the rythym of communication. Those within the visual arts often recreate a "master's" work and this app seeks to help wirters do just that. Our data (the text) comes from Project Gutenberg an open-source project that compiles pubilically availible text. PMVP goals are to allow the app to report anyalitics in realtime such as words per minute, accuracy, and approximate writing time it would take the user to complete typing the work themselves.  
 
 <br>
 
 ### Goals
 
-- _The ability to type (word for word) F. Scott Fitzgerald's short story, The Romantic Egotist_
-- _Three Screen Sizes not including mobile_
-- _Anyalytics that include WPM, Accuracy, and total typing time_
+- _The ability to type (word for word) any text uploaded to our rails database_
 - _a 'ruby on rails' database seeded with data from Project Gutenberg_
-- _a react with at least 8 rendered componenets and three 'screens' using react router_
+- _a reactapp with at least 8 rendered componenets and three 'screens' using react router_
 
 <br>
 
@@ -49,13 +47,7 @@ _**WriterTyper's** _ MVP will allow a user to practice their typing with the tex
 |      React       | Front-end framework|
 |   React Router   | Allows React to have multiple 'screens' |
 |     Rails      | back-end framework |
-
-### Data Sources 
-|     Data         |Source                                       | Data Description                            | Source Description |
-| :--------------: | :-----------------------------------------: | :-----------------------------------------: | :----------------------------------------- |
-| The Romantic Egotist | The Gutenberg Project      | Short Story from F. Scott Fitzgeral's Paradise Lost | "a library of over 60,000 free eBooks." |
- 
-<br>
+| Typeitjs | allows for animation on mainpage|
 
 ### Client (Front End)
 
@@ -179,40 +171,32 @@ __Index.js
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create File Structure|    H     |     3 hrs      |     :---------:     |   :---------:    |
-| Create database migration	|    H    |     1 hrs      |  :---------:        |    :---------:   |
-| Create database models	|    H    |     1 hrs      |     :---------:     |     :---------:  |
-| Create Seed file	|    H    |     2 hrs      |      :---------:    |     :---------:  |
-| Rails Controllers	|    H    |     3 hrs      |     :---------:     |    :---------:   |
-| Test Api and Debug	|    H    |     2 hrs      |   :---------:       |     :---------:  |
-| Header Component	|    H    |     1 hrs      |    :---------:      |   :---------:    |
-| Footer Component	|    H    |     1 hrs      |    :---------:      |    :---------:   |
-| Main Component	|    H    |     1 hrs      |    :---------:      |  :---------:     |
-| Layout Component	|    H    |     1 hrs      |   :---------:       |  :---------:     |
-| TitleAndAuthor Component	|    H    |     2 hrs      |     :---------:     |  :---------:     |
-| SubmitButton Component	|    H    |     2 hrs      |    :---------:      |   :---------:    |
-| StartButton Component	|    H    |     1 hrs      |   :---------:       |  :---------:     |
-| Introduction	|    H    |     1 hrs      |   :---------:       |  :---------:     |
-| WordPerMinute	|    H    |     3 hrs      |   :---------:       |  :---------:     |
-| WordComponent	|    H    |     3 hrs      |      :---------:    |   :---------:    |
-| Accuracy Component	|    H    |     3 hrs      |    :---------:      | :---------:      |
-| Estimate	|    H    |     3 hrs      |   :---------:       |   :---------:    |
-| Indicator	|    H    |     3 hrs      |     :---------:     |   :---------:    |
-| UpdateTextInput Component	|    H    |     2 hrs      |  :---------:        |  :---------:     |
-| DeleteButton Component	|    H    |     1 hrs      |   :---------:       |   :---------:    |
-| Modal	|    H    |     3 hrs      |    :---------:      |    :---------:   |
-| UploadForm	|    H    |     1 hrs      |    :---------:      |    :---------:   |
-| ApiConfig	|    H    |     1 hrs      |     :---------:     |    :---------:   |
-| text.js	|    H    |     2 hrs      |     :---------:     |     :---------:  |
-| Main Screen	|    H    |     4 hrs      |    :---------:      |   :---------:    |
-| Type Screen	|    H    |     3 hrs      |    :---------:      |   :---------:    |
-| Read Screen	|    H    |     2 hrs      |   :---------:       |   :---------:    |
-| Upload Screen	|    H    |     3 hrs      |   :---------:       | :---------:      |
-| App.js|    H    |     2 hrs      |      :---------:    |    :---------:   |
-| index.js|    H    |     1 hrs      |    :---------:      |     :---------:  |
-| Css|    H    |     10 hrs      |     :---------:     |   :---------:    |
+| Create File Structure|    H     |     3 hrs      |     2hrs   | 2hrs |
+| Create database migration	|    H    |     1 hrs      | 1hr       |    1hr  |
+| Create database models	|    H    |     1 hrs      |     2hrs    |     2hrs  |
+| Create Seed file	|    H    |     2 hrs    |      4hrs   |     4hrs  |
+| Rails Controllers	|    H    |     3 hrs      |     2hrs     |    2hrs   |
+| Test Api and Debug	|    H    |     2 hrs      |   4hrs        |     4hrs   |
+| Header Component	|    H    |     1 hrs      |    1.5hrs     |   1.5hrs   |
+| Footer Component	|    H    |     1 hrs      |    1 hrs      |    1 hrs   |
+| Main Component	|    H    |     1 hrs      |    1 hrs       |  1 hrs     |
+| Layout Component	|    H    |     1 hrs      |   1 hrs      |  1 hrs     |
+| SubmitButton Component	|    H    |     2 hrs      |    1 hrs      |   1 hrs     |
+| StartButton Component	|    H    |     1 hrs      |   1hrs      |  1hrs     |
+| Introduction	|    H    |     1 hrs      |   2hrs      |  2hrs    |
+| UpdateTextInput Component	|    H    |     2 hrs      |  4hrs       |  4hrs      |
+| DeleteButton Component	|    H    |     1 hrs      |   1 hrs       |   1 hrs     |
+| UploadForm	|    H    |     1 hrs      |    4hrs      |    4hrs    |
+| ApiConfig	|    H    |     1 hrs      |     1 hrs     |   1 hrs    |
+| Main Screen	|    H    |     4 hrs      |    3hrs     |   3hrs  |
+| Type Screen	|    H    |     3 hrs      |    8hrs    |   8hrs    |
+| Read Screen	|    H    |     2 hrs      |   2hrs      |   2hrs   |
+| Upload Screen	|    H    |     3 hrs      |   3hrs      | 3hrs     |
+| App.js|    H    |     2 hrs      |      1hr   |    1hr  |
+| index.js|    H    |     1 hrs      |     1 hrs      |      1 hrs  |
+| Css|    H    |     10 hrs      |     8hrs    |   8hrs   |
 | MVP Contingency|    H    |  7 hrs  |   :---------:       |  :---------:     |
-| Total|:---------:       |  79 hrs  |  :---------:        |  :---------:     |
+| Total|:---------:       |  57 hrs  |  59.5hrs       |  59.5hrs     |
 
 ### Server (Back End)
 
@@ -227,7 +211,7 @@ https://whimsical.com/Q56Mz28NmJdP7ELfKHjXzE
 ## Post-MVP
 
 Post-MVP goals include:
--adding a user functionality. 
+-adding a user functionality.
 -auth
 -adding more texts to seed file
 -adding author bio page
@@ -239,9 +223,65 @@ Post-MVP goals include:
 ***
 
 ## Code Showcase
-
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
-
+The code below shows the prototype for how the typing function works. Using state to dynamically keep track of three different arrays.
+```
+  handleType = (e) => {
+    const userInput = e.target.value
+    const char = this.state.currentChar
+    if (userInput === char) {
+      const newCompleted = this.state.completed
+      const newUpcoming = this.state.upcoming
+      const nextChar = newUpcoming.shift()
+      newCompleted.push(userInput)
+      this.setState({
+        upcoming: newUpcoming,
+        completed: newCompleted,
+        currentChar: nextChar
+      })
+      e.target.value = ''
+    }
+  }
+  render() {
+    const completeRender = this.state.completed.join('')
+    const upcomingRender = this.state.upcoming.join('')
+    return (
+      <>
+        {this.state.completed ?
+          <div
+            className='typeCont'>
+            <p>
+              <span
+                className='completedText'>
+                {completeRender}
+              </span>
+              <mark
+                className='currentChar'>
+                {this.state.currentChar}
+              </mark>
+              <span
+                className='upcomingText'>
+                {upcomingRender}
+              </span>
+            </p>
+            <textarea
+              className='userInput'
+              onKeyUp={this.handleType}>
+            </textarea>
+          </div>
+          :
+          <>
+            <textarea
+              value={this.state.currentChar}
+              disabled='disabled'
+            ></textarea>
+            <textarea
+              onKeyUp={this.handleType}
+            ></textarea>
+          </>
+        }
+```
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+1. The biggest challenge with this project was finding a way to get the typing function to operate. I started off with one letter at a time. This relied on an array created from the text. While working with this array I realized that I could create multiple and in a way keep track of the user's progress. In the future I'd like to make this more sophistacted to better handle wrong answers as well as give users metrics like words per minute.
+
+2. Another challenge I am currently working to resolve is formatting the text. Especially for poems, punctuation and spacing matters. Some characters don't translate well. I am currently working on an algoirithim so when you upload and edit text some of the problematic characters are automatically changed to ones the program can handle better.
