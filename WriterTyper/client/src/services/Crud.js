@@ -50,4 +50,9 @@ export const editAuthor = async (authorId, authorData) => {
   return resp.data;
 }
 
+export const readScore = async (authorId, textId) => {
+  const res = await api.get(`/authors/${authorId}/texts/${textId}/scores`);
+  return res.data;
+}
+
 

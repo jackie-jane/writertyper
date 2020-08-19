@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { readOneByAuthor } from '../../services/Crud'
+import { readOneByAuthor, readScore } from '../../services/Crud'
 import { withRouter } from 'react-router-dom'
+import Score from '../../components/TYPE/Score/Score'
 import './Type.css'
 class Type extends Component {
   constructor(props) {
@@ -34,9 +35,6 @@ class Type extends Component {
       const newUpcoming = this.state.upcoming
       const nextChar = newUpcoming.shift()
       newCompleted.push(userInput)
-      console.log(newCompleted)
-      console.log(newUpcoming)
-      console.log(nextChar)
       this.setState({
         upcoming: newUpcoming,
         completed: newCompleted,
@@ -52,7 +50,7 @@ class Type extends Component {
       <>
         {this.state.completed ?
           <div
-          className='typeCont'>
+            className='typeCont'>
             <p>
               <span
                 className='completedText'>
@@ -83,6 +81,7 @@ class Type extends Component {
             ></textarea>
           </>
         }
+        <Score />
       </>
     );
   }
